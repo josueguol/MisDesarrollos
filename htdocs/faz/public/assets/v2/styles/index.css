@@ -1,0 +1,169 @@
+.item--css-background-clip .demo {
+	width: 100%;
+	height: 100%;
+	background: url(../images/azteka2.jpg) top center no-repeat;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	position: fixed;
+	top: 0;
+	padding: 12% 20% 23% 20%
+}
+
+.demo {
+	font: normal 13.6em GotModKK;
+	line-height: 70%
+}
+
+.demo span {
+	font: normal .3em GotModKK
+}
+
+.item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .999)
+}
+
+.item:before {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font: 2rem/1 GotModKK;
+	color: #fff
+}
+
+.item:after {
+	content: '';
+	display: table;
+	width: 100%
+}
+
+.demo {
+	position: relative;
+	float: left
+}
+
+.demo:before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(../images/azteka2.jpg) top center no-repeat;
+	opacity: .07
+}
+
+.imaLogo img {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	z-index: 1
+}
+
+.texto {
+	z-index: 1;
+	color: #fff;
+	position: absolute;
+	bottom: 12%;
+	right: 315px
+}
+
+.anchor {
+	position: absolute;
+	bottom: 40px;
+	z-index: 1;
+	text-align: center
+}
+
+.anchor a {
+	color: #fff;
+	font-size: 28px;
+	text-decoration: none
+}
+
+@media only screen and (max-width:1280px) {
+	.item--css-background-clip .demo {
+		padding: 10% 12% 18% 14%
+	}
+}
+
+@media only screen and (max-width:1080px) {
+	.item--css-background-clip .demo {
+		font-size: 9.8em;
+		padding: 22% 20%
+	}
+	.texto {
+		right: 215px
+	}
+}
+
+@media only screen and (max-width:810px) {
+	.item--css-background-clip .demo {
+		font-size: 9.5em;
+		padding: 30% 11%
+	}
+	.texto {
+		right: 0;
+		padding: 0 16px
+	}
+}
+
+@media only screen and (max-width:667px) {
+    .imaLogo img {
+        top: 10px;
+        left: 20px;
+        width: 40%;
+    }
+    .item--css-background-clip .demo {
+        padding: 1% 5%;
+    }
+    .texto {
+        font-size: 12px;
+    }
+    .anchor {
+        bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:640px) {
+	.item--css-background-clip .demo {
+		font-size: 7.6em;
+		padding: 40% 10%
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.imaLogo img {
+		width: 100%;
+		left: 0;
+		top: 10px
+	}
+	.item--css-background-clip .demo {
+		font-size: 6em;
+		padding: 40% 10%
+	}
+}
+
+@media only screen and (max-width:425px) {
+	.item--css-background-clip .demo {
+		font-size: 5.2em;
+		padding: 50% 10%
+	}
+}
+
+@media only screen and (max-width:375px) {
+	.item--css-background-clip .demo {
+		font-size: 4.5em
+	}
+}
+
+@media only screen and (max-width:320px) {
+	.item--css-background-clip .demo {
+		font-size: 4em
+	}
+}

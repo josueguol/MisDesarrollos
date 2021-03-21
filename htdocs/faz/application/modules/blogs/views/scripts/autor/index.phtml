@@ -1,0 +1,170 @@
+<?php 
+	$existeAautor 		= 1;
+	$datos				= $this->datosAutor;
+	if(empty($datos)) 	$existeAautor = 0;
+	
+	$arrayNotasAutor 	= $this->articulosAutores;
+	$otrosAutores 		= $this->otrosAutores;
+
+	$name = $datos['autor'];
+	$name = explode(" ", $name, 2);
+	
+	$date = explode("T", $datos["fecha"]);
+	$date = explode("-", $date[0]);
+	
+	$dia = $date[2];
+	$mes = $date[1];
+	$anio = $date[0];		 		
+	$fecha = strtotime("{$mes}/{$dia}/{$anio}");
+	$newformat = date('F j, Y', $fecha);
+	
+	$Imagen = new My_Helper_CrearImagen();
+	//$string_1 			=  	preg_replace('/style=\\"[^\\"]*\\"/', '', 		$datos['cContenido']);
+	//$string_2 			= 	preg_replace('/ style=("|\')(.*?)("|\')/','',	$datos['cContenido']);
+	$string_1 			 	=  	preg_replace('/ style=\\"[^\\"]*\\"/', '', 		$datos['contenido']); //Quita los styles
+	
+	$datos['contenido']    = 	str_replace("<span>&nbsp;</span>","<!-- remove <span>&nbsp;</span> -->", $string_1);//Quita los espacios inncesarios despues de quitar los styles...
+	
+	$cantidadC  	= 140;
+	$tresPuntos 	= "";
+	$titulo		 	= $datos["titulo"];
+	$desc 			= str_replace("&nbsp;", "", strip_tags($datos["contenido"]));
+	$urlImagen		= $datos["imagen"];
+	$descripcion 	= explode("||",wordwrap($desc,$cantidadC,"||"));
+	$descripcion	= htmlspecialchars($descripcion[0]."...", ENT_QUOTES);
+
+	/****Metadata HTML ***/
+	$this->metadatos["configuracion"][0]["cTitulo"] 			= htmlspecialchars("Punto Casa Bolsa - ".$datos["autor"], ENT_QUOTES);
+	$this->metadatos["configuracion"][0]["cMetaDescripcion"] 	= htmlspecialchars($descripcion, ENT_QUOTES);
+	$cMetaKeywords = $descripcion.$titulo;
+	$cMetaKeyWord  = '';
+	foreach(explode(' ',$cMetaKeywords) as $keyWord){
+		if(strlen($keyWord) > 2){
+			$conservar = '0-9a-zñáéíóú'; // juego de caracteres a conservar
+			$regex = sprintf('~[^%s]++~i', $conservar); // case insensitive
+			$keyWord = preg_replace($regex, '', $keyWord);
+			$cMetaKeyWord[] =   $keyWord;
+		}
+	}
+	$this->metadatos["configuracion"][0]["cMetaKeywords"] = implode(',', $cMetaKeyWord);
+	/****Metadata HTML ***/
+	
+	
+	$crop ="";
+	$this->imgHisFB = $crop . $urlImagen;
+	
+	$this->metaFacebook =  @<<<METANOTA
+  	<meta property="og:type"   content="article" />
+	<meta property="og:url"    content="http://{$this->site}" />
+	<meta property="og:title"  content="{$titulo}" />
+	<meta property="og:image"  content="{$this->imgHisFB}" />
+	<meta property="og:description"  content="{$descripcion}" />
+METANOTA;
+	
+	$this->metaFacebook .= @<<<METATWITTER
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$titulo}">
+	<meta name="twitter:description" content="{$descripcion}">
+	<meta name="twitter:image:src" content="{$urlImagen}">
+	<meta name="twitter:domain" content="http://{$this->site}">
+	<meta name="twitter:site" content="http://{$this->site}">
+	
+METATWITTER;
+?>
+
+<link rel="stylesheet" href="/portal/styles/blog.css">
+<link rel="stylesheet" href="/portal/styles/home.css">
+  <div class="contentBox">
+    <div>
+      <div>
+        <div class="author">
+          <h2><strong><?php if($existeAautor == 1 ) { echo $datos["autor"];}else{echo "Lo sentimos, el autor que solicitaste ya no se encuentra disponible <br/>";} ?></strong></h2>
+          <img src="<?php echo $datos["imagenAutor"]; ?>" alt="<?php echo $datos["autorC"];?>" style="" width="800px" height="400px" name="imagencrop">
+          <p>
+            	<?php 
+	            	if(mb_detect_encoding($datos['acercaAutor'], 'UTF-8', true)){
+	            		echo $datos["acercaAutor"];
+	            	}else{
+	            		echo utf8_encode($datos['acercaAutor']);
+	            	}
+            	?>
+          </p>
+          <div>
+            <?php 
+            	if (sizeof($arrayNotasAutor)>0):
+            		echo '<h2>Notas escritas por el mismo<strong>Autor</strong></h2>';
+            		foreach ($arrayNotasAutor as $key => $relacionados ):
+            			if($key <= 1 ):
+            ?>
+					            <a href="<?php echo $relacionados["urlC"];?>">
+					           		<div>
+						              <img src="<?php echo $relacionados["imagen"]; ?>" alt="<?php echo $relacionados["tituloC"];?>" style="" width="376px" height="239px" name="imagencrop">
+						              <strong>	<?php echo $relacionados['tituloC'];?></strong>
+						              <h6>		<?php echo $relacionados["autor"];?></h6>
+						              			<?php echo $relacionados["contenidoC"]?>         
+						              <span>leer más</span>
+					              	</div>
+					            </a>
+            <?php
+            			endif;
+            		endforeach;
+            	endif;
+            ?>
+          </div>
+        </div>
+        <div>
+
+          <div class="mod">
+            <?php             	
+            if (sizeof($arrayNotasAutor)>0):
+            	echo '<h2>Artículos <strong>más visto</strong></h2>';
+            		foreach  ($arrayNotasAutor as $key => $datosVistos):
+            			if($key >= 2 && $key<= 11):
+            ?>
+				            <a href="<?php echo $datosVistos["urlC"];?>" class="artcls">
+				              <span></span>
+				              <?php echo $datosVistos['titulo'];?>
+				            </a>
+            <?php 		endif;
+            		endforeach;
+           	endif;?>
+          </div>
+          <div class="mod">
+            <?php if(sizeof($otrosAutores) > 0):
+            	echo '<h2><strong>Autores</strong></h2>';
+            		$imagenOtrosAutores = "";
+            		foreach ($otrosAutores as $key => $datosAutores):
+            			if($key <= 2 ):
+            			if ($datosAutores['imagenAutor'] != null){$imagenOtrosAutores =	$datosAutores['imagenAutor'];}else{$imagenOtrosAutores ="https://tvazteca.brightspotcdn.com/d3/8a/7e7f6bdd48f9b1ed91b2cf9e15b6/defaultautor.png";}
+            	?>
+				            <a href="<?php echo $datosAutores['urlAutor'];?>" class="authrs">
+				              <img src="<?php echo $imagenOtrosAutores;?>" alt="<?php echo $datosAutores['autorC'];?>">
+				              <strong>
+				              		<?php
+				            			if(mb_detect_encoding($datosAutores['nombreAutor'], 'UTF-8', true)){	echo $datosAutores['nombreAutor']; }else{	echo utf8_encode($datosAutores['nombreAutor']); }
+				            		?>
+				            	</strong>
+				              <br>
+				              <h6><?php
+				              if(mb_detect_encoding($datosAutores['acercaAutor'], 'UTF-8', true)){
+				              		echo substr($datosAutores['acercaAutor'], 0, 58)."...";
+				              }else{
+				              		echo utf8_encode(substr($datosAutores['acercaAutor'], 0, 58)."...");
+				              }?></h6>
+				              <span>conoce más</span>
+				            </a>
+            <?php 
+            		endif;
+            		endforeach;
+            	endif;
+            ?>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="/portal/scripts/header.js"></script>
+    <script src="/js/detecta-dispositivo.js"> </script>

@@ -1,0 +1,71 @@
+<header>
+    <div class="navbar_component">
+        <div>
+            <button mat-button class="btn" (click)="application()"><i class="fa fa-box-open"></i></button>
+            <h1 class="navbar_component-brand">Colmena</h1>
+        </div>
+        <div>
+            <button mat-button class="btn" (click)="profile(status)"><i class="fa fa-user-circle"></i></button>
+        </div>
+    </div>
+    <div class="statebar_component-projects">
+        <button class="btn" mat-button (click)="sidenav()"><i class="fa fa-bars"></i></button>
+        <h2 class="project_component-current">
+            <a href="javaScript:"><span>{{currentProject}}</span></a>
+            <a href="javaScript:"><span>{{projectFlow}}</span></a>
+        </h2>
+    </div>
+</header>
+
+
+<!-- Inicia el panel de aplicaciones -->
+<div class="applications_component-panel" [ngClass]="{'open': applicationStatus == true}">
+    <p>Aqui van las aplicaciones como dam, market, diseñador de documentos</p>
+</div>
+<!-- Termina el panel de aplicaciones -->
+
+<!-- Inicia el panel de configuracion -->
+<div class="settings_component-wrapper" [ngClass]="{'open': settingStatus == true}">
+    <div class="settings_component">
+        <div class="settings_component-header">
+            <div>
+                <h3>Configuración</h3>
+            </div>
+            <div>
+                <button mat-button class="btn" (click)="settingStatus = false"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inicia el panel de configuracion -->
+
+<!-- Inicia el panel de perfil -->
+<div class="profile_component-panel" [@rigthPanel]="profileStatus">perfil</div>
+<!-- Termina el panel de perfil -->
+
+<!-- Inicia el panel de notificaciones -->
+<div class="notification_component-panel" [@rigthPanel]="notificationStatus">notificaciones</div>
+<!-- Termina el panel de notificaciones -->
+
+
+
+<div class="main_wrapper">
+    <div class="sidenav_component"></div>
+    <div class="content_component" [ngClass]="{'open': sideNavStatus == true}">
+        <div>
+            <p>
+                Bienvenido a Colmena <span>{{version}}</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div>
+        <p>Colmena ® 2018</p>
+    </div>
+    <div class="footer_component-nav">
+        <button class="btn" mat-button (click)="settings()"><i class="fa fa-cog"></i></button>
+        <button mat-button class="btn" (click)="notification(status)"><i class="fa fa-bell"></i></button>
+    </div>
+</footer>

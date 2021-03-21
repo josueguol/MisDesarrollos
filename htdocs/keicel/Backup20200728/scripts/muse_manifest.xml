@@ -1,0 +1,424 @@
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="keicel.com" resolutions="1x" timestamp="1575556896925">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="master_a-master-copy.css" crc="373890036" ref="sakura:simport:icr:sartorius:bolsa-de-trabajo:productos:hycel:bio-sb:contacto:servicios:index:erma:nosotros:meyer:deltalab"/>
+    <file name="sakura.css" crc="442427072" ref="sakura"/>
+    <file name="simport.css" crc="3872846804" ref="simport"/>
+    <file name="icr.css" crc="110035441" ref="icr"/>
+    <file name="sartorius.css" crc="4110411013" ref="sartorius"/>
+    <file name="bolsa-de-trabajo.css" crc="3790264701" ref="bolsa-de-trabajo"/>
+    <file name="productos.css" crc="3899682881" ref="productos"/>
+    <file name="hycel.css" crc="4162768699" ref="hycel"/>
+    <file name="bio-sb.css" crc="425562661" ref="bio-sb"/>
+    <file name="contacto.css" crc="3913248329" ref="contacto"/>
+    <file name="servicios.css" crc="66686536" ref="servicios"/>
+    <file name="index.css" crc="312682222" ref="index"/>
+    <file name="erma.css" crc="4266345836" ref="erma"/>
+    <file name="nosotros.css" crc="390575925" ref="nosotros"/>
+    <file name="meyer.css" crc="3958247939" ref="meyer"/>
+    <file name="deltalab.css" crc="3943922197" ref="deltalab"/>
+  </folder>
+  <folder name="assets">
+    <file name="bio-sb-2018-catalog---lr-051418.pdf" crc="48266362" seo="true" mt="1552968978000"/>
+    <file name="catalogo_sartorius.pdf" crc="446184979" seo="true" mt="1552970193000"/>
+    <file name="sakurafa-catalog2018.pdf" crc="3764531573" seo="true" mt="1553026703000"/>
+    <file name="icr-cofepris-2015.pdf" crc="517341613" seo="true" mt="1553364200000"/>
+    <file name="deltalab_2017es.pdf" crc="4158649693" seo="true" mt="1553026495000"/>
+    <file name="catalogo-simport.pdf" crc="263202624" seo="true" mt="1553025213000"/>
+    <file name="img_0596.png" crc="4279236168" seo="true" mt="1549812364000"/>
+    <file name="img_0619.jpg" crc="22087069" seo="true" mt="1517339668000"/>
+    <file name="8879936798750.jpg" crc="4045777576" seo="true" mt="1552970219000"/>
+    <file name="8887163355166.jpg" crc="4128457594" seo="true" mt="1552970150000"/>
+    <file name="8887166238750.jpg" crc="3794726934" seo="true" mt="1552970077000"/>
+    <file name="f201055_p.eps-650.jpg" crc="241907331" seo="true" mt="1552970206000"/>
+    <file name="255.jpg" crc="14428303" seo="true" mt="1552970786000"/>
+    <file name="2418.jpg" crc="4132482893" seo="true" mt="1552970731000"/>
+    <file name="dsc_0244-copy.jpg" crc="329548147" seo="true" mt="1552970802000"/>
+    <file name="wright-colorante-hycel-1.jpg" crc="4078405727" seo="true" mt="1552970753000"/>
+    <file name="almacenamiento-muestras.jpg" crc="3960368959" seo="true" mt="1553131070000"/>
+    <file name="bandeja-metal-histologia.jpg" crc="4071801546" seo="true" mt="1553130447000"/>
+    <file name="crioperlas.jpg" crc="4223124046" seo="true" mt="1553130408000"/>
+    <file name="deltalab_-5.png" crc="382005292" seo="true" mt="1553130496000"/>
+    <file name="cubreobjetos.jpg" crc="425746545" seo="true" mt="1553130635000"/>
+    <file name="frasco-muestra.jpg" crc="3785887712" seo="true" mt="1553131100000"/>
+    <file name="cassetteinclusionbiopsias.jpg" crc="3915800642" seo="true" mt="1553027075000"/>
+    <file name="familypic.jpg" crc="473550304" seo="true" mt="1553027896000"/>
+    <file name="gradillas.jpg" crc="4080384733" seo="true" mt="1553027579000"/>
+    <file name="moldesdeacero.jpg" crc="488621249" seo="true" mt="1553027241000"/>
+    <file name="alcohol-etilico-absoluto.jpg" crc="519226277" seo="true" mt="1553189029000"/>
+    <file name="img_0759.png" crc="3929491724" seo="true" mt="1563060738000"/>
+    <file name="reactivo-de-biuret.jpg" crc="90998633" seo="true" mt="1553188975000"/>
+    <file name="benzyl-alcohol.jpg" crc="457709485" seo="true" mt="1553131853000"/>
+    <file name="reactivos-quimica.jpg" crc="4217166286" seo="true" mt="1553132040000"/>
+    <file name="reactivos.jpg" crc="190438579" seo="true" mt="1553131753000"/>
+    <file name="wright-colorante-para-sangre.jpg" crc="3795946793" seo="true" mt="1553131767000"/>
+    <file name="autotec-1.png" crc="210907977" seo="true" mt="1553131603000"/>
+    <file name="centro-de-inclusion-sakura.jpg" crc="3850155957" seo="true" mt="1553131332000"/>
+    <file name="sistema-de-preparacion-de-muestras-histologia.jpg" crc="4285593124" seo="true" mt="1553131566000"/>
+    <file name="tissue-tek-oct-compound.png" crc="4045240573" seo="true" mt="1553131242000"/>
+    <file name="tissue-tek-paraffin-wax.png" crc="528144893" seo="true" mt="1553131276000"/>
+    <file name="hematology-analyzer.jpg" crc="3855631408" seo="true" mt="1554922377000"/>
+    <file name="supplier-laboratory-hematology-analyzer.jpg" crc="73515974" seo="true" mt="1554922473000"/>
+    <file name="img_0699.jpg" crc="171198341" seo="true" mt="1517343286000"/>
+    <file name="vasocoplin.jpg" crc="4202206861" seo="true" mt="1553027366000"/>
+    <file name="pipetatransferencia.jpg" crc="3812660681" seo="true" mt="1553027501000"/>
+    <file name="bs_1.png" crc="3986829425" seo="true" mt="1563060967000"/>
+    <file name="tintostainer-2.png" crc="4268232881" seo="true" mt="1563060981000"/>
+    <file name="img_0601.jpg" crc="4230802776" seo="true" mt="1517338216000"/>
+    <file name="img_0643.jpg" crc="4158692840" seo="true" mt="1517340616000"/>
+    <file name="img_0629.jpg" crc="4149545351" seo="true" mt="1517339948000"/>
+    <file name="img_0714.jpg" crc="187965840" seo="true" mt="1563062686000"/>
+    <file name="lista-de-productos--icr.pdf" crc="3930310130" seo="true" mt="1569084790000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="museutils.js" crc="340535759" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="whatinput.js" crc="86476730" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="museconfig.js" crc="310584261" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="jquery.musemenu.js" crc="510910590" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="jquery.watch.js" crc="51536988" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="4260645839" ref="index:nosotros:servicios:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura"/>
+    <file name="webpro.js" crc="4059564322" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="musewpslideshow.js" crc="3862962738" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="jquery.museoverlay.js" crc="4147669564" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="touchswipe.js" crc="4075097462" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="require.js" crc="7928878" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo"/>
+    <file name="form_check.php" crc="4020933626" ref="contacto"/>
+    <file name="form_throttle.php" crc="4259590256" ref="contacto"/>
+    <file name="form_process.php" crc="37464564" ref="contacto"/>
+    <file name="form-u11741.php" crc="3865309026" ref="contacto"/>
+    <file name="form-u18951.php" crc="168628542" ref="bolsa-de-trabajo"/>
+  </folder>
+  <folder name="images">
+    <file name="logo-keicel_posible_b-n.svg" crc="307919391" seo="true" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo">
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="servicios" alt=""/>
+      <caption webpage="servicios" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="contacto" alt=""/>
+      <caption webpage="contacto" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="simport" alt=""/>
+      <caption webpage="simport" alt=""/>
+      <caption webpage="productos" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logo keicel_posible_b-n_poster_.png" crc="3760011983" ref="index"/>
+    <file name="productos-entrega-rapida.jpg" crc="3778721450" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="-banner 1.jpg" crc="108159040" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="blank.gif" crc="4208392903" ref="index:nosotros:productos:servicios:contacto:bolsa-de-trabajo"/>
+    <file name="slider_morado.jpg" crc="4128004805" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="loading.gif" crc="3815509949" ref="index:nosotros:productos:servicios:contacto:bolsa-de-trabajo"/>
+    <file name="logo_quimica keicel_horizontal_full.png" crc="33053267" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="logos_marcas-09188x195.png" crc="493030836" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="logos_marcas_mesa de trabajo 1.png" crc="427063563" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-05.png" crc="389575453" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-07.png" crc="1315617" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-02.png" crc="4040364764" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-08.png" crc="3796052981" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="inmunohistoquimica.png" crc="4088519230" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="hibridacion in situ.png" crc="362397216" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="biologia molecular-.png" crc="4144329617" seo="true" ref="index:productos">
+      <caption webpage="index" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="img-20190712-wa0006-crop-u22095.jpg" crc="365973975" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="img-20190712-wa0006.jpg" crc="4280419552" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="s2.png" crc="4011641191" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="s2-u5502-r-fr.png" crc="4235286913" ref="index"/>
+    <file name="s3-u5574-fr.png" crc="3785038815" ref="index"/>
+    <file name="s3-u5574-r-fr.png" crc="4239783522" ref="index"/>
+    <file name="logo-keicel_posible_k.svg" crc="3765852580" seo="true" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo">
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="servicios" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="contacto" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="simport" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logo keicel_posible_k_poster_.png" crc="3994569571" ref="index"/>
+    <file name="ubicación_icono.svg" crc="4089107846" seo="true" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo">
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="servicios" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="contacto" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="simport" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="ubicación_icono_poster_.png" crc="240199822" ref="index"/>
+    <file name="tel_icono.svg" crc="3791721127" seo="true" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo">
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="servicios" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="contacto" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="simport" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="tel_icono_poster_.png" crc="50229266" ref="index"/>
+    <file name="reloj_icono.svg" crc="4017742010" seo="true" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo">
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="servicios" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="contacto" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="simport" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="reloj_icono_poster_.png" crc="3947250697" ref="index"/>
+    <file name="correo_icon.svg" crc="411000959" seo="true" ref="index:nosotros:productos:servicios:contacto:bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura:bolsa-de-trabajo">
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="servicios" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="contacto" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="simport" alt=""/>
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="correo_icon_poster_.png" crc="241977842" ref="index"/>
+    <file name="banner corrección.jpg" crc="4045907549" seo="true" ref="nosotros">
+      <caption webpage="nosotros" alt=""/>
+    </file>
+    <file name="logo_quimica keicel_full-crop-u19701.png" crc="3759262262" seo="true" ref="nosotros">
+      <caption webpage="nosotros" alt=""/>
+    </file>
+    <file name="fondo-quienes-somos.jpg" crc="4056709186" ref="nosotros">
+      <caption webpage="nosotros" alt=""/>
+    </file>
+    <file name="slider_intro_j.jpg" crc="460224290" seo="true" ref="nosotros">
+      <caption webpage="nosotros" alt=""/>
+    </file>
+    <file name="road.jpg" crc="180693847" seo="true" ref="nosotros">
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+    </file>
+    <file name="trees.jpg" crc="4071309946" seo="true" ref="nosotros">
+      <caption webpage="nosotros" alt=""/>
+      <caption webpage="nosotros" alt=""/>
+    </file>
+    <file name="slider_intro_k.jpg" crc="4272147186" seo="true" ref="nosotros">
+      <caption webpage="nosotros" alt=""/>
+    </file>
+    <file name="banner_productos.jpg" crc="4041345343" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="histologia_.png" crc="441534188" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="reactivos-y-colorantes.png" crc="3828397759" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="consumibles.png" crc="4040024216" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="equipos.png" crc="148312020" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-03.png" crc="265772955" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-04.png" crc="348996944" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-06.png" crc="4257430441" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="logos_marcas-09.png" crc="368567538" seo="true" ref="productos">
+      <caption webpage="productos" alt=""/>
+    </file>
+    <file name="banner_servicios.jpg" crc="4176477691" seo="true" ref="servicios">
+      <caption webpage="servicios" alt=""/>
+    </file>
+    <file name="auxiliar laboratorio.jpg" crc="4241105992" seo="true" ref="servicios">
+      <caption webpage="servicios" alt=""/>
+    </file>
+    <file name="s3.png" crc="4028289235" ref="servicios">
+      <caption webpage="servicios" alt=""/>
+    </file>
+    <file name="banner corrección2.jpg" crc="4011055570" seo="true" ref="contacto">
+      <caption webpage="contacto" alt=""/>
+    </file>
+    <file name="ubicación_icono_azul.svg" crc="424692539" seo="true" ref="contacto">
+      <caption webpage="contacto" alt=""/>
+    </file>
+    <file name="ubicación_icono_azul_poster_.png" crc="393263630" ref="contacto"/>
+    <file name="reloj_icono_azul.svg" crc="4043297959" seo="true" ref="contacto">
+      <caption webpage="contacto" alt=""/>
+    </file>
+    <file name="reloj_icono_azul_poster_.png" crc="3805529279" ref="contacto"/>
+    <file name="tel_icono_azul.svg" crc="3927409836" seo="true" ref="contacto">
+      <caption webpage="contacto" alt=""/>
+    </file>
+    <file name="tel_icono_azul_poster_.png" crc="4064867346" ref="contacto"/>
+    <file name="correo_icon_azul.svg" crc="3992807980" seo="true" ref="contacto:bolsa-de-trabajo">
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+      <caption webpage="contacto" alt=""/>
+    </file>
+    <file name="correo_icon_azul_poster_.png" crc="4269677602" ref="contacto"/>
+    <file name="fondo-degradado.jpg" crc="300263590" ref="bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura">
+      <caption webpage="deltalab" alt=""/>
+      <caption webpage="erma" alt=""/>
+      <caption webpage="sakura" alt=""/>
+      <caption webpage="bio-sb" alt=""/>
+      <caption webpage="sartorius" alt=""/>
+      <caption webpage="icr" alt=""/>
+      <caption webpage="meyer" alt=""/>
+      <caption webpage="hycel" alt=""/>
+      <caption webpage="simport" alt=""/>
+    </file>
+    <file name="bios sb png.png" crc="490762794" seo="true" ref="bio-sb">
+      <caption webpage="bio-sb" alt=""/>
+    </file>
+    <file name="sin-título-2-crop-u20755.png" crc="4036558826" seo="true" ref="bio-sb">
+      <caption webpage="bio-sb" alt=""/>
+    </file>
+    <file name="categorias.jpg" crc="170293532" ref="bio-sb:meyer:icr:simport:deltalab:hycel:sartorius:erma:sakura">
+      <caption webpage="bio-sb" alt=""/>
+    </file>
+    <file name="meyer_blanco.png" crc="3894345540" seo="true" ref="meyer">
+      <caption webpage="meyer" alt=""/>
+    </file>
+    <file name="logos_marcas-062.png" crc="3860627917" seo="true" ref="icr">
+      <caption webpage="icr" alt=""/>
+    </file>
+    <file name="simport blanco.png" crc="4076671079" seo="true" ref="simport">
+      <caption webpage="simport" alt=""/>
+    </file>
+    <file name="deltalab_blanco.png" crc="4144777594" seo="true" ref="deltalab">
+      <caption webpage="deltalab" alt=""/>
+    </file>
+    <file name="hycel_blanco.png" crc="135861097" seo="true" ref="hycel">
+      <caption webpage="hycel" alt=""/>
+    </file>
+    <file name="sartorius_blanco.png" crc="4207763819" seo="true" ref="sartorius">
+      <caption webpage="sartorius" alt=""/>
+    </file>
+    <file name="erma_blanco.png" crc="4184595344" seo="true" ref="erma">
+      <caption webpage="erma" alt=""/>
+    </file>
+    <file name="sakura_blanco.png" crc="4085719730" seo="true" ref="sakura">
+      <caption webpage="sakura" alt=""/>
+    </file>
+    <file name="bolsa de trabajo.png" crc="254825774" seo="true" ref="bolsa-de-trabajo">
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+    </file>
+    <file name="pasted image 1200x800.jpg" crc="460498482" seo="true" ref="bolsa-de-trabajo">
+      <caption webpage="bolsa-de-trabajo" alt=""/>
+    </file>
+  </folder>
+  <file name="index.html" crc="374640459" seo="true" mt="1568683971123" redirect="true"/>
+  <file name="nosotros.html" crc="3822600310" seo="true" mt="1569080050176" redirect="true"/>
+  <file name="productos.html" crc="398413413" seo="true" mt="1575519526698" redirect="true"/>
+  <file name="servicios.html" crc="3909579889" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="contacto.html" crc="349336705" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="bio-sb.html" crc="4284548776" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="meyer.html" crc="103164527" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="icr.html" crc="243244834" seo="true" mt="1569084943856" redirect="true"/>
+  <file name="simport.html" crc="4080480146" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="deltalab.html" crc="270808476" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="hycel.html" crc="4072876720" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="sartorius.html" crc="498495619" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="erma.html" crc="4293503551" seo="true" mt="1569080214196" redirect="true"/>
+  <file name="sakura.html" crc="512563264" seo="true" mt="1563155797809" redirect="true"/>
+  <file name="bolsa-de-trabajo.html" crc="108949489" seo="true" mt="1569081608024" redirect="true"/>
+</manifest>

@@ -1,0 +1,42 @@
+[
+    {
+        "Id": "ecfde1a8-7428-43ea-8321-61236594bb48",
+        "Name": "blog",
+        "Type": "Folder"
+    },
+    {
+        "Id": "16eadabc-8c43-46bc-ba6d-616b0dd9b52c",
+        "Name": "catalogos",
+        "Type": "Folder"
+    },
+    {
+        "Id": "72c1b7d2-08cd-43a4-a125-611e3775400d",
+        "Name": "configuracion",
+        "Type": "Folder"
+    },
+    {
+        "Id": "80192b58-bf6f-4890-9823-354cd1de8848",
+        "Name": "noticia",
+        "Type": "Folder"
+    },
+    {
+        "Id": "522e0d29-d2ea-4579-a63a-83d2db8c6eb3",
+        "Name": "programa",
+        "Type": "Folder"
+    },
+    {
+        "Id": "489cc277-7c5d-4764-947c-b6f801457e99",
+        "Name": "videoteca",
+        "Type": "Folder"
+    },
+    {
+        "Id": "134f78ac-05b0-4c1a-922b-c43e8f60abb2",
+        "Name": "videotecanvi",
+        "Type": "Folder"
+    },
+    {
+        "Id": "05b7cae6-51a2-4aa1-88d1-25ad1c47ac79",
+        "Name": ".content",
+        "Type": "Document"
+    }
+]

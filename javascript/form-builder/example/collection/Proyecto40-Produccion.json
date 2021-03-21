@@ -1,0 +1,192 @@
+{
+    "items": [
+        {
+            "type": "collection",
+            "name": "catalogos",
+            "title": "Catálogos",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "name": "blogs",
+                    "title": "Blogs",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs"
+                },
+                {
+                    "type": "element",
+                    "name": "programas",
+                    "title": "Programas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas"
+                },
+                {
+                    "type": "element",
+                    "name": "taletos",
+                    "title": "Talentos",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/talentos"
+                }
+            ]
+        },
+        {
+            "type": "collection",
+            "name": "noticias",
+            "title": "Noticias",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "name": "notas",
+                    "title": "Notas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/notas"
+                },
+                {
+                    "type": "element",
+                    "name": "galerias",
+                    "title": "Galerias",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/galerias"
+                },
+                {
+                    "type": "element",
+                    "name": "infografias",
+                    "title": "Infografías",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/noticias/infografias"
+                },
+                {
+                    "type": "element",
+                    "name": "encuestas",
+                    "title": "Encuestas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/encuestas"
+                },
+                {
+                    "type": "element",
+                    "name": "capitulo",
+                    "title": "Capitulo",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/capitulo"
+                }
+            ]
+        },
+        {
+            "type": "collection",
+            "name": "programas",
+            "title": "Programas",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "name": "notas",
+                    "title": "Notas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/notas"
+                },
+                {
+                    "type": "element",
+                    "name": "galerias",
+                    "title": "Galerias",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/galerias"
+                },
+                {
+                    "type": "element",
+                    "name": "infografias",
+                    "title": "Infografías",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/programas/infografias"
+                },
+                {
+                    "type": "element",
+                    "name": "encuestas",
+                    "title": "Encuestas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/encuestas"
+                },
+                {
+                    "type": "element",
+                    "name": "capitulo",
+                    "title": "Capitulo",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/capitulo"
+                }
+            ]
+        },
+        {
+            "type": "collection",
+            "name": "blogs",
+            "title": "Blogs",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "name": "notas",
+                    "title": "Notas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/notas"
+                },
+                {
+                    "type": "element",
+                    "name": "galerias",
+                    "title": "Galerias",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/galerias"
+                },
+                {
+                    "type": "element",
+                    "name": "infografias",
+                    "title": "Infografías",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/blogs/infografias"
+                },
+                {
+                    "type": "element",
+                    "name": "encuestas",
+                    "title": "Encuestas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/encuestas"
+                },
+                {
+                    "type": "element",
+                    "name": "capitulo",
+                    "title": "Capitulo",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/capitulo"
+                }
+            ]
+        },
+        {
+            "type": "element",
+            "name": "videoteca",
+            "title": "Videoteca",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": "http://localhost:9000/videoteca"
+        }
+    ]
+}

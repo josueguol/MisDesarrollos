@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSS3", "AWSS3\AWSS3.csproj", "{E592BB36-B693-428D-BEEE-D62A1F51D6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSearchS3", "FileSearchS3\FileSearchS3.csproj", "{DEBD3A06-B483-400F-96AC-CA38C735F036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E592BB36-B693-428D-BEEE-D62A1F51D6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E592BB36-B693-428D-BEEE-D62A1F51D6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E592BB36-B693-428D-BEEE-D62A1F51D6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E592BB36-B693-428D-BEEE-D62A1F51D6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEBD3A06-B483-400F-96AC-CA38C735F036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEBD3A06-B483-400F-96AC-CA38C735F036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEBD3A06-B483-400F-96AC-CA38C735F036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEBD3A06-B483-400F-96AC-CA38C735F036}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3D1EA95-619E-4E37-855F-4DC94020494A}
+	EndGlobalSection
+EndGlobal

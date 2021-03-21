@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WakeUp", "WakeUp.csproj", "{EC4AB600-188C-48F8-AA1B-9C40099B7625}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EC4AB600-188C-48F8-AA1B-9C40099B7625}.Debug.ActiveCfg = Release|.NET
+		{EC4AB600-188C-48F8-AA1B-9C40099B7625}.Debug.Build.0 = Release|.NET
+		{EC4AB600-188C-48F8-AA1B-9C40099B7625}.Release.ActiveCfg = Release|.NET
+		{EC4AB600-188C-48F8-AA1B-9C40099B7625}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

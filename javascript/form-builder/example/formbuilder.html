@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Form Builder</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../build/css/formbuilder.css" />
+</head>
+
+<body>
+    <!-- MENÚ SUPERIOR -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+        </div>
+    </nav>
+    <!-- CONTENT AREA -->
+    <div class="container-fluid work-space">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- COMPONENTS TOOLBAR -->
+                <div class="col-lg-3 col-md-3 col-sm-3 work-area">
+                    <div class="dir-panel">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-compressed" aria-hidden="true"></span> Componentes</h3>
+                            </div>
+                        </div>
+                        <div class="full-height-body workarea-scroll-y">
+                            <div class="full-height workarea-place">
+                                <div class="content" id="frmb-toolbar-components">
+                                    <!-- COMPONENTS TOOLS AREA -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sizer"></div>
+                    <div class="tool-panel">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Propiedades</h3>
+                            </div>
+                        </div>
+                        <div class="full-height-body workarea-scroll-y">
+                            <div class="full-height workarea-place">
+                                <div class="content" id="frmb-toolbar-properties">
+                                    <!-- COMPONENTS TOOLS AREA -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FORMBUILDER AREA -->
+                <div class="col-lg-9 col-md-9 col-sm-9 work-area">
+                    <div class="panel panel-info full-height">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Documento: </h3>
+                        </div>
+                        <div class="panel-body full-height-body">
+                            <div class="workarea-builder">
+                                <div class="workarea-actions workarea-scroll-y">
+                                    <div class="workarea-place margin-bottom: 10px;" >
+                                        <form class="form-horizontal margin-sides" id="frbm-workarea-docProperties">
+                                        <!-- DOC PROPERTIES AREA -->
+                                        </form>
+                                    </div>
+                                    <div class="workarea-buttons pull-right" id="frbm-action-buttons">
+                                        <button type="button" class="btn btn-primary btn-xs">Guardar</button>
+                                        <button type="button" class="btn btn-default btn-xs">Cancelar</button>
+                                    </div>
+                                </div>
+                                <div class="alert-info" role="alert"><h4>Formulario:</h4></div>
+                                <div class="workarea-elements workarea-scroll-y">
+                                    <div class="workarea-place workarea-sortable" id="frmb-workarea-components">
+                                        <!-- FORMBUILDER AREA -->
+                                    </div>
+                                    <div class="workarea-place" id="frbm-droppable-component">
+                                        <div class="workarea-place text-center workarea-plus">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SCRIPTS AREA -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/handlebars/handlebars.min.js"></script>
+    <script src="../build/js/formbuilder.js"></script>
+    <script src="js/yourcode.js"></script>
+    <div id="frmb-components-templates"></div>
+    <div id="frmb-forms-templates"></div>
+</body>
+<!-- TODO: LLEVAR LOS TEMPLATES A ARCHIVOS INDIVUDALES -->
+<!-- HBS TEMPLATES AREA -->
+<script id="frmb-component-template" type="text/x-handlebars-template">
+    {{#each items}}
+    <div class="btn btn-primary draggable"{{#each this}} data-{{@key}}="{{this}}"{{/each}}>
+        <span class="glyphicon {{icon}}"></span> {{label}}
+    </div>
+    {{/each}}
+</script>
+<!-- COMPONENTS -->
+<script id="CtrlCajadeTexto-template" type="text/x-handlebars-template">
+    <div class="workarea-place workarea-draggable" data-name="{{name}}" data-title="{{title}}" data-icon="{{icon}}">
+        <div class="form-group">
+            <div class="cover"></div>
+            <label>{{label}}</label>
+            <input class="form-control">
+        </div>
+    </div>
+</script>
+<script id="CtrlFecha-template" type="text/x-handlebars-template">
+    <div class="workarea-place workarea-draggable" data-name="{{name}}" data-title="{{title}}" data-icon="{{icon}}">
+        <div class="form-group">
+            <div class="cover"></div>
+            <div class="input-group date">
+                <input type="text" class="form-control" placeholder="1979/10/02 23:45 PM" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="CtrlCheckbox-template" type="text/x-handlebars-template">
+    <div class="workarea-place workarea-draggable" data-name="{{name}}" data-title="{{title}}" data-icon="{{icon}}">
+        <div class="checkbox">
+            <div class="cover"></div>
+            <label>
+                <input type="checkbox"> Check
+            </label>
+        </div>
+    </div>
+</script>
+<script id="CtrlImagen-template" type="text/x-handlebars-template">
+    <div class="workarea-place workarea-draggable" data-name="{{name}}" data-title="{{title}}" data-icon="{{icon}}">
+        <div class="form-group">
+            <div class="cover"></div>
+            <label>Image</label>
+            <input type="file">
+            <p class="help-block">Subir imagen...</p>
+        </div>
+    </div>
+</script>
+<script id="CtrlCombobox-template" type="text/x-handlebars-template">
+    <div class="workarea-place workarea-draggable" data-name="{{name}}" data-title="{{title}}" data-icon="{{icon}}">
+        <div class="dropdown">
+            <div class="cover"></div>
+            <button class=" btn btn-default dropdown-toggle" type="button">
+                Combo
+                <span class="caret"></span>
+            </button>
+        </div>
+    </div>
+</script>
+<script id="CtrlGrid-template" type="text/x-handlebars-template">
+    <div class="workarea-place workarea-draggable" data-name="{{name}}" data-title="{{title}}" data-icon="{{icon}}">
+        <div class="form-group">
+            <div class="cover"></div>
+            <select multiple class="form-control">
+                <option selected="true">Some option</option>
+                <option selected="true">Another option</option>
+                <option>Any option</option>
+            </select>
+        </div>
+    </div>
+</script>
+<script id="Default-template" type="text/x-handlebars-template">
+    <div class="workarea-place workarea-draggable" data-name="{{name}}" data-title="{{title}}" data-icon="{{icon}}">
+    </div>
+</script>
+<!-- END HBS TEMPLATES AREA -->
+
+</html>

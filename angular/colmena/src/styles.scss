@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import './scss/themes/blue_theme';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: $base_color;
+    font-size: 12px;
+    font-family: 'Muli', sans-serif;
+    padding-top: 40px;
+}
+
+/* Estilos para resetear los botones del material */
+.btn {
+    height: 40px;
+    min-width: 40px !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Estilos para los titulos */
+.title_component {
+    font-size: 1.2em;
+}
+

@@ -1,0 +1,264 @@
+<?php 
+	$compartir = $this->compartir['items'][0];
+	$titulo		 	= $compartir["titulo"];
+	$descripcion 	= $compartir["titulo"];
+	$descripcionR 	= htmlspecialchars($compartir["titulo"], ENT_QUOTES);
+	$urlImagen		= $compartir["imagen"];
+	/****Metadata HTML ***/
+	$this->metadatos["configuracion"][0]["cTitulo"]			 = htmlspecialchars("Punto Casa Bolsa", ENT_QUOTES);
+	$this->metadatos["configuracion"][0]["cMetaDescripcion"] = htmlspecialchars($descripcion, ENT_QUOTES);
+	$cMetaKeywords = $descripcion.$descripcionR;
+	$cMetaKeyWord  = '';
+	foreach(explode(' ',$cMetaKeywords) as $keyWord){
+		if(strlen($keyWord) > 2){
+			$conservar = '0-9a-zñáéíóú'; // juego de caracteres a conservar
+			$regex = sprintf('~[^%s]++~i', $conservar); // case insensitive
+			$keyWord = preg_replace($regex, '', $keyWord);
+			$cMetaKeyWord[] =   $keyWord;
+		}
+	}
+	$this->metadatos["configuracion"][0]["cMetaKeywords"] = implode(',', $cMetaKeyWord);
+	/****Metadata HTML ***/
+	
+	
+	$crop ="";
+	$this->imgHisFB = $crop . $urlImagen;
+	
+	$this->metaFacebook =  @<<<METANOTA
+	
+  	<meta property="og:type"   content="article" />
+	<meta property="og:url"    content="http://{$this->site}" />
+	<meta property="og:title"  content="{$titulo}" />
+	<meta property="og:image"  content="{$this->imgHisFB}" />
+	<meta property="og:description"  content="{$descripcionR}" />
+	
+METANOTA;
+	
+	$this->metaFacebook .= @<<<METATWITTER
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$titulo}">
+	<meta name="twitter:description" content="{$descripcionR}">
+	<meta name="twitter:image:src" content="{$urlImagen}">
+	<meta name="twitter:domain" content="http://{$this->site}">
+	<meta name="twitter:site" content="http://{$this->site}">
+	
+METATWITTER;
+?>
+
+  <link rel="stylesheet" href="/portal/styles/home.css">
+
+<?php //echo $this->render('My/Helper/nav/testNav2019.phtml'); ?>
+
+  <div class="pcb-box0">
+    <div id="slides">
+      <!-- <a href="productos.html"> -->
+      <a href="#productos">
+        <img src="/portal/images/slide1.jpg" alt="">
+      </a>
+      <!-- <a href="coaching-financiero.html"> -->
+      <a href="//www.puntotrader.mx/coaching-financiero.html">
+        <img src="/portal/images/slide2.jpg" alt="">
+      </a>
+      <a href="//www.puntotrader.mx/test.html">
+        <img src="/portal/images/slide3.jpg" alt="">
+      </a>
+      <a href="#pqInvertir">
+        <img src="/portal/images/slide4.jpg" alt="">
+      </a>
+    </div>
+    <a href="/coaching-financiero.html" class="edgeBtn buttonP">solicitar asesoría
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="pcb-box3">
+    <div class="contentBox">
+      <div>
+        <div>
+          <h2>Conoce qué estilo de inversionista tienes.</h2>
+          <p>Todos somos diferentes, por eso es importante conocer tu etapa
+            <br>de vida y objetivos financieros para comenzar a invertir.</p>
+          <a href="test.html">Conoce tu estilo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contentBox">
+    <div>
+      <div class="pcb-box4">
+        <h2 id="productos">
+          <strong>Los productos</strong> que tenemos para&nbsp;ti</h2>
+        <a href="productos.html?prod=diario" class="pcb-prd1">
+          <span>
+            <img src="/portal/icons/pcb-ico-diario.svg" alt="Diario">
+          </span>
+          <strong>diario</strong>
+        </a>
+        <a href="productos.html?prod=corp" class="pcb-prd2">
+          <span>
+            <img src="/portal/icons/pcb-ico-corp.svg" alt="Corp">
+          </span>
+          <strong>corp</strong>
+        </a>
+        <a href="productos.html?prod=fibras" class="pcb-prd3">
+          <span class="buttonP">
+            <img src="/portal/icons/pcb-ico-fibras.svg" alt="Fibras">
+          </span>
+          <strong>fibras</strong>
+        </a>
+        <a href="productos.html?prod=mex" class="pcb-prd4">
+          <span>
+            <img src="/portal/icons/pcb-ico-mex.svg" alt="Mex">
+          </span>
+          <strong>mex</strong>
+        </a>
+        <a href="productos.html?prod=plus" class="pcb-prd5">
+          <span>
+            <img src="/portal/icons/pcb-ico-plus.svg" alt="Plus">
+          </span>
+          <strong>plus</strong>
+        </a>
+        <a href="productos.html?prod=global" class="pcb-prd6">
+          <span>
+            <img src="/portal/icons/pcb-ico-global.svg" alt="Global">
+          </span>
+          <strong>global</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="pqInvertir" class="contentBox">
+    <div>
+      <div class="pcb-box2">
+        <img src="/portal/images/businessmen.jpg" alt="">
+        <div>
+          <h2>¿Por qué invertir con nosotros?</h2>
+          <p>
+            En Punto Casa de Bolsa encontrarás un aliado para lograr tus metas financieras. Así sea tu primera
+            experiencia de inversión
+            en casa de bolsa, o ya tengas experiencia y te sientas preparado para gestionar tú mismo tus operaciones,
+            siempre
+            contarás con ayuda de expertos y una robusta plataforma de inversión.
+          </p>
+          <ul>
+            <li>
+              Tú tendrás el control de tu dinero, con disponibilidad diaria, o en inversiones a diferentes plazos.
+            </li>
+            <li>
+              Invierte en productos cuidadosamente creados por nuestros expertos para ser la estrategia de inversión
+              perfecta para ti.
+            </li>
+            <li>
+              Gestiona tu portafolio desde cualquier lugar con nuestra App Punto Trader.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pcb-box6">
+    <div class="contentBox">
+      <div>
+        <div>
+          <div>
+            <img src="/portal/images/app-download.png" alt="">
+          </div>
+          <div>
+            <img src="/portal/icons/punto-trader-logo.svg" alt="Punto Trader">
+            <ul>
+              <li>Compra y vende acciones en tiempo real.</li>
+              <li>Invierte a plazo en el Mercado de Dinero.</li>
+              <li>Consulta tu Estado de Cuenta.</li>
+              <li>Disponibilidad inmediata para bajar tu inversión.</li>
+            </ul>
+            <a href="https://itunes.apple.com/us/app/punto-trader/id671222553?mt=8">
+              <img src="/portal/icons/apple-app-store.svg" alt="App Store">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.casadebolsa.front_principal&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+              <img src="/portal/icons/google-play-store.svg" alt="Play Store">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contentBox pcb-box5" style="">
+    <div>
+      <div>
+        <h2>Consejos y finanzas personales</h2>
+        <span id="indicator">
+          <i class="fas fa-plus"></i>
+          <i class="fas fa-arrow-right"></i>
+        </span>
+        <div id="swipeBar" class="swipeBar">
+          <div id="swipeBtns">
+          <?php 
+          	$iconos 	= array("","pcb-ico-finanzas.svg","pcb-ico-patrimonio.svg","pcb-ico-salud.svg","pcb-ico-familia.svg","pcb-ico-viajes.svg","pcb-ico-ahorro.svg","pcb-ico-negocios.svg");
+          	$categorias = array("finanzas","patrimonio","salud","familia","viajes","ahorro","negocios");//Orden de los elementos (escritos en minisculas), el nombre las categorias deben ser la misma que den de alta en el cms (no necesariamente minisculas), la forma como lo habia echo generaba los nombres de categoria de forma dinamica (en orden diferente), el pex es que el cliente lo mas seguro que lo quiera como esta en produccion, por eso cree este arreglo
+          	 
+          	$dataIcono 	= $this->datahome;
+          	$contadorI 	= 1;
+          	//para generar las categorias de forma dinamica :  foreach ($dataIcono as $keyI => $valoresI):
+          	
+          	foreach ($categorias as $keyI => $valoresI):
+          	if($contadorI <= 7): //Numero maximo de elementos a mostrar
+          	?>
+	            <button <?php if($contadorI == 1) echo 'class="active"';?>  data-id="<?php echo $contadorI;?>">
+	              <img src="/portal/icons/<?php echo $iconos[$contadorI];?>" alt="<?php echo $valoresI; /*  $keyI */?>" title="<?php echo $valoresI; /* $keyI */ ?>">
+	              <span><?php echo ucfirst($valoresI);  /*  mb_substr(ucfirst($keyI),0,10);*/?></span>
+	            </button>
+    		<?php 
+    			$contadorI++;
+    		endif;
+    		endforeach;?>
+          </div>
+        </div>
+        <div id="collections" class="collections">
+        <?php 
+        $dataHome 	= $this->datahome;
+        $contador 	= 1;
+        $contadorK	= 0;
+        //categorias de forma dinamica:  foreach ($dataHome[$key] as $keyValue => $datos):
+        foreach ($dataHome as $key => $valores): // Recorrer las categorias o secciones
+        	if($contador <= 7): //Numero maximo de elementos a mostrar
+        		echo '<div id="collection-'.$contador.'">';
+        			foreach ($dataHome[$categorias[$contadorK]] as $keyValue => $datos): // Recorrer los registros de cada cadategoria o secciones
+		          				if ($keyValue <= 7):
+		?>
+					            <a href="<?php echo $datos["urlC"];?>">
+					            	<div>
+					              		<img src="<?php echo $datos["imagen"]; ?>" alt="<?php echo $datos["tituloC"];?>" width="278" height="166">
+					              		<strong><?php echo $datos["tituloC"];?></strong>
+					              		<?php echo $datos["contenidoC"];?>
+					              		<span>ver más</span>
+					              	</div>
+					            </a>
+					            <?php if(($keyValue + 1) % 2 == 0): ?><span>&nbsp;</span><?php endif;?>
+		          	
+		<?php 	
+								endif;
+
+          			endforeach;
+          		echo '</div>';
+          	endif;	
+          	$contador++;
+          	$contadorK++;
+          endforeach;?>
+         
+          </div>
+        </div>
+        <div class="pcb-buttonBox">
+          <a href="blogs/index" class="buttonP">blog financiero</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="/portal/scripts/MooTools-Core-1.6.0-compressed.js"></script>-->
+  <script src="/portal/scripts/header.js"></script>
+  <script src="/portal/scripts/home.js"></script>

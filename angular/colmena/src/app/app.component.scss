@@ -1,0 +1,264 @@
+@import '../scss/mixins/flexbox';
+@import '../scss/themes/blue_theme';
+@import '../scss/variables';
+
+
+.test { border:1px solid crimson }
+.test2 { border:1px solid dodgerblue }
+.test3 { border:1px solid green }
+
+
+/*============== Estilos para el header ==============*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    -webkit-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.5);
+}
+/* Estilos para la navbar */
+.navbar_component {
+    height: 40px;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    background-color: $dasboard_base-dark;
+    color: $light_color;
+    > div {
+        @include flexbox;
+        @include align-items(center);
+    }
+}
+/* Estilos para el logo */
+.navbar_component-brand {
+    font-size: 1.4em;
+    margin: 0px;
+}
+
+
+/*============== Estilos para el componente de Barra de estado ==============*/
+.statebar_component-projects {
+    height: 40px;
+    background-color: $base_color;
+    border-bottom: 1px solid $border_color;
+    @include flexbox;
+    @include align-items(center);
+}
+/* Estilos para el projecto actual */
+.project_component-current {
+    font-size: 1em;
+    a {
+        color: $dark_color;
+        text-decoration: none;
+    }
+    a:first-child {
+        &::after {
+            content: '\f054';
+            font-family: "Font Awesome 5 Free";
+            margin: 0 10px;
+        }
+    }
+    a:last-child {
+        color: #858585;
+    }
+}
+
+/*============== Estilos para el panel del perfil y de notificaciones ==============*/
+.profile_component-panel, .notification_component-panel {
+    position: fixed;
+    bottom: 0;
+    height: calc(100% - 81px);
+    width: 100%;
+    max-width: 200px;
+    border-left: 1px solid $border_color;
+    background-color: #fff;
+    z-index: 10;
+    -webkit-box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.25);
+}
+
+/*============== Estilos para el panel de configuración ==============*/
+.settings_component-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($dark_color, .6);
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    opacity: 0;
+    transition-duration: 200ms;
+}
+.settings_component {
+    background-color: #fff;
+    width: 80%;
+    padding: 15px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.53);
+    transform: translateY(-100%);
+    transition-duration: 200ms;
+}
+.settings_component-wrapper.open {
+     opacity: 1;
+     z-index: 70;
+}
+ .settings_component-wrapper.open .settings_component {
+    transform: translateY(0);
+}
+ 
+
+.settings_component-header {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+}
+
+/*============== Estilos para el panel de aplicaciones ==============*/
+.applications_component-panel {
+    position: fixed;
+    height: calc(100% - 80px);
+    width: 250px;
+    left: -100%;
+    bottom: 0;
+    border-right: 1px solid $border_color;
+    transition-duration: 600ms;
+    background-color: #fff;
+    z-index: 10;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+}
+.applications_component-panel.open {
+    left: 0;
+}
+
+
+
+/*============== Estilos para el contenedor principal ==============*/
+.main_wrapper {
+    @include flexbox;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 80px;
+    left: 0;
+}
+/*============== Estilos para la sidenav ==============*/
+.sidenav_component {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: calc(100% - 80px);
+    max-width: 250px;
+    background-color: $dasboard_base-dark;
+    overflow: hidden;
+   z-index: 0;
+}
+/*============== Estilos para area de contenido ==============*/
+.content_component {
+    width: 100%;
+    padding: 15px;
+    transition-duration: 600ms;
+    transform: translateX(0px);
+    position: relative;
+    z-index: 10;
+    background-color: $base_color;
+    -webkit-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.25);
+}
+.content_component.open {
+    transform: translateX(250px);
+}
+
+.content_component div {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+.content_component div p {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid $border_color;
+    text-align: center;
+    span {
+        color: $dasboard_base-blue;
+        font-weight: 700;
+    }
+}
+/*============== Estilos para el footer ==============*/
+footer {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    background-color: $base_color;
+    border-top: 1px solid $border_color;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 60;
+    flex-flow: row nowrap;
+}
+footer div {
+    width: 100%;
+}
+footer div:first-child {
+    width: 150px;
+    padding-left: 10px;
+}
+.footer_component-breadcrumbs {
+    width: 100%;
+    display: none;
+}
+.footer_component-breadcrumbs a {
+    color: #ccc;
+    text-decoration: none;
+}
+.footer_component-breadcrumbs a:last-child {
+    color: $dasboard_base-dark;
+}
+.footer_component-breadcrumbs a span:after {
+    content: '\f054';
+    font-family: "Font Awesome 5 Free";
+    margin: 0 10px;
+    top: 2px;
+    position: relative;
+}
+.footer_component-nav {
+    @include flexbox;
+    @include justify-content(flex-end);
+    width: 100%;
+    max-width: 150px;
+}
+/*===========================================*/
+/*============== Media Queries ==============*/
+/*===========================================*/
+
+@media only screen and (min-width: $medium) {
+    /* Estilos para el logo */
+    .navbar_component-brand {
+        font-size: 1.4em;
+        margin: 0 10px;
+    }
+    /* Estilos para la barra de estado */
+    .sidenav_component.open {
+        min-width: 250px;
+    }
+    .project_component-current {
+        font-size: 1em;
+    }
+    /* Estilos para el footer */
+    .footer_component-breadcrumbs {
+        display: block;
+    }
+}

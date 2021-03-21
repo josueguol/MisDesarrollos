@@ -1,0 +1,414 @@
+.contentBox {
+  width: 100%;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.contentBox>div {
+  width: 1280px;
+  margin: 0 auto 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contentBox>div>div {
+  width: 100%;
+  float: left;
+}
+
+.pcbTest {
+  margin: 30px 0 0 0;
+}
+
+.testTop {
+  width: 100%;
+  float: left;
+  padding: 0 100px 0 80px;
+  box-sizing: border-box;
+}
+
+.steps {
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 4px;
+  background-color: #6D5380;
+}
+
+.steps span {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: -10px;
+  background-color: #ABAFB9;
+  text-align: center;
+  font-size: 1em;
+  line-height: 24px;
+  border-radius: 50%;
+  color: #FFF;
+}
+
+.steps span.activated {
+  background-color: #6D5380;
+}
+
+.steps span:first-child + span {
+  left: 12.5%;
+}
+
+.steps span:first-child + span + span {
+  left: 25%;
+}
+
+.steps span:first-child + span + span + span {
+  left: 37.5%;
+}
+
+.steps span:first-child + span + span + span + span {
+  left: 50%;
+}
+
+.steps span:first-child + span + span + span + span + span {
+  left: 62.5%;
+}
+
+.steps span:first-child + span + span + span + span + span + span {
+  left: 75%;
+}
+
+.steps span:first-child + span + span + span + span + span + span + span {
+  left: 87.5%;
+}
+
+.steps span:first-child + span + span + span + span + span + span + span + span {
+  left: 100%;
+}
+
+.testBottom {
+  width: 100%;
+  float: left;
+  margin: 50px 0 0 0;
+  padding: 40px 60px 30px 60px;
+  box-sizing: border-box;
+  background-color: #F5F2F0;
+}
+
+.testBottom > div {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.testBottom > div.testBox {
+  display: none;
+}
+
+.testBottom > div:first-child {
+  display: block;
+}
+
+.testBottom > div h2 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+  color: #5B296E;
+}
+
+.testBottom > div p {
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 0 0 40px 0;
+  color: #7F8083;
+}
+
+.testBottom > div p strong {
+  font-weight: bold;
+  color: #5B296E;
+}
+
+.testBottom > div h3 {
+  text-align: left;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+  color: #5B296E;
+}
+
+.testBottom > div.testBox > button {
+  width: 220px;
+  margin: 0 30px 60px 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.testBottom > div.testBox > button strong {
+  font-weight: normal !important;
+}
+
+.testBottom > div.testBox > button * {
+  pointer-events: none
+}
+
+.testBottom > div.testBox > button img {
+  width: 140px;
+  height: 140px;
+  display: inline-block;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #FFF;
+  transition: all 0.2s;
+}
+
+.testBottom > div.testBox > button:hover img {
+  background-color: #1BC5A2;
+}
+
+.testBottom > div.testBox > button span {
+  width: 100%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1em;
+  text-align: left;
+  line-height: 1.4em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+  background-color: #FFF;
+  color: #7F8083;
+}
+
+.testBottom > div.testBox > button strong {
+  font-weight: bold;
+}
+
+.testBottom > div.testBox > button span i {
+  font-size: 1.6em;
+  margin-right: 5px;
+  vertical-align: bottom;
+  color: #B0B4BD;
+}
+
+.testBottom > div.testBox > button span i.fa-check-square {
+  display: none;
+  color: #1BB293;
+}
+
+.testBottom > div.testBox > button.selected span i.fa-square {
+  display: none;
+}
+
+.testBottom > div.testBox > button.selected span i.fa-check-square {
+  display: inline-block;
+}
+
+#errorMsg {
+  width: 100%;
+  float: left;
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+}
+
+#errorMsg p {
+  width:300px;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  margin: 0 0 0 0;
+  border-radius: 5px;
+  border: 1px solid rgb(243, 205, 205);
+  background-color: #FFEFEF;
+  color: #B92424;
+}
+
+.testFoot {
+  width: 100%;
+  float: left;
+  margin: 20px 0 0 0;
+}
+
+.testFoot button {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 10px 40px 10px 40px;
+  border-radius: 20px;
+  color: #FFF;
+}
+
+.testFoot button:first-of-type {
+  display: none;
+}
+
+.testFoot button:first-of-type {
+  float: left;
+}
+
+.testFoot button:last-of-type {
+  float: right;
+}
+
+.formEnd {
+  width: 100%;
+  float: left;
+  margin: 30px 0 0 0;
+}
+
+.formEnd input[type="text"] {
+  width: 200px;
+  height: 36px;
+  text-align: center;
+  border: none;
+  margin: 0 5px 14px 5px;
+  font-size: 1em;
+  color: #7F8083;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  background-color: #FFF;
+}
+
+.formEnd input[type="radio"] {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.formEnd strong {
+  text-transform: uppercase;
+  font-size: 0.55em;
+  letter-spacing: 1px;
+  color: #7F8083;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0px;
+  bottom:0px;
+  right: 0px;
+  z-index: 1;
+  background: rgba(255,255,255,0.9);
+}
+
+.loading i {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  font-size: 40px;
+  color: #5B296E;
+  left: 50%;
+  top: 50%;
+  margin: -20px auto auto -20px;
+}
+
+.hdnForm {
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .contentBox>div {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contentBox>div {
+    padding: 20px 0 0 0;
+  }
+  .testTop {
+    padding: 0 44px 0 20px;
+  }
+  .testBottom {
+    padding: 26px 16px 16px 16px;
+  }
+  .testBottom > div.testBox > button {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    display: table;
+    float: left;
+    margin: 0 0 0 0;
+    padding: 0 10px 0 50px;
+    border-bottom: 1px solid #eddef7;
+    background-color: #FFF;
+  }
+  .testBottom > div.testBox > button:last-of-type {
+    border-bottom: none;
+  }
+  .testBottom > div.testBox > button img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    box-shadow: none;
+    padding: 6px;
+    margin: 0 0 0 0;
+    border-radius: 0px;
+  }
+  .testBottom > div.testBox > button:hover img {
+    background-color: transparent;
+  }
+  .testBottom > div.testBox > button span {
+    width: auto;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    box-shadow: none;
+    padding: 0 0 0 10px;
+    border-radius: 0px;
+  }
+  .testFoot button {
+    padding: 10px 20px 10px 20px;
+  }
+  .testBottom > div h2, .testBottom > div h3 {
+    font-size: 1em;
+  }
+  .testBottom > div h3 {
+    margin-bottom: 20px;
+  }
+  .testBottom > div p {
+    font-size: 0.9em;
+  }
+  .testBottom > div.testBox > button img {
+    transition: none;
+    background-color: transparent;
+  }
+  .testBottom > div.testBox > button.selected {
+    background-color: #efe9f1
+  }
+  .testBottom > div.testBox > button.selected span {
+    background-color: transparent;
+    color: #5B296E;
+  }
+  .testBottom > div.testBox > button i {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #errorMsg p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .testBottom > div h2, .testBottom > div h3 {
+    font-size: 0.9em;
+  }
+}

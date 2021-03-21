@@ -1,0 +1,10 @@
+<script id="String-frmb-template" type="text/x-handlebars-template">
+    <div class="workarea-place" data-id="{{control.label}}" {{#each control}} data-{{@key}}="{{this}}" {{/each}}>
+        <div class="form-group form-group-bottom">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" for="frmb-{{name}}" id="frmb-{{name}}">{{control.label}}</span>
+                <input type="text" class="form-control" id="frmb-{{name}}" placeholder="{{control.label}}" value="{{control.value}}" {{#equal control.mode "readonly"}}readonly{{/equal}}>
+            </div>
+        </div>
+    </div>
+</script>

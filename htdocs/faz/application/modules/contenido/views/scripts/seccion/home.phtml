@@ -1,0 +1,184 @@
+<?php
+//$this->headScript()->appendFile('/assets/js/MooTools-Core-1.6.0-compressed.js', $type = 'text/javascript'); 
+	$this->headLink()->appendStylesheet('/assets/v2/styles/animate.css?v=3');
+	// Solo lo implemente de puro gusto en esta sección,pues nadien me lo pidio pero se ve mas chido con una miniatura al compartir en las redes sociales...xD
+	$arrayData 		= $this->datos;
+	$url 			= explode("?", $this->site);
+	$url 			= $url[0];
+	$urlNoticias 	= "/contenido/seccion/home";
+	
+	$cantidadC  	= 140;
+	$tresPuntos 	= "";
+	$titulo_		= $arrayData[0]["titulo"];
+	$desc 			= str_replace("&nbsp;", "", strip_tags($arrayData[0]["contenidoC"]));
+	$urlImagen		= $arrayData[0]["imagen"];
+	$descripcion	= htmlspecialchars($desc, ENT_QUOTES);
+	
+	/****Metadata HTML ***/
+	$this->metadatos["configuracion"][0]["cTitulo"] 			= htmlspecialchars("Fundación Azteca - ".$titulo_, ENT_QUOTES);
+	$this->metadatos["configuracion"][0]["cMetaDescripcion"] 	= htmlspecialchars($descripcion, ENT_QUOTES);
+	$cMetaKeywords = $descripcion.$titulo_;
+	$cMetaKeyWord  = '';
+	
+	foreach(explode(' ',$cMetaKeywords) as $key => $keyWord){
+		if(strlen($keyWord) > 2){
+			//$conservar = '0-9a-zñáéíóú'; // juego de caracteres a conservar
+			$conservar = '/[^a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]/iu'; // juego de caracteres a conservar
+			$regex = sprintf('~[^%s]++~i', $conservar); // case insensitive
+			$keyWord = preg_replace($conservar, '',$keyWord);
+			$cMetaKeyWord[] =  $keyWord;
+		}
+	}
+	
+	$this->metadatos["configuracion"][0]["cMetaKeywords"] = implode(',', $cMetaKeyWord);
+	/****Metadata HTML ***/
+	
+	
+	$crop ="";
+	$this->imgHisFB = $crop . $urlImagen;
+	
+	$this->metaFacebook =  @<<<METANOTA
+  	<meta property="og:type"   content="article" />
+	<meta property="og:url"    content="https://{$url}" />
+	<meta property="og:title"  content="{$titulo_}" />
+	<meta property="og:image"  content="{$this->imgHisFB}" />
+	<meta property="og:description"  content="{$descripcion}" />
+METANOTA;
+	
+	$this->metaFacebook .= @<<<METATWITTER
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$titulo_}">
+	<meta name="twitter:description" content="{$descripcion}">
+	<meta name="twitter:image:src" content="{$urlImagen}">
+	<meta name="twitter:domain" content="https://{$url}">
+	<meta name="twitter:site" content="https://{$url}">
+	
+METATWITTER;
+
+?>
+
+<div class="w3-col s12 m12 l12 content">
+
+        <script>
+            var sldItm = [
+            <?php 
+	        if (!empty($this->galeria)) :	
+	           	foreach ($this->galeria as $key => $datos):
+	        ?>
+	        { bckGnd: '<?php echo $datos['urlImagen'];?>', url: '<?php echo $datos['urlLink'];?>' },
+		    <?php             
+	            endforeach;
+	        else:
+	         ?>
+	             { bckGnd: '/assets/v2/images/azteka2.jpg', url: '/contenido/noticias/historico' }
+		    <?php 
+	         endif;
+	        ?>      
+	           ];
+        </script>
+
+        <section class="w3-col s12 m12 l12 sliderContainer">
+            <!-- slider -->
+            <div class="w3-col s12 m12 l12 bluredbg animated"></div>
+            <div class="w3-col s12 m12 l12 container wrapper">
+                <div class="w3-col s12 m12 l12 slideItem animated">
+                    <a href="#">
+                        <!-- <img src="images/azteka2.jpg" alt="Fundación Azteca"> -->
+                        <!-- <img src="images/main_ima_1.png" alt=""> -->
+                    </a>
+                </div>
+                <div class="controles">
+                  <a class="left" href="#" id="toLeft"><i class="fal fa-chevron-left"></i></a>
+                  <a class="right" href="#" id="toRight"><i class="fal fa-chevron-right"></i></a>
+                </div>
+                <!-- eo slider -->
+            </div>
+        </section>
+
+
+        <section class="w3-col s12 m12 l12 conLogo wrapper">
+            <h4 class="animated">Detonamos el potencial de la juventud y de la sociedad mexicana mediante programas educativos<br><i class="fas fa-minus"></i></h4>
+            <p class="animated">Somos firmes creyentes que una sociedad próspera se forma brindando oportunidades, generando capacidades para que las personas puedan mejorar sus condiciones y las de sus comunidades.</p>
+        </section>
+        
+        <section class="w3-col s12 m12 l12 wrapper ejes">
+            <h4 class="animated">Trabajamos en <strong>tres ejes educativos<strong></h4>
+        </section>
+        
+        <section class="w3-col s12 m12 l12 threesome wrapper">
+            <div class="w3-col s12 m4 l4 single yellow">
+                <div class="inner">
+                    <a href="/contenido/seccion/comunidad">
+                        <h3>En la Comunidad<br><i class="fas fa-minus"></i></h3>                    
+                        <p>Promovemos pr&aacute;cticas socialmente responsables.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col s12 m4 l4 single red">
+                <div class="inner">
+                    <a href="/contenido/seccion/programaseducativos">
+                        <h3>Por la Juventud<br><i class="fas fa-minus"></i></h3>
+                        <p>La educaci&oacute;n es la base para mejorar nuestra vida.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col s12 m4 l4 single green">
+                <div class="inner">
+                    <a href="/contenido/seccion/programasambientales">
+                        <h3>Para la Tierra<br><i class="fas fa-minus"></i></h3>
+                        <p>El medio ambiente toma lugar prioritario en nuestra comunidad.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="w3-col s12 m12 l12 videoRow wrapper">
+            <div class="wcol-md-6 offset-md-3">
+                <div class="w3-col s12 m8 l8 video">
+
+                    <h4><strong>Conoce más</strong> de la labor de Fundación Azteca<br></h4>
+                    <div class="int-video">
+                        <div class="int-vinner">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Kw7ykxaeiz0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="w3-col s12 m12 l12 newsRow">
+            <div class="w3-col s12 m12 l12 news">
+                <h3>NOTICIAS</h3>
+                <div class="w3-col s12 m12 l12 wrapper News">
+                <?php 
+	                  if (!empty($this->datos)) :	
+	                     foreach ($this->datos as $key => $datos):
+	                     echo '<div class="w3-col s12 m4 l4 newItem">
+			                        <a href="'.$datos["urlC"].'">
+			                            <div class="itm-ima">
+			                                <div class="inner-ima">
+			                                    <img src="'.$datos["imagen"].'" alt="Articulo Fundación Azteca">
+			                                </div>
+			                            </div>
+			                            <span class="ttl">'.$datos["titulo"].'</span>
+			                            <span class="tsr">'.$datos["contenidoH"].'</span>
+			                        </a>
+		                    	</div>';            
+	                endforeach;
+	            	endif;
+	            	?>
+                </div>
+                <div class="w3-col s12 m12 l12 btnMrNws">
+                    <a href="/contenido/noticias/historico">
+                        ver m&aacute;s noticias
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+<script type="text/javascript" src="/assets/js/MooTools-Core-1.6.0-compressed.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/devices.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/headfoot.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/home.js?v=4"></script>

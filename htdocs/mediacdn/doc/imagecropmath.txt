@@ -1,0 +1,24 @@
+Page Ratio = 0.56222
+
+
+Ej.
+
+1024 w  then 575.71328 h
+
+
+si 900w x 500h
+
+ARi 0.555~
+
+Sea 800w x 500h
+
+ARx 0.625
+
+Si ARi < ARx  entonces wx se ajusta
+
+
+Sea 800w x 400h
+
+ARx 0.5
+
+si nARi > ARx entonces hx se ajusta

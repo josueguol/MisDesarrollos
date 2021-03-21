@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <ConfigPath RootPath="\\tvaapps01\Colmena\Notas" FlowPath="\Deportes\Borrador">
+    <Created>
+      <Evaluate Path="\Futbol\Torneos.xml" Enable="true">
+        <Process Name="Transformer 1" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\TransformerLite.exe">Parametros</Process>
+        <Process Name="Transformer 2" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\Tester.exe">Parametros</Process>
+        <Process Name="Otro proceso " Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\proceso.exe">Parametros</Process>
+      </Evaluate>
+      <Evaluate Path="\notas\" Enable="true" FileTypes=".xml|.json|.rss|.html">
+        <Process Name="Transformer A" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\TransformerLite.exe">Parametros</Process>
+        <Process Name="Transformer B" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\TransformerLite.exe">Parametros</Process>
+        <Process Name="Parser A" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\FileParserV4.exe">Parametros</Process>
+        <Process Name="Publisher A" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\FilePublisherV4.exe">Parametros</Process>
+      </Evaluate>
+    </Created>
+    <Modified>
+      <Evaluate Path="\Futbol\Torneos.xml" Enable="true">
+        <Process Name="Transformer 1" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\TransformerLite.exe">Parametros</Process>
+        <Process Name="Transformer 2" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\Tester.exe">Parametros</Process>
+        <Process Name="Otro proceso " Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\proceso.exe">Parametros</Process>
+      </Evaluate>
+      <Evaluate Path="\notas\" Enable="true" FileTypes=".xml|.json|.rss|.html">
+        <Process Name="Transformer A" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\TransformerLite.exe">Parametros</Process>
+        <Process Name="Transformer B" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\TransformerLite.exe">Parametros</Process>
+        <Process Name="Parser A" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\FileParserV4.exe">Parametros</Process>
+        <Process Name="Publisher A" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\FilePublisherV4.exe">Parametros</Process>
+      </Evaluate>
+    </Modified>
+    <Deleted>
+      <Evaluate Path="\notas\" Enable="true" FileTypes=".xml|.html">
+        <Process Name="FileDelete A" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\FileDelete.exe">Parametros</Process>
+        <Process Name="Transformer X" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\TransformerLite.exe">Parametros</Process>
+        <Process Name="Transformer Y" Description="..." Overwrite="false" Enable="true" Multiple="false" Hide="true" TaskFile="...Ruta\Tester.exe">Parametros</Process>
+      </Evaluate>
+    </Deleted>
+  </ConfigPath>
+</Configuration>

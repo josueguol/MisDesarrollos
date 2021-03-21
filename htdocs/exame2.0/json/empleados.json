@@ -1,0 +1,41 @@
+{
+    "documento": "Empleados",
+    "empleados": [
+        {
+            "nombre": "Bob Patiño",
+            "edad": "37 años",
+            "profesion": "Bufón",
+            "imagen": "http://develop.aztecadeportes.com/examen-azteca/imagenes/bob-profile.jpg"
+        },
+        {
+            "nombre": "Homer Jay Simpson",
+            "edad": "35 años",
+            "profesion": "Inspector de seguridad",
+            "imagen": "http://develop.aztecadeportes.com/examen-azteca/imagenes/homero-profile.jpg"
+        },
+        {
+            "nombre": "Marjorie Bouvier",
+            "edad": "33 años",
+            "profesion": "Ama de Casa",
+            "imagen": "http://develop.aztecadeportes.com/examen-azteca/imagenes/marge-profile.jpg"
+        },
+        {
+            "nombre": "Moe Szyslak",
+            "edad": "28 años",
+            "profesion": "Barman",
+            "imagen": "http://develop.aztecadeportes.com/examen-azteca/imagenes/moe-profile.jpg"
+        },
+        {
+            "nombre": "Barney Gumble",
+            "edad": "40 años",
+            "profesion": "Desconocida",
+            "imagen": "http://develop.aztecadeportes.com/examen-azteca/imagenes/barney-profile.jpg"
+        },
+        {
+            "nombre": "Ned Flanders",
+            "edad": "30 años",
+            "profesion": "Vendedor del Leftorium",
+            "imagen": "http://develop.aztecadeportes.com/examen-azteca/imagenes/ned-profile.jpg"
+        }
+    ]
+}

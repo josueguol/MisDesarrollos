@@ -1,0 +1,37 @@
+[
+    {
+        "Id": "7beb8797-5c38-4afa-9da0-7ea4f92aa46e",
+        "Name": "Capitulos",
+        "Type": "Document"
+    },
+    {
+        "Id": "89794ba6-b1c4-486c-a8f5-9bfa9bbb4970",
+        "Name": "Galerias",
+        "Type": "Document"
+    },
+    {
+        "Id": "b9a2ed09-6ae2-40c0-a6d4-67980a3c58ae",
+        "Name": "ImagenGaleria",
+        "Type": "Document"
+    },
+    {
+        "Id": "141d717a-a4b9-4093-ab34-92ad43365cc6",
+        "Name": "Infografia",
+        "Type": "Document"
+    },
+    {
+        "Id": "3da4af30-727c-4e39-8b17-4aebeea89d4b",
+        "Name": "Nota",
+        "Type": "Document"
+    },
+    {
+        "Id": "1638b352-e778-4629-bd35-341817cbdce3",
+        "Name": "Video",
+        "Type": "Document"
+    },
+    {
+        "Id": "05b7cae6-51a2-4aa1-88d1-25ad1c47ac79",
+        "Name": ".content",
+        "Type": "Document"
+    }
+]

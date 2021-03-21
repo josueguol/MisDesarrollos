@@ -1,0 +1,236 @@
+<!-- Inicio  metricasAdobe -->
+<?php
+        $modelUtilities = new My_Model_Utilities_tortugaUtilities();
+        switch($this->module) {
+            case 'home':
+                if($this->metadatos['configuracion'][0]['programa'] == "home2013") {
+                    $pageId = "01-HomePrincipal";
+                    $pageName = $this->cUri;
+                    $destinationURL = $this->cUrl;
+                    $issueDate = date('Y-m-d');
+                    $effectiveDate = date('Y-m-d');
+                    $tags           = array("home","homeprincipal","aztecaUno");
+                    $tagsSinAcentos = array("home","homeprincipal","aztecaUno");
+                    
+                    $primaryCategory = "aztecaUno";
+                    $subCategory1    = "home";
+                    $pageType        = "homeprincipal";
+                } else {
+                    $pageId = "01-Home";
+                    $pageName = $this->cUri;
+                    $destinationURL = $this->cUrl;
+                    $issueDate = date('Y-m-d');
+                    $effectiveDate = date('Y-m-d');
+                    $tags           = array("home", $this->metadatos['configuracion'][0]['programa']);
+                    $tagsSinAcentos = array("home", $this->metadatos['configuracion'][0]['programa']);
+                    
+                    $primaryCategory = $this->metadatos['configuracion'][0]['cNombre'];
+                    $subCategory1    = "home";
+                    $pageType        = "homeprograma";
+                }
+                break;
+            case 'capitulos':
+                
+                $pageId = $this->variableTemp['capitulogenerico2018'][0]['entryId'] . "-02-Capitulo";
+                $pageName = $this->cUri;
+                $destinationURL = $this->cUrl;
+                $issueDate = date('Y-m-d', strtotime($this->variableTemp['capitulogenerico2018'][0]['dtFecha']));
+                $effectiveDate = date('Y-m-d', strtotime($this->variableTemp['capitulogenerico2018'][0]['dtFecha']));
+                $tags          = explode(",", $this->variableTemp['capitulogenerico2018'][0]['keywords2']);
+                
+                $tagsSinAcentos = array();
+                foreach($tags as $k => $v) {
+                    $tagsSinAcentos[] = $modelUtilities->comvierteUrl($v);
+                }
+                
+                $primaryCategory = $modelUtilities->eliminar_acentos($this->metadatos['configuracion'][0]['cNombre']);
+                $subCategory1    = "capitulo";
+                $pageType        = "vod";
+                
+                break;
+            case 'videos':
+                
+                $pageId = $this->variableTemp['videogenerico2018'][0]['entryId'] . "-34-Videos";
+                $pageName = $this->cUri;
+                $destinationURL = $this->cUrl;
+                $issueDate = date('Y-m-d', strtotime($this->variableTemp['videogenerico2018'][0]['dtFecha']));
+                $effectiveDate = date('Y-m-d', strtotime($this->variableTemp['videogenerico2018'][0]['dtFecha']));
+                $tags          = explode(",", $this->variableTemp['videogenerico2018'][0]['keywords2']);
+                
+                $tagsSinAcentos = array();
+                foreach($tags as $k => $v) {
+                    $tagsSinAcentos[] = $modelUtilities->comvierteUrl($v);
+                }
+                
+                $primaryCategory = $modelUtilities->eliminar_acentos($this->metadatos['configuracion'][0]['cNombre']);
+                $subCategory1    = "video";
+                $pageType        = "vod";
+                
+                break;
+            case 'galerias':
+                $pageId = $this->variableTemp['ubicagenerica']['idGalerias'] . "-04-Galeria";
+                $pageName = $this->cUri;
+                $destinationURL = $this->cUrl;
+                $issueDate = date('Y-m-d', strtotime($this->variableTemp['ubicagenerica']['dtFecha']));
+                $effectiveDate = date('Y-m-d', strtotime($this->variableTemp['ubicagenerica']['dtFecha']));
+                $tags          = explode(",", $this->variableTemp['ubicagenerica']['keywords2']);
+                
+                $tagsSinAcentos = array();
+                foreach($tags as $k => $v) {
+                    $tagsSinAcentos[] = $modelUtilities->comvierteUrl($v);
+                }
+                
+                $primaryCategory = $modelUtilities->eliminar_acentos($this->metadatos['configuracion'][0]['cNombre']);
+                $subCategory1    = "galeria";
+                $pageType        = "galeria";
+                
+                break;
+            case 'notas':
+                if( isset($this->variableTemp['notas-relacionadas-2018']) ){
+                    $nombreContenidoNota = 'notas-relacionadas-2018';
+                }
+                else if( isset($this->variableTemp['notasaz7-2016'] )){
+                    $nombreContenidoNota = 'notasaz7-2016';
+                }
+                $pageId = $this->variableTemp[$nombreContenidoNota][0]['idNotaGenerica'] . "-03-Nota";
+                $pageName = $this->cUri;
+                $destinationURL = $this->cUrl;
+                $issueDate = date('Y-m-d', strtotime($this->variableTemp[$nombreContenidoNota][0]['dtFechaEvento']));
+                $effectiveDate =  date('Y-m-d', strtotime($this->variableTemp[$nombreContenidoNota][0]['dtFechaEvento']));;
+                $tags          = explode(",", $this->variableTemp[$nombreContenidoNota][0]['keywords2']);
+                
+                $tagsSinAcentos = array();
+                foreach($tags as $k => $v) {
+                    $tagsSinAcentos[] = $modelUtilities->comvierteUrl($v);
+                }
+                
+                $primaryCategory = $modelUtilities->eliminar_acentos($this->metadatos['configuracion'][0]['cNombre']);
+                $subCategory1    = "nota";
+                $pageType        = "nota";
+                
+                break;
+            case 'busqueda':
+                
+                $pageId = "09-Busqueda";
+                $pageName = $this->cUri;
+                $destinationURL = $this->cUrl;
+                $issueDate = date('Y-m-d');
+                $effectiveDate = date('Y-m-d');
+                $tags           = array("busqueda");
+                $tagsSinAcentos = array("busqueda");
+                
+                $primaryCategory = "busqueda";
+                $subCategory1    = $this->textobusqueda;
+                $pageType        = "busqueda";
+                
+                break;
+            case 'historico':
+                
+                $pageId = "10-Historico";
+                $pageName = $this->cUri;
+                $destinationURL = $this->cUrl;
+                $issueDate = date('Y-m-d');
+                $effectiveDate = date('Y-m-d');
+                $tags           = array("historico");
+                $tagsSinAcentos = array("historico");
+                
+                $primaryCategory = "historico";
+                $subCategory1    = $modelUtilities->eliminar_acentos($this->strTipo);
+                $pageType        = "historico";
+                
+                break;
+            default:
+                
+                $pageId = "aztecaUno";
+                $pageName = "";
+                $destinationURL = "http://www.aztecauno.com/";
+                $issueDate = date('Y-m-d');
+                $effectiveDate = date('Y-m-d');
+                $tags           = array("default");
+                $tagsSinAcentos = array("default");
+                
+                $primaryCategory = $modelUtilities->eliminar_acentos($this->metadatos['configuracion'][0]['cNombre']);
+                $subCategory1    = "aztecaUno";
+                $pageType        = "aztecaUno";
+                
+                break;
+        }
+        $numTags = count($tags);
+    ?>
+    <script>
+        window.digitalData = {
+            pageInstanceID: '<?php echo $pageId; ?>-aztecaUnoProduccion', // un identificador único de esta página en este entorno (si existe en su CMS)
+            page:{
+                pageInfo:{
+                    pageID: '<?php echo $pageId; ?>', // identificador único de página
+                    pageName: '<?php echo $pageName; ?>', // el nombre de la página que será visto en el analytics (puede ser pathname)
+                    destinationURL: '<?php echo $destinationURL; ?>', //la dirección URL de la página
+                    author: 'aztecaUno', // nombre del autor
+                    issueDate: '<?php echo $issueDate; ?>', // fecha de publicación de la página
+                    effectiveDate: '<?php echo $effectiveDate; ?>', // fecha de actualización de la página
+                    publisher: 'aztecaUno', // nombre del editor del contenido
+                    tags:   [<?php $increment = 1; foreach($tagsSinAcentos as $k => $v) {  if ($increment < $numTags) echo "'".$v."', "; else echo "'".$v."'"; $increment++;  }  ?>] // tags
+                },
+                category:{
+                    primaryCategory: '<?php echo $primaryCategory; ?>', // categoría principal de la página
+                    subCategory1: '<?php echo $subCategory1; ?>', // subcategoría de la página
+                    pageType: '<?php echo $pageType; ?>' // tipo de página
+                },
+                attributes:{
+                    country: 'MX',
+                    language: 'es-mx',
+                    server: 'aztecaUno_prod01' // identificación del servidor
+                }
+            },
+            component:[],
+            event: []
+        };
+    </script>
+    
+    <?php if ($this->module == 'capitulos' || $this->module == 'videos') { ?>
+    <?php $strIndice = ($this->module == 'capitulos') ? 'capitulogenerico2018' : 'videogenerico2018'; ?>
+    <script>
+        // INFORMACIÓN ACERCA DE VÍDEOS
+        window.digitalData.component.push({
+            componentInfo:{
+                componentID: '<?php echo $this->variableTemp[$strIndice][0]['entryId']; ?>', // ID del contenido
+                componentName: '<?php echo $this->variableTemp[$strIndice][0]['cTituloVideo']; ?>', // Nombre del contenido
+                description: '<?php echo $this->variableTemp[$strIndice][0]['cTeaserVideo']; ?>' // Descripción
+            },
+            category:{
+                primaryCategory: '<?php echo $this->metadatos['configuracion'][0]['cNombre']; ?>', // categoría principal del contenido
+                componentType: 'video', // tipo de componente
+                componentSubType: 'vod' // subtipo de componente (vod / live)
+            },
+            attributes:{
+                production: 'aztecaUno',
+                player: 'kdplayer',
+                length: <?php echo $this->variableTemp[$strIndice][0]['iDuracion']; ?>,  // duracion en segundos / (para Live - la cantidad deseada para considerar un 'complete' ej: '1800' = 30min
+                offset: 0 // tiempo actual del contenido
+            }
+        });
+    </script>
+    <?php } ?>
+    
+    <!--<script src="//assets.adobedtm.com/launch-ENf2240900d91d486b902bfeb35af4cd95.min.js"></script> -->
+    
+    <?php if ($this->module == 'capitulos' || $this->module == 'videos') { ?>
+    <script>
+        
+        function playContentPlayer(){ playDL(); }
+        
+        function pausedContentPlayer(){ pauseDL(); }
+        
+        function completeContent(){ completeDL(); }
+        
+        function firstQuartilePercentaje(){ percentageDL('25%'); }
+				
+        function secondQuartilePercentaje(){ percentageDL('50%'); }
+				
+        function thirdQuartilePercentaje(){ percentageDL('75%'); }
+        
+    </script>
+    <?php } ?>
+
+    <!-- Fin  metricasAdobe -->
+

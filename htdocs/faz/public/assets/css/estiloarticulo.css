@@ -1,0 +1,985 @@
+
+    h1, h3 {
+        font-weight: 600;
+    }
+    h3 {
+        margin-bottom: 30px;
+        color: #999;
+    }
+    span {
+        /* font-size: 46px;
+        color: yellow; */
+        margin-bottom: 20px;
+        display: inline-block;
+        font-weight: 600;
+        text-align: center;
+    }
+    span > span {
+        margin-bottom: 0;
+    }
+
+    .backW {
+        position: relative; 
+        overflow: hidden; 
+        float: left; 
+        width: 100%; 
+        height: 105px; 
+        background: #ffffff;
+    }
+    .logo{
+        position: absolute;
+        top:0px;
+        left:100px;
+        z-index: 1000;
+        max-height: 105px;
+        margin: 0 30vw;
+    }
+
+    .logo img{
+        /* margin-top:2%;
+        max-width: 70%; */
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .circle {
+        background: #2980b9;
+        width: 200px;
+        line-height: 200px;
+        display: inline-block;
+        color: #fff;
+        border-radius: 100%;
+    }
+    .contador{
+    	background: #4aa458;
+    	padding: 20px 0;
+    	text-align: center;
+    }
+    .titulo{
+    	width: 100%;
+    }
+    .titulo img{
+    	width: 30%;
+    }
+    .contimg{
+        padding-top: 40px;
+        width:100%;
+    }
+    .contimg img{
+        width:30%;
+    }
+
+    .cont1, .cont2, .cont3{
+        display: inline-block; 
+        vertical-align: top; 
+        text-align: center;
+        padding-bottom: 30px;
+        width: 32%;
+    } 
+    .contp1, .contp2, .contp3{ 
+        width: 100%;
+    } 
+    .contp1 p, .contp2 p, .contp3 p{
+        color: #fff;
+        font-size: 30px; 
+    }
+
+    .texto{
+    	background-image: url(../img/back.png);
+    	height: 400px;
+    	width: 100%;
+    }
+
+    .texto h2{
+        font-family: Montserrat, sans-serif;
+    	margin-top: 100px;
+    	padding: 40px 100px;
+    	font-size: 30px;
+    	color: #333;
+    }
+
+    .texto p{
+        font-family: Montserrat, sans-serif;
+    	padding: 20px 100px;
+    	text-align: left;
+    	font-size: 24px;
+    	color: #333;
+    }
+
+    .texto p#text{
+        font-family: Montserrat, sans-serif;
+        padding-top: 120px;
+    }
+
+
+    .texto1{
+        background-image: url(../img/back1.png);
+        padding: 80px 40px;
+        height: 700px;
+        width: 100%;
+    }
+
+    .text1, .text2, .text3{
+        display: inline-block;
+        vertical-align: top;
+        width:32%;
+    }
+
+    .text2{
+        padding-top: 70px;
+    }
+    .text3{
+        padding-top: 30px;
+    }
+
+    .texto1 h2{
+        font-family: Montserrat, sans-serif;
+        margin-top: 10px;
+        padding: 10px 30px;
+        font-size: 28px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .texto1 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 30px;
+        text-align: left;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .divs01, .divs02, .divs03 {
+      display: inline-block;
+      min-height: 130px;
+      padding-top: 10px;
+      text-align: center;
+      vertical-align: top;
+      width: 24%;
+      }
+
+    footer{
+        background: #292d32;
+    	margin: 40px auto 0 auto;
+    	min-height: 300px;
+    	width: 100%;
+    }
+
+    .content-footer{
+    	margin: 0 auto;
+    	width: 90%;
+    }
+
+    .redes{
+    	margin-top: 40px;
+    	margin: auto;
+    	width: 30%;
+    }
+
+    .red1, .red2, .red3, .red4{
+      margin: auto;
+      display: inline-block;
+      padding-top: 40px;
+      text-align: center;
+      vertical-align: top;
+      width: 24%;
+    } 
+
+    .red1 img, .red2 img, .red3 img, .red4 img{
+      height: 35px;
+    }
+
+    .logo-footer{
+    	width: 100%;
+    	margin: 50px auto 0 auto;
+    }
+
+    .logo-f{
+    	font-size: 14px;
+    	text-align: center;
+    	margin: 0 auto;
+    	width: 55%;
+    }
+
+    .logo-f img{
+    	width: 80%;
+    }
+
+    .nosotros{
+        padding-top: 80px;
+        padding-left: 60px;
+        padding-right: 60px;
+        width: 100%;
+    }
+
+    .paginas{
+    	padding: 0;
+    	text-align: center;
+    	margin: 0 auto;
+    	width: 100%;
+    }
+
+    .pag1 img, .pag2 img, .pag3 img{
+    	width: 100%;
+    }
+
+    .pag1, .pag2, .pag3{
+    	display: inline-block;
+    	vertical-align: top;
+    	width: 32%;
+    }
+
+    .mitades{
+    	margin: 60px auto;
+    	width: 100%;
+    }
+    .mitadesa{
+        margin-top: 540px;
+        width: 100%;
+    }
+
+    .mitades1{
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+    .mitad11, .mitad12{
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+
+    .mitad13, .mitad12{
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+
+    .mitad21, .mitad22{
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+
+    .mitad23, .mitad22{
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+
+    .mitad31, .mitad32{
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+
+    .mitad33, .mitad32{
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+
+    .mitad1, .mitad2{
+    	margin: 0 auto;
+    	padding-left: 40px;
+    	display: inline-block;
+    	vertical-align: top;
+    	width: 49%;
+    }
+    .mitad1{
+    	text-align: center;
+    }
+    .mitad1 h2{
+        font-family: Montserrat, sans-serif;
+    	text-align: center;
+    }
+    .mitad2{
+    	text-align: center;
+    }
+    .mitad2 img{
+        width: 100%;
+    }
+    .mitad1 h2, .mitad2 h2{
+        font-family: Montserrat, sans-serif;
+    	font-size: 30px;
+    	font-weight: 800;
+        text-align: center;
+    	color:#666;
+    }
+    .mitad2 h2{
+        text-align: center;
+    }
+    .mitad1 h3, .mitad2 h3{
+        font-family: Montserrat, sans-serif;
+    	font-size: 21px;
+    	color:orange;
+    }
+    .mitad2 h3{
+        text-align: center;
+    }
+    .mitad1 p, .mitad2 p{
+        font-family: Montserrat, sans-serif;
+    	margin: 10px;
+    	font-size: 22px;
+    	color:#333;
+    }
+
+    .mitad11{
+        background: #e3ddc1;
+        padding: 180px 0;
+    }
+    .mitad12{
+        background: #fff;
+        padding: 30px 0;
+    }
+    .mitad13{
+        background: #e3ddc1;
+        padding: 100px 0;
+    }
+
+    .mitad21{
+        background: #f9dee2;
+        padding: 180px 0;
+    }
+    .mitad22{
+        background: #fff;
+        padding: 30px 0;
+    }
+    .mitad23{
+        background: #f9dee2;
+        padding: 100px 0;
+    }
+
+    .mitad31{
+        background: #d1eddd;
+        padding: 180px 0;
+    }
+    .mitad32{
+        background: #fff;
+        padding: 30px 0;
+    }
+    .mitad33{
+        background: #d1eddd;
+        padding: 100px 0;
+    }
+
+    .mitad11 img{
+        text-align: center;
+        margin: 0 auto;
+        width: 40%;
+    }
+    .mitad11 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 24px;
+        color:#333;
+    }
+
+    .mitad13 img{
+        text-align: center;
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .mitad13 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 24px;
+        color:#333;
+    }
+
+    .mitad12 h2{
+        text-align: left;
+        font-family: Montserrat, sans-serif;
+        font-size: 21px;
+        font-weight: 800;
+        padding-left: 30px;
+        color:#333;
+    }
+    .mitad12 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 20px;
+        color:#333;
+    }
+
+
+    .mitad21 img{
+        text-align: center;
+        margin: 0 auto;
+        width: 40%;
+    }
+    .mitad21 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 24px;
+        color:#333;
+    }
+
+    .mitad23 img{
+        text-align: center;
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .mitad23 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 24px;
+        color:#333;
+    }
+
+    .mitad22 h2{
+        font-family: Montserrat, sans-serif;
+        text-align: left;
+        font-family: sans-serif;
+        font-size: 21px;
+        font-weight: 800;
+        padding-left: 30px;
+        color:#333;
+    }
+    .mitad22 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: le;
+        font-size: 20px;
+        color:#333;
+    }
+
+
+    .mitad31 img{
+        text-align: center;
+        margin: 0 auto;
+        width: 40%;
+    }
+    .mitad31 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 24px;
+        color:#333;
+    }
+
+    .mitad33 img{
+        text-align: center;
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .mitad33 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 24px;
+        color:#333;
+    }
+
+    .mitad32 h2{
+        font-family: Montserrat, sans-serif;
+        text-align: left;
+        font-family: sans-serif;
+        font-size: 21px;
+        font-weight: 800;
+        padding-left: 30px;
+        color:#333;
+    }
+    .mitad32 p{
+        font-family: Montserrat, sans-serif;
+        padding: 0 40px;
+        text-align: left;
+        font-size: 20px;
+        color:#333;
+    }
+
+    .cajas{
+        margin: 0 auto;
+        padding: 60px;
+        width: 100%;
+    }
+    .cajas1a{
+        background: #e3e3e3;
+        padding: 80px 40px;
+        margin: 40px auto 0 auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .cajas h2{
+        text-align: left;
+        font-family: Montserrat, sans-serif;
+        font-size: 21px;
+        font-weight: 900;
+        color:red;
+    }
+    .cajas p{
+        font-family: Montserrat, sans-serif;
+        text-align: left;
+        font-size: 20px;
+        color:#666;
+    }
+
+    .cajas img{
+        text-align: center;
+    }
+
+    .caja1 p, .caja2 p{
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        color:#666;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    .caja1{
+        display: inline-block;
+        vertical-align: top; 
+        width: 29%;
+    }
+    .caja1a{
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 20px;
+        width: 29%;
+    }
+    .caja2{
+        display: inline-block;
+        vertical-align: top;
+        width: 70%;
+    }
+    .caja1 img{
+        width: 65%;
+    }
+    .caja1a img{
+        width: 100%;
+    }
+
+    .adn{
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .adn img{
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .mitad11, .mitad12{
+        display: block;
+        width: 100%;
+    }
+        .mitad13, .mitad12{
+        display: block;
+        width: 100%;
+    }
+
+        .mitad21, .mitad22{
+        display: block;
+        width: 100%;
+    }
+        .mitad23, .mitad22{
+        display: block;
+        width: 100%;
+    }
+
+        .mitad31, .mitad32{
+        display: block;
+        width: 100%;
+    }
+        .mitad33, .mitad32{
+        display: block;
+        width: 100%;
+    }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        /* span {
+            font-size: 40px;
+            margin-bottom: 20px;
+        } */
+        .cont1 p, .cont2 p, .cont3 p{
+        font-size: 26px; 
+        margin: 0;
+    }
+
+    .text1, .text2, .text3{
+        display: inline-block;
+        width:32%;
+    }
+
+    .texto1 h2{
+        text-align: center; 
+        }
+
+        .texto1 p{
+        padding: 0 20px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .mitad1, .mitad2{
+        margin-top: 100px;
+        display: block;
+        width: 95%;
+    }
+    .cajas#empresas{
+        padding: 0 60px ;
+    }
+    .caja1{
+        display: block;
+        width: 95%;
+    }
+
+    .caja1 img#logos{
+        width: 40%;
+    }
+
+    .caja1a{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 95%;
+    }
+    .caja2{
+        display: block;
+        width: 95%;
+    }
+    .caja1a img{
+        width: 50%;
+    }
+    }
+    @media only screen and (max-width: 768px) {
+
+    .mitadesa{
+        margin-top: 840px;
+        }
+
+    .contimg img{
+        width:30%;
+    }
+    .contp1 p, .contp2 p, .contp3 p{
+        font-size: 30px; 
+        margin: 0;
+    }
+    .texto{
+        background-image: url(../img/backb.png);
+    }
+
+    .texto h2{
+    	margin-top: 60px;
+    	padding: 20px 40px;
+    	font-size: 30px;
+    	color: #333;
+    }
+
+    .texto p{
+    	padding: 20px 40px;
+    	text-align: left;
+    	font-size: 24px;
+    	color: #333;
+    }
+
+    .redes{
+    	margin-top: 40px;
+    	margin: auto;
+    	width: 80%;
+    }
+
+    .mitad1, .mitad2{
+        margin-top: 20px;
+    	padding: 0 20px;
+    	display: block;
+    	width: 95%;
+    }
+    .mitad1 h2{
+        text-align: center;
+    }
+    .mitad2 h2{
+        text-align: center;
+    }
+    .mitad2 h3{
+        text-align: center;
+    }
+    .mitad2 p{
+        text-align: center;
+    }
+
+    .texto p#text{
+        padding-top: 50px;
+    }
+    .texto1 p#text{
+        font-size: 20px;
+        padding-top: 0;
+    }
+
+    .mitad11, .mitad12{
+        display: block;
+        width: 100%;
+    }
+    .mitad11 p{
+        padding: 0 40px;
+        font-size: 24px;
+    }
+    .mitad13, .mitad12{
+        display: block;
+        width: 100%;
+    }
+    .mitad13 p{
+        padding: 0 40px;
+        font-size: 24px;
+    }
+
+    .mitad21, .mitad22{
+        display: block;
+        width: 100%;
+    }
+    .mitad21 p{
+        padding: 0 40px;
+        font-size: 24px;
+    }
+    .mitad23, .mitad22{
+        display: block;
+        width: 100%;
+    }
+    .mitad23 p{
+        padding: 0 40px;
+        font-size: 24px;
+    }
+
+    .mitad31, .mitad32{
+        display: block;
+        width: 100%;
+    }
+    .mitad31 p{
+        padding: 0 40px;
+        font-size: 24px;
+    }
+    .mitad33, .mitad32{
+        display: block;
+        width: 100%;
+    }
+    .mitad33 p{
+        padding: 0 40px;
+        font-size: 24px;
+    }
+
+    .caja1, .caja2{
+        display: block;
+        width: 95%;
+    }
+
+    .nosotros{
+        padding: 5px;
+        }
+
+    .mitades{
+        padding: 0;
+        }
+
+    .mitad1, .mitad2{
+        margin-top: 100px;
+        display: block;
+        width: 95%;
+    }
+
+    .texto1{
+        background-image: url(../img/back1b.png);
+        height: 1450px;
+        background-size: cover;
+    }
+    .texto1 h2{
+        text-align: center; 
+        }
+
+        .texto1 p{
+        padding: 0 20px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .text1, .text2, .text3{
+        display: block;
+        width:95%;
+    }
+    .text2{
+        padding-top: 10px;
+    }
+    .cajas#empresas{
+        padding: 0 60px ;
+    }
+    .caja1{
+        display: block;
+        width: 95%;
+    }
+
+    .caja1 img#logos{
+        width: 50%;
+    }
+
+    .caja1a{
+        display: block;
+        width: 95%;
+    }
+    
+    }
+
+    @media only screen and (max-width: 600px){
+    h3 {
+        margin-bottom: 30px;
+        color: #999;
+    }
+    span {
+        font-size: 44px;
+        color: yellow;
+        margin-bottom: 20px;
+        display: inline-block;
+        font-weight: 600;
+        text-align: center;
+    }
+    .titulo img{
+        width: 70%;
+    }
+    .cont1, .cont2, .cont3{
+        display: block;
+        width: 100%;
+    }
+    .contimg{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .contp1 p, .contp2 p, .contp3 p{
+        font-size: 34px;
+    }
+
+    .contimg img{
+        width:30%;
+    }
+        .nosotros{
+        padding: 5px;
+        }
+
+        .mitades{
+        padding: 0;
+        }
+
+        .mitadesa{
+        margin-top: 840px;
+        }
+
+        .mitad1, .mitad2{
+        margin-top: 100px;
+        display: block;
+        width: 95%;
+    }
+        .texto1 h2{
+        text-align: center; 
+        }
+
+        .texto1 p{
+        padding: 0 20px;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .text1, .text2, .text3{
+        display: block;
+        width:95%;
+    }
+    .cajas#empresas{
+        padding: 0 60px ;
+    }
+
+    .cajas1a{
+        padding-bottom: 20px;
+    }
+    
+    .text2{
+        padding-top: 10px;
+    }
+
+    .caja1 img{
+        width: 25%;
+    }
+    .caja1 img#logos{
+        width: 70%;
+    }
+    .caja1 img#monitos{
+        width: 75%;
+    }
+    .caja1a img{
+        padding-left: 0;
+        width: 90%;
+    }
+
+    .divs01, .divs02, .divs03 {
+      display: inline-block;
+      min-height: 130px;
+      padding-top: 10px;
+      text-align: center;
+      vertical-align: top;
+      width: 32%;
+      }
+    }
+    
+/*FIXES BG EN IOS*/
+@supports (-webkit-overflow-scrolling: touch) {
+    .iosbackgroundfix { background-attachment: local !important; }
+}
+
+@media all and (max-width:500px) {
+    .col h1 {
+        font-size: 38px !important;
+        text-align: center;
+    }
+
+    footer .redes .red1,
+    footer .redes .red2,
+    footer .redes .red3,
+    footer .redes .red4 { width: 22%; }
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 425px) {
+    .logo {
+        width: 56%;
+        margin: 0;
+    }
+    .backW {
+        height: 60px;
+    }
+    .toFix {
+        top: 60px;
+        left: -30px;
+        position: fixed;
+    }
+    .footer-dark {
+        position: relative;
+    }
+}

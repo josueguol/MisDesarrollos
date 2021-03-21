@@ -1,0 +1,574 @@
+.contentBox {
+  width: 100%;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.contentBox>div {
+  width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+.contentBox>div>div,
+.pcb-box7 {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box7 {
+  margin: 0 0 80px 0;
+}
+
+.pcb-box7>div>div>div {
+  width: 50%;
+  float: left;
+}
+
+.pcb-box7>div>div>div>img,
+.pcb-box9>div>div>div>form {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box7>div>div>div>form {
+  text-align: center;
+  padding: 50px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+.pcb-box7>div>div>div>form h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+  display: block;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #492F63;
+}
+
+.pcb-box7>div>div>div>form>p,
+.pcb-box9>div>div>p,
+.pcb-box11>div>div>h2+div p {
+  display: block;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin: 0 0 20px 0;
+  color: #7F8083;
+}
+
+.pcb-box7>div>div>div>form>a.hollow {
+  display: inline-block;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  padding: 12px 30px 12px 30px;
+  border: 1px solid #492F63;
+  margin: 0 0 30px 0;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  color: #492F63;
+  transition: all 0.2s;
+}
+
+.pcb-box7>div>div>div>form>a.hollow:hover {
+  background-color: #18c7a4;
+  border-color: #18c7a4;
+  box-shadow: none;
+  color: #FFF;
+}
+
+.pcb-box7>div>div>div>form>button.buttonP {
+  display: inline-block;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  padding: 12px 40px 12px 40px;
+  margin: 0 0 30px 0;
+  border: none;
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+
+.pcb-box7>div>div>div>form>p#errorMsg1 {
+  width:70%;
+  display: none;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid rgb(243, 205, 205);
+  background-color: #FFEFEF;
+  color: #B92424;
+}
+
+.pcb-box7>div>div>div>form>div {
+  width: 100%;
+  display: inline-block;
+  padding: 0 70px 0 70px;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.pcb-box7>div>div>div>form>div>input {
+  width: 48%;
+  float: left;
+  height: 42px;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  margin: 0 0.5% 5px 0.5%;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+.pcb-box7>div>div>div>form>div>input[name="phone"] {
+  width: 97.5%;
+}
+
+.pcb-box7>div>div>div>form>div>input::placeholder {
+  color: #9FA1A0;
+}
+
+.pcb-box7>div>div>div>form>div>span {
+  width: 100%;
+  float: left;
+  font-size: 0.7em;
+  text-align: left;
+  margin: 10px 0 0 0;
+  color: #7F8083;
+}
+
+.pcb-box7>div>div>div>form>div>span input {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.pcb-box8>div>div,
+.pcb-box9>div>div {
+  text-align: center;
+}
+
+.pcb-box8>div>div h2,
+.pcb-box9>div>div h2,
+.pcb-box11>div>div>h2 {
+  font-size: 2em;
+  display: block;
+  font-weight: bold;
+  margin: 0 0 36px 0;
+  color: #492F63;
+}
+
+.video16-9 {
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video16-9>div {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #ebebeb;
+}
+
+.video16-9>div>iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.pcb-box9>div>div {
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.pcb-box9>div>div>h2 {
+  margin: 0 0 16px 0;
+}
+
+.pcb-box9>div>div>span {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  display: block;
+  margin: 30px 0 40px 0;
+  color: #492F63;
+}
+
+.pcb-box9>div>div>div {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box9>div>div>div>hr {
+  display: none;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  margin-bottom: 40px;
+}
+
+.pcb-box9>div>div>div>span {
+  width: 160px;
+  display: inline-block;
+  margin: 0 30px 0 30px;
+  vertical-align: top;
+  font-size: 0.86em;
+  line-height: 1.2em;
+  text-align: center;
+  color: #7F8083;
+}
+
+.pcb-box9>div>div>div>span img {
+  height: 80px;
+  display: inline-block;
+  margin: 0 0 16px 0;
+}
+
+.pcb-box10 {
+  margin: 0 0 80px 0;
+}
+
+.pcb-box10>div>div>div:first-child {
+  width: 62%;
+  float: left;
+}
+
+.pcb-box10>div>div>div:first-child+div {
+  width: 38%;
+  float: left;
+}
+
+.pcb-box10>div>div>div>img {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box10>div>div>div>form {
+  text-align: center;
+  padding: 0px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+.pcb-box10>div>div>div>form h4 {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  display: block;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  color: #492F63;
+}
+
+.pcb-box10>div>div>div>form>button.buttonP {
+  display: inline-block;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  padding: 12px 40px 12px 40px;
+  margin: 0 0 30px 0;
+  border: none;
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+
+.pcb-box10>div>div>div>form>p#errorMsg2 {
+  width:70%;
+  display: none;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid rgb(243, 205, 205);
+  background-color: #FFEFEF;
+  color: #B92424;
+}
+
+.pcb-box10>div>div>div>form>div {
+  width: 100%;
+  display: inline-block;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+}
+
+.pcb-box10>div>div>div>form>div>input {
+  width: 48%;
+  float: left;
+  height: 42px;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  margin: 0 0.5% 5px 0.5%;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+.pcb-box10>div>div>div>form>div>input[name="phone"] {
+  width: 97%;
+}
+
+.pcb-box10>div>div>div>form>div>input::placeholder {
+  color: #9FA1A0;
+}
+
+.pcb-box10>div>div>div>form>div>span {
+  width: 100%;
+  float: left;
+  font-size: 0.7em;
+  text-align: left;
+  margin: 10px 0 0 0;
+  color: #7F8083;
+}
+
+.pcb-box10>div>div>div>form>div>span input {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.pcb-box11>div>div {
+  text-align: center;
+}
+
+.pcb-box11>div>div>div {
+  width: 50%;
+  float: left;
+}
+
+.pcb-box11>div>div>h2+div {
+  padding: 0 50px 0 30px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.pcb-box11>div>div>h2+div p {
+  font-size: 1.26em;
+}
+
+.pcb-box11>div>div>div img {
+  width: 100%;
+  float: left;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1280px) {
+  .contentBox>div {
+    width: 100%;
+  }
+
+  .pcb-box7>div>div>div>form h2,
+  .pcb-box8>div>div h2,
+  .pcb-box9>div>div h2,
+  .pcb-box11>div>div>h2 {
+    font-size: 1.6em;
+  }
+
+  .pcb-box7>div>div>div>form>p,
+  .pcb-box9>div>div>p,
+  .pcb-box11>div>div>h2+div p {
+    font-size: 1em;
+  }
+
+  .pcb-box7>div>div>div>form>div {
+    padding: 0 0 0 0;
+  }
+
+  .pcb-box9>div>div>div>span {
+    margin: 0 16px 0 16px
+  }
+  .pcb-box10 {
+    margin: 0 0 30px 0
+  }
+
+  .pcb-box11>div>div>div img {
+    border-radius: 16px 0 0 16px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pcb-box7 {
+    margin: 0 0 20px 0;
+  }
+
+  .pcb-box7>div>div>div:first-child {
+    padding-top: 60px;
+  }
+
+  .pcb-box7>div>div>div>form h2,
+  .pcb-box8>div>div h2,
+  .pcb-box9>div>div h2,
+  .pcb-box11>div>div>h2 {
+    font-size: 1.4em;
+  }
+
+  .pcb-box9>div>div>div>span {
+    width: 140px;
+  }
+
+  .pcb-box10>div>div>div:first-child {
+    padding-top: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
+  .pcb-box7>div>div>div>form h2,
+  .pcb-box8>div>div h2,
+  .pcb-box9>div>div h2,
+  .pcb-box11>div>div>h2 {
+    font-size: 1.2em;
+  }
+
+  .pcb-box7>div>div>div>form>p,
+  .pcb-box9>div>div>p,
+  .pcb-box11>div>div>h2+div p {
+    font-size: 1em;
+  }
+
+  .pcb-box9>div>div>div>span {
+    width: 160px;
+    margin: 0 30px 0 30px
+  }
+
+  .hr2 {
+    display: block !important;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .pcb-box7>div>div>div:first-child {
+    padding-top: 0px;
+  }
+
+  .pcb-box7>div>div>div,
+  .pcb-box10>div>div>div:first-child,
+  .pcb-box10>div>div>div:first-child+div,
+  .pcb-box11>div>div>div {
+    width: 100%;
+  }
+
+  .hr1 {
+    display: block !important;
+  }
+
+  .hr2 {
+    display: none !important;
+  }
+
+  .hr3 {
+    display: block !important;
+  }
+
+  .pcb-box7>div>div>div>form>div>span,
+  .pcb-box10>div>div>div>form>div>span {
+    float: none;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .pcb-box7>div>div>div>form>div>input {
+    width: 48%;
+    height: 50px;
+    margin: 0 0.5% 16px 0.5%;
+  }
+
+  .pcb-box10>div>div>div>form>div>input:first-child,
+  .pcb-box10>div>div>div>form>div>input:first-child+input {
+    width: 48%;
+    margin: 0 0.5% 5px 0.5%;
+  }
+
+  .pcb-box11>div>div>div img {
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+  }
+
+  .pcb-box10>div>div>div>form h4 {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pcb-box9>div>div>span {
+    font-size: 1em;
+  }
+
+  .pcb-box9>div>div>div>span {
+    width: 140px;
+    margin: 0 16px 0 16px
+  }
+
+  .pcb-box10>div>div>div:first-child {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+
+  .pcb-box7>div>div>div>form>a.hollow,
+  .pcb-box7>div>div>div>form>button.buttonP {
+    font-size: 0.8em;
+    padding: 18px 30px 18px 30px;
+  }
+
+  .pcb-box7>div>div>div>form>p,
+  .pcb-box9>div>div>p,
+  .pcb-box11>div>div>h2+div p {
+    font-size: 1em;
+  }
+
+  .pcb-box7>div>div>div>form {
+    padding: 30px 20px 30px 20px;
+  }
+
+  .pcb-box9>div>div>span {
+    font-size: 0.9em;
+  }
+
+  .pcb-box9>div>div>div>span {
+    width: 200px;
+    display: inline-block;
+    margin: 0 0 40px 0;
+  }
+
+  .pcb-box9>div>div>div>hr {
+    display: none !important;
+  }
+
+  .pcb-box10>div>div>div>form h4 {
+    font-size: 1em;
+  }
+
+  .pcb-box10>div>div>div>form>div>input, .pcb-box7>div>div>div>form>div>input {
+    width: 100% !important;
+    margin: 0 0 5px 0 !important;
+  }
+}

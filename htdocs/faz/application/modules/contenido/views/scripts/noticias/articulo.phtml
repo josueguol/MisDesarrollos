@@ -1,0 +1,134 @@
+<?php 
+	$existeArticulo 	= 1;
+	$datos				= $this->articulo;
+	if(empty($datos)) 	$existeArticulo = 0;
+	
+	$relacionados 		= $this->otrosArticulos;
+	$name 				= $datos['autor'];
+	$name 				= explode(" ", $name, 2);
+
+	$newformat 			= $datos["fecha"];
+	$urlDominio			= "https://".$this->site;	
+	
+	//$string_1 			=  	preg_replace('/style=\\"[^\\"]*\\"/', '', 		$datos['cContenido']);
+	//$string_2 			= 	preg_replace('/ style=("|\')(.*?)("|\')/','',	$datos['cContenido']);
+	$string_1 			 	=  	preg_replace('/ style=\\"[^\\"]*\\"/', '', 		$datos['contenido']); //Quita los styles
+	$datos['contenido']    = 	str_replace("<span>&nbsp;</span>","<!-- remove <span>&nbsp;</span> -->", $string_1);//Quita los espacios innecesarios despues de quitar los styles...
+	
+	//$datos['contenido']    = 	str_replace("<br/>","<!-- remove <br/> -->", $string_1);//Elimina un par de nueva linea...
+	
+	$cantidadC  	= 140;
+	$tresPuntos 	= "";
+	$titulo		 	= $datos["titulo"];
+	$tituloFace		= "Fundación Azteca - ".$datos["titulo"];
+	$desc 			= str_replace("&nbsp;", "", strip_tags($datos["contenidoH"]));
+	$urlImagen		= $datos["imagen"];
+	$descripcion 	= explode("||",wordwrap($desc,$cantidadC,"||"));
+	$descripcion	= htmlspecialchars($descripcion[0]."...", ENT_QUOTES);
+
+	/****Metadata HTML ***/
+	$this->metadatos["configuracion"][0]["cTitulo"] 			= htmlspecialchars("Fundación Azteca - ".$titulo, ENT_QUOTES);
+	$this->metadatos["configuracion"][0]["cMetaDescripcion"] 	= htmlspecialchars($descripcion, ENT_QUOTES);
+	$cMetaKeywords = $descripcion.$titulo;
+	$cMetaKeyWord  = '';
+	foreach(explode(' ',$cMetaKeywords) as $keyWord){
+		if(strlen($keyWord) > 2){
+			//$conservar = '0-9a-zñáéíóú'; // juego de caracteres a conservar
+			$conservar = '/[^a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]/iu'; // juego de caracteres a conservar
+			$regex = sprintf('~[^%s]++~i', $conservar); // case insensitive
+			$keyWord = preg_replace($conservar, '', $keyWord);
+			$cMetaKeyWord[] =   $keyWord;
+		}
+	}
+	$this->metadatos["configuracion"][0]["cMetaKeywords"] = implode(',', $cMetaKeyWord);
+	/****Metadata HTML ***/
+	
+	
+	$crop ="";
+	$this->imgHisFB = $urlImagen;
+	
+	$this->metaFacebook =  @<<<METANOTA
+  	<meta property="og:type"   content="article" />
+	<meta property="og:url"    content="{$urlDominio}" />
+	<meta property="og:title"  content="{$tituloFace}" />
+	<meta property="og:image"  content="{$this->imgHisFB}" />
+	<meta property="og:description"  content="{$descripcion}" />
+METANOTA;
+	
+	$this->metaFacebook .= @<<<METATWITTER
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$tituloFace}">
+	<meta name="twitter:description" content="{$descripcion}">
+	<meta name="twitter:image:src" content="{$urlImagen}">
+	<meta name="twitter:domain" content="{$urlDominio}">
+	<meta name="twitter:site" content="{$urlDominio}">
+	
+METATWITTER;
+?>
+<?php
+	$this->headLink()->appendStylesheet('/assets/v2/styles/interna.css');
+?>
+<script type="text/javascript" src="/assets/js/MooTools-Core-1.6.0-compressed.js"></script>
+<script type="text/javascript">
+									window.addEvent('domready',function(){
+										$$("a[id=cms-progreset]").each(function(miriam) {
+											miriam.addEvent("click", function(kevin) {
+										   			kevin.preventDefault();//Cancela el hipervinculo (no refresca la pagina)	
+										    });
+										
+										})
+									})
+										function openWindow(href, target){
+										    window.open(href, target, 'width=600px,height=400px,left=400%,top=250%'); return false;
+										}
+</script>
+<div class="w3-col s12 m12 l12">
+     
+        <section class="w3-col s12 m12 l12 content interna">
+
+            <article class="w3-col s12 m12 l12 bigItems">
+                
+                <div class="w3-col s12 m12 l12 bigNew">
+                    <div class="w3-col s12 m12 l12 bigTxtInterna">
+                    <section class="w3-col s12 m12 l12 share-new">
+                           <span>Compartir </span>
+                           <a id="cms-progreset" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $urlDominio;?>" target="_blank" rel="noopener" onclick="openWindow(this.href,this.target)"><i class="fab fa-facebook-square"></i></a>
+                           <a id="cms-progreset" href="https://twitter.com/intent/tweet?text=<?php echo "Fundación Azteca - ".$datos["titulo"];?>&url=<?php echo $urlDominio;?>" target="_blank" rel="noopener" onclick="openWindow(this.href,this.target)"><i class="fab fa-twitter-square"></i></a>
+                           <a href="https://api.whatsapp.com/send?text=<?php echo urlencode("Fundación Azteca - ".$datos["titulo"]) ." ".$urlDominio;?>"  target="_blank" rel="noopener"><i class="fab fa-whatsapp-square"></i></a>
+                    </section>
+                    <?php if($existeArticulo == 1 ):?>
+                    
+                        <h2><?php echo $titulo; ?></h2>
+                        <p><span><?php echo $newformat;?></span></p>                       
+                        <img src="<?php echo $datos["imagen"]; ?>" alt="Artículo Fundación Azteca">
+                        <p></p>
+                        <?php  echo $datos['contenido']; ?>
+                        
+                      <?php elseif ($existeArticulo == 0):?>
+                       <h2><strong>Lo sentimos, la página que solicitaste ya no se encuentra disponible <br/></strong></h2>
+				          <h3><div class="fundacion-buttonBox"><a href="/contenido/noticias/historico" class="buttonP">Ver m&aacute;s noticias</a></div></h3>
+                    <?php endif;?>               
+                    </div>
+                </div>
+
+            </article>           	
+            <aside class="w3-col s12 m4 l4 smallItems hidden">
+                <h2>Lo m&aacute;s <span>visto</span></h2>
+                <?php 
+		           	foreach ($relacionados as $key => $datos):
+		           	if($key >= 0 && $key<= 4):
+		            ?> 		   
+		            	<a href="<?php echo $datos['urlC'];?>"><i class="fas fa-minus"></i><?php echo $datos['titulo'];?></a>
+		            <?php 	
+		            endif;
+		            endforeach;?>               
+            </aside>
+
+        </section>
+
+    </div>
+    
+
+<script type="text/javascript" src="/assets/v2/scripts/headfoot.js"></script>
+<script src="https://tvazteca.brightspotcdn.com/resource/0000016b-0aa3-d497-abff-dfa761910000/styleguide/All.min.b5accccadb6204381b8dc1ff7d89e678.gz.js"></script>

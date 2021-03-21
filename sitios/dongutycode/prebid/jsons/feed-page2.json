@@ -1,0 +1,62 @@
+{
+    "items": [
+        {
+            "autor": "Redacción ADN40",
+            "compartir": "https://qa5.tv-azteca.psdops.com/adn40/noticia/internacional/notas/2020-02-04-06-00/casarse-en-gaza-ha-llevado-a-muchos-novios-a-la-carcel-por-impagable-deuda",
+            "fecha": "2020-02-04T06:00:48-06:00",
+            "fechacap": "2020-02-04T06:00:48-06:00",
+            "galeria": "",
+            "imagen": "https://tv-azteca-brightspot.s3.amazonaws.com/31/b4/73e11be94a34b7cef0315d72a0ee/2020-02-03t145041z-1-lynxmpeg1214z-rtroptp-4-israel-palestina-bodas.JPG",
+            "imgDefault": 0,
+            "nota": "https://qa5.tv-azteca.psdops.com/adnapp/noticia/internacional/notas/2020-02-04-06-00/casarse-en-gaza-ha-llevado-a-muchos-novios-a-la-carcel-por-impagable-deuda.zip",
+            "sourceImageUrl": "https://tv-azteca-brightspot.s3.amazonaws.com/ce/c5/e827af739d94383774d81dacab85/logoadn-2268863.png",
+            "teaser": "La falta de empleo lleva a los hombres a pedir un préstamo impagable. ",
+            "titulo": "Casarse en Gaza ha llevado a muchos novios a la cárcel por impagable deuda",
+            "video": ""
+        },
+        {
+            "autor": "Redacción ADN40",
+            "compartir": "https://qa5.tv-azteca.psdops.com/adn40/noticia/mexico/notas/2020-02-04-06-00/casi-80-millones-de-mexicanos-tienen-una-cuenta-de-facebook",
+            "fecha": "2020-02-04T06:00:36-06:00",
+            "fechacap": "2020-02-04T06:00:36-06:00",
+            "galeria": "",
+            "imagen": "https://tv-azteca-brightspot.s3.amazonaws.com/5c/0e/078a71f04f5599b2a5a7296681ef/96.JPG",
+            "imgDefault": 0,
+            "nota": "https://qa5.tv-azteca.psdops.com/adnapp/noticia/mexico/notas/2020-02-04-06-00/casi-80-millones-de-mexicanos-tienen-una-cuenta-de-facebook.zip",
+            "sourceImageUrl": "https://tv-azteca-brightspot.s3.amazonaws.com/ce/c5/e827af739d94383774d81dacab85/logoadn-2268863.png",
+            "teaser": "Expertos de la UNAM indicaron que uno de los puntos trascendentes en esta red social son las fake news, las cuales está modificando los hábitos de los mexicanos.",
+            "titulo": "Casi 80 millones de mexicanos tienen una cuenta de Facebook",
+            "video": ""
+        },
+        {
+            "autor": "Redacción ADN40",
+            "compartir": "https://qa5.tv-azteca.psdops.com/adn40/noticia/cultura/notas/2020-02-04-05-29/cocina-sana-con-pizca-de-sabor",
+            "fecha": "2020-02-04T05:29:03-06:00",
+            "fechacap": "2020-02-04T05:29:03-06:00",
+            "galeria": "",
+            "imagen": "https://tv-azteca-brightspot.s3.amazonaws.com/85/00/392032bf4b059e15f9054976fccd/7-cocina-sana-con-una-pizca-de-sabor-chef-karla-hernandez.jpg",
+            "imgDefault": 0,
+            "nota": "https://qa5.tv-azteca.psdops.com/adnapp/noticia/cultura/notas/2020-02-04-05-29/cocina-sana-con-pizca-de-sabor.zip",
+            "sourceImageUrl": "https://tv-azteca-brightspot.s3.amazonaws.com/ce/c5/e827af739d94383774d81dacab85/logoadn-2268863.png",
+            "teaser": "Si te gustó este libro de la Chef Karla Hernández, tenemos ejemplares para regalar.",
+            "titulo": "Cocina sana con pizca de sabor ",
+            "video": ""
+        },
+        {
+            "autor": "Redacción ADN40",
+            "compartir": "https://qa5.tv-azteca.psdops.com/adn40/noticia/ciudad/notas/2019-09-24-06-00/este-martes-no-circulan-los-autos-con-engomado-rosa",
+            "fecha": "2020-02-04T05:00:00-06:00",
+            "fechacap": "2020-02-04T05:00:00-06:00",
+            "galeria": "",
+            "imagen": "https://tv-azteca-brightspot.s3.amazonaws.com/a5/0f/8d31a75d5a1c853f9a16b285362d/0",
+            "imgDefault": 0,
+            "nota": "https://qa5.tv-azteca.psdops.com/adnapp/noticia/ciudad/notas/2019-09-24-06-00/este-martes-no-circulan-los-autos-con-engomado-rosa.zip",
+            "sourceImageUrl": "https://tv-azteca-brightspot.s3.amazonaws.com/ce/c5/e827af739d94383774d81dacab85/logoadn-2268863.png",
+            "teaser": "El programa Hoy no Circula aplica este martes 4 de febrero para los autos con holograma 1 y 2, con engomado rosa y terminación de placas 7 y 8.\r\n",
+            "titulo": "Este martes no circulan los autos con engomado rosa",
+            "video": ""
+        }
+    ],
+    "page": "2",
+    "totalPages": "3"
+}

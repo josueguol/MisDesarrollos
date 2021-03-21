@@ -1,0 +1,138 @@
+<?php
+//$this->headScript()->appendFile('/assets/js/MooTools-Core-1.6.0-compressed.js', $type = 'text/javascript'); 
+	$this->headLink()->appendStylesheet('/assets/v2/styles/animate.css');
+	$this->headLink()->appendStylesheet('/assets/v2/styles/homegal.css');
+?>
+
+<div class="w3-col s12 m12 l12 content">
+
+        <script>
+            var sldItm = [
+            <?php 
+	        if (!empty($this->galeria)) :	
+	           	foreach ($this->galeria as $key => $datos):
+	        ?>
+	        { bckGnd: '<?php echo $datos['urlImagen'];?>', url: '<?php echo $datos['urlLink'];?>' },
+		    <?php             
+	            endforeach;
+	        else:
+	         ?>
+	             { bckGnd: '/assets/v2/images/azteka2.jpg', url: '#' }
+		    <?php 
+	         endif;
+	        ?>      
+	           ];
+        </script>
+
+        <section class="w3-col s12 m12 l12">
+            <!-- slider -->
+            <div class="w3-col s12 m12 l12 container">
+                <div class="w3-col s12 m12 l12 slideItem">
+                    <a href="#">
+                        <!-- <img src="/assets/v2/images/azteka2.jpg" alt="Fundación Azteca"> -->
+                        <!-- <img src="/assets/v2/images/main_ima_1.png" alt=""> -->
+                    </a>
+                </div>
+            </div>
+            <div class="controles">
+                <a class="left" href="#" id="toLeft"><i class="fal fa-chevron-left"></i></a>
+                <a class="right" href="#" id="toRight"><i class="fal fa-chevron-right"></i></a>
+            </div>
+            <!-- eo slider -->
+        </section>
+
+
+
+        <section class="w3-col s12 m12 l12 conLogo">
+            <h4 class="animated">Trabajamos en equipo para impactar de manera positiva <br><i class="fas fa-minus"></i></h4>
+            <p class="animated">Somos el principal brazo social de Grupo Salinas, que por más de 20 años ha creado valor social, ambiental y educativo, a través de programas de alto impacto y sinergias con el sector público y la ciudadanía.</p>
+        </section>
+
+        <section class="w3-col s12 m12 l12 threesome">
+            <div class="w3-col s12 m4 l4 single yellow">
+                <div class="inner">
+                    <a href="/contenido/seccion/comunidad">
+                        <h3>COMUNIDAD<br><i class="fas fa-minus"></i></h3>
+                        <p>Promovemos prácticas socialmente responsables.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col s12 m4 l4 single red">
+                <div class="inner">
+                    <a href="/contenido/seccion/programaseducativos">
+                        <h3>PROGRAMAS EDUCATIVOS Y CULTURALES <br><i class="fas fa-minus"></i></h3>
+                        <p>La educaci&oacute;n es la base para mejorar nuestra vida.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="w3-col s12 m4 l4 single green">
+                <div class="inner">
+                    <a href="/contenido/seccion/programasambientales">
+                        <h3>PROGRAMAS AMBIENTALES <br><i class="fas fa-minus"></i></h3>
+                        <p>El medio ambiente toma lugar prioritario en nuestra comunidad.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="w3-col s12 m12 l12 videoRow">
+            <div class="w3-col s12 m6 l6 ">
+                <div class="w3-col s12 m10 l10 video">
+                    <p><span>Esperanza Azteca</span></p>
+                    <h3>Conoce más de la labor de Fundación Azteca<br><i class="fas fa-minus"></i></h3>
+                    <div class="int-video">
+                        <div class="int-vinner">
+                            <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/U6CWs_kz7lA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wDHb072Y058" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col s12 m6 l6">
+                <div class="w3-col s12 m10 l10 textos" id="centavos">
+                    <p><span class="first">MOVIMIENTO AZTECA</span></p>
+                    <h2>¡GRACIAS!</h2>
+                    <h3>T&uacute; hiciste la diferencia <br><i class="fas fa-minus"></i></h3>
+                    <p class="flow">Con tu apoyo pudimos recaudar:</p>
+                    <p class="flow"><span id="pesos">7,866,453</span> pesos</p>
+                    <p class="flow">Equivalente a:</p>
+                    <p class="flow"><span id="chair">3,026</span> sillas-cama</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="w3-col s12 m12 l12 newsRow">
+            <div class="w3-col s12 m12 l12 news">
+                <h3>NOTICIAS</h3>
+                <div class="w3-col s12 m12 l12 wraprNews">
+                <?php 
+	                  if (!empty($this->datos)) :	
+	                     foreach ($this->datos as $key => $datos):
+	                     echo '<div class="w3-col s12 m3 l3 newItem">
+			                        <a href="'.$datos["urlC"].'">
+			                            <div class="itm-ima">
+			                                <div class="inner-ima">
+			                                    <img src="'.$datos["imagen"].'" alt="Articulo Fundación Azteca">
+			                                </div>
+			                            </div>
+			                            <span class="ttl">'.$datos["titulo"].'</span>
+			                            <span class="tsr">'.$datos["contenidoH"].'</span>
+			                        </a>
+		                    	</div>';            
+	                endforeach;
+	            	endif;
+	            	?>
+                </div>
+                <div class="w3-col s12 m12 l12 btnMrNws">
+                    <a href="/contenido/noticias/historico">
+                        ver m&aacute;s noticias
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+<script type="text/javascript" src="/assets/js/MooTools-Core-1.6.0-compressed.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/devices.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/headfoot.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/homegal.js"></script>

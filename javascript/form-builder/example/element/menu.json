@@ -1,0 +1,172 @@
+{
+    "items": [
+        {
+            "type": "collection",
+            "name": "catalogos",
+            "title": "Catálogos",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "name": "catalogos",
+                    "title": "Blogs",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs"
+                },
+                {
+                    "type": "element",
+                    "title": "Programas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas"
+                },
+                {
+                    "type": "collection",
+                    "title": "Talentos",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/talentos"
+
+                }
+            ]
+        },
+        {
+            "type": "collection",
+            "title": "Noticias",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "title": "Notas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/notas"
+                },
+                {
+                    "type": "element",
+                    "title": "Galerias",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/galerias"
+                },
+                {
+                    "type": "element",
+                    "title": "Infografías",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/noticias/infografias"
+                },
+                {
+                    "type": "element",
+                    "title": "Encuestas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/encuestas"
+                },
+                {
+                    "type": "element",
+                    "title": "Capitulo",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/noticias/capitulo"
+                }
+            ]
+        },
+        {
+            "type": "collection",
+            "title": "Programas",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "title": "Notas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/notas"
+                },
+                {
+                    "type": "element",
+                    "title": "Galerias",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/galerias"
+                },
+                {
+                    "type": "element",
+                    "title": "Infografí­as",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/programas/infografias"
+                },
+                {
+                    "type": "element",
+                    "title": "Encuestas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/encuestas"
+                },
+                {
+                    "type": "element",
+                    "title": "Capitulo",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/programas/capitulo"
+                }
+            ]
+        },
+        {
+            "type": "collection",
+            "title": "Blogs",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": [
+                {
+                    "type": "element",
+                    "title": "Notas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/notas"
+                },
+                {
+                    "type": "element",
+                    "title": "Galerias",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/galerias"
+                },
+                {
+                    "type": "element",
+                    "title": "Infografías",
+                    "show": true,
+                    "icon": "",
+                    "value": "http://localhost:9000/blogs/infografias"
+                },
+                {
+                    "type": "element",
+                    "title": "Encuestas",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/encuestas"
+                },
+                {
+                    "type": "element",
+                    "title": "Capitulo",
+                    "show": true,
+                    "icon": "glyphicon glyphicon-pushpin",
+                    "value": "http://localhost:9000/blogs/capitulo"
+                }
+            ]
+        },
+        {
+            "type": "element",
+            "title": "Videoteca",
+            "show": true,
+            "icon": "glyphicon glyphicon-pushpin",
+            "value": "http://localhost:9000/videoteca"
+        }
+    ]
+}

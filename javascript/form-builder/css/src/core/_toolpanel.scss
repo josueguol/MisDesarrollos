@@ -1,0 +1,13 @@
+.bs-example-tabs .nav-tabs {
+    margin-bottom: 15px;
+}
+
+.draggable {
+	z-index: 500;
+	margin-bottom: 5px
+}
+
+.draggable.ui-draggable-dragging {
+	opacity: 0.2;
+	filter: alpha(opacity=20)
+}

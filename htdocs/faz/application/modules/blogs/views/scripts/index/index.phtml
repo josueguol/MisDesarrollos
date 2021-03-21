@@ -1,0 +1,133 @@
+<?php 
+	$arrayData 		= $this->datos;
+	$masVistos 		= $this->masVisto;
+	$datosCompartir	= $this->datos[0][0];
+	$url = explode("?", $this->cUrl);
+	$url = $url[0];
+	$Imagen = new My_Helper_CrearImagen();
+	
+	$cantidadC  	= 140;
+	$tresPuntos 	= "";
+	$titulo_		= $arrayData[0]["titulo"];
+	$desc 			= str_replace("&nbsp;", "", strip_tags($arrayData[0]["contenidoC"]));
+	$urlImagen		= $arrayData[0]["imagen"];
+	$descripcion	= htmlspecialchars($desc, ENT_QUOTES);
+	
+	/****Metadata HTML ***/
+	$this->metadatos["configuracion"][0]["cTitulo"] 			= htmlspecialchars("Punto Casa Bolsa - ".$titulo_, ENT_QUOTES);
+	$this->metadatos["configuracion"][0]["cMetaDescripcion"] 	= htmlspecialchars($descripcion, ENT_QUOTES);
+	$cMetaKeywords = $descripcion.$titulo_;
+	$cMetaKeyWord  = '';
+	foreach(explode(' ',$cMetaKeywords) as $keyWord){
+		if(strlen($keyWord) > 2){
+			$conservar = '0-9a-zñáéíóú'; // juego de caracteres a conservar
+			$regex = sprintf('~[^%s]++~i', $conservar); // case insensitive
+			$keyWord = preg_replace($regex, '', $keyWord);
+			$cMetaKeyWord[] =   $keyWord;
+		}
+	}
+	$this->metadatos["configuracion"][0]["cMetaKeywords"] = utf8_encode(implode(',', $cMetaKeyWord));
+	/****Metadata HTML ***/
+	
+	
+	$crop ="";
+	$this->imgHisFB = $crop . $urlImagen;
+	
+	$this->metaFacebook =  @<<<METANOTA
+  	<meta property="og:type"   content="article" />
+	<meta property="og:url"    content="http://{$this->site}" />
+	<meta property="og:title"  content="{$titulo_}" />
+	<meta property="og:image"  content="{$this->imgHisFB}" />
+	<meta property="og:description"  content="{$descripcion}" />
+METANOTA;
+	
+	$this->metaFacebook .= @<<<METATWITTER
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$titulo_}">
+	<meta name="twitter:description" content="{$descripcion}">
+	<meta name="twitter:image:src" content="{$urlImagen}">
+	<meta name="twitter:domain" content="http://{$this->site}">
+	<meta name="twitter:site" content="http://{$this->site}">
+	
+METATWITTER;
+
+?>
+  <link rel="stylesheet" href="/portal/styles/blog.css">
+
+  <div class="contentBox">
+    <div>
+      <div>
+        <div>
+          <h2>
+         </h2>
+	<?php 
+	if (sizeof($arrayData)>0) :	
+		 foreach ($arrayData as $key => $datos):
+		 
+			 	if(!empty($datos["fecha"])){
+				 	$newformat = $datos["fecha"];
+			 	}else{
+			 		$newformat ="";
+			 	} 
+		 		
+		 	?>
+			          <div class="post">
+			            <h3><?php echo $datos["tema"];?></h3>
+			            <a href="<?php echo $datos["urlC"];?>">
+			              <img src="<?php echo $datos["imagen"] ?>" alt="<?php echo $datos["temaC"];?>" width="800px" height="470px" name="imagencrop">
+			            </a>
+			            <a href="<?php echo $datos["urlC"];?>">
+			              <?php echo $datos["titulo"];?>
+			            </a>
+			            <h4><?php echo $newformat;?></h4>
+			            <p>
+			              <?php echo $datos['contenidoH']; ?>
+			            </p>
+			            <?php if(!empty($datos["urlC"])):?><a href="<?php echo $datos["urlC"];?>">leer más</a><?php endif;?>
+			          </div>
+<?php 		endforeach;
+	endif;
+?>
+
+          <div class="pager">
+          <?php if($this-> pagina > 1){?>
+            <a href="<?php echo $url."?pagina=".($this->pagina-1);?>">
+              <i class="fas fa-angle-left"></i>
+              anteriores
+            </a>
+            <?php }
+      		if ($this->pagina < $this->total ){?>
+            <a href="<?php echo $url."?pagina=".($this->pagina+1);?>">
+              siguientes
+              <i class="fas fa-angle-right"></i>
+            </a>
+            <?php }?>
+          </div>
+
+        </div>
+        <div>
+          <div class="mod">
+          
+          	<?php 
+          	if (sizeof($masVistos) > 0): 
+			 foreach ($masVistos as $key => $datosVisto):
+			 	if($key <= 2):
+		 	?>
+		            <a href="<?php echo $datosVisto["urlC"];?>" class="resource">
+		              <img src="<?php echo  $datosVisto["imagen"]; ?>" alt="<?php echo $datosVisto["TitImagen"];?>">
+		              <?php echo $datosVisto["titulo"];?>
+		            </a>
+            <?php 
+            	endif;
+            	endforeach;
+          	endif;
+          	?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/portal/scripts/header.js"></script>
+  <script src="/js/detecta-dispositivo.js"> </script>

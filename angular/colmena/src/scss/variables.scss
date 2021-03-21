@@ -1,0 +1,24 @@
+/* Media Queries */
+/* >= a 1px Smartphone */
+$xsmall: 1px;
+/* >= a 540px  Smartphone Plus o Tablets min*/
+$small: 540px;  
+/* >= a 768px  Tablets */    
+$medium: 768px;
+/* >= a 960px  Laptops*/
+$large: 960px;
+/* >= a 1200px Pc */   
+$xlarge: 1200px;    
+
+
+
+// Documentacion grid
+
+// col-1 muestra 12 su width es de 8.33% cada columna
+// col-2 caben 6 su width es de 16.66% cada columna
+// col-3 caben 4 su width es de 25% cada columna
+// col-4 caben 3 su width es de 33.33% cada columna
+// col-5 caben 2 y sobra su width es de 41.65% cada columna
+// col-6 caben 2 su width es de 50%, cada columna
+// col-7 cabe 1 y necesita una de 5, su width es de 58.31% cada columna
+// col-8 cabe 1 y sobra su width es de 58.31% cada columna

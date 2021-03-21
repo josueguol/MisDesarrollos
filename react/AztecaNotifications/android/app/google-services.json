@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "274413824149",
+    "firebase_url": "https://azteca-notification.firebaseio.com",
+    "project_id": "azteca-notification",
+    "storage_bucket": "azteca-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274413824149:android:470456ea4163ba3b4c539c",
+        "android_client_info": {
+          "package_name": "com.example.aztecanotifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274413824149-4e8mrr69leqpn48nb8fmm769bl76fdrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0Bizh4VP_Ce3BAWzkwr_z2CPLJmuriak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274413824149-4e8mrr69leqpn48nb8fmm769bl76fdrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

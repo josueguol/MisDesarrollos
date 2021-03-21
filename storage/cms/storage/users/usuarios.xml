@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Usuarios>
+    <Usuario>
+        <Nombre Tipo="String">CMS Admin</Nombre>
+        <Identificador Tipo="String">admin</Identificador>
+        <CreateTime Tipo="String">2019-09-31 12:34:56</CreateTime>
+        <Clave Tipo="Password" Crypt="sha512">d401016cf6333c271e7e8d7daf0af3326ff19ca89aa3a6d04e98d34acc2d99349b0f2fa30aa3a724ce009dfca2edd48b94d74c800f475eb3417a2c09bdc4a0e8</Clave>
+    </Usuario>
+</Usuarios>

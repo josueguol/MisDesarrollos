@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cryptos": {
+      "commandName": "Project",
+      "commandLineArgs": "-e \"contraseña\" \"Una_gallina_pone_huevos_de_oro\""
+    }
+  }
+}

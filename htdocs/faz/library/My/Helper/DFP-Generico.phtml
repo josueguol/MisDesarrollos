@@ -1,0 +1,257 @@
+<!-- INICIAMOS CON DFP v3 -->
+<?php
+
+$setTargeting = array('cintillo_570_60'=>'cintillo2',
+					'320x50'=>'Pos2',
+					'728x90'=>'Full3',
+					'Back'=>'Back1',
+					'Banner300x100'=>'Pos1',
+					'CintilloTop'=>'CintilloSup',
+					'FullBanner'=>'FullSup',
+					'FullBanner3'=>'Fullinf',
+					'divCintilloTop'=>'Fullinf',
+					'full728_90'=>'Fullinf',
+					'CintilloBotom'=>'Fullinf',
+					'FullInf'=>'Fullinf',
+					'FullMed' => 'FullMed',
+					'BoxBanner'=>'BoxSup',
+					'DobleBoxBanner'=>'DobleBoxBanner',
+					'BoxBannerGaleria'=>'BoxGal',
+					'BoxBanner2'=>'BoxInf',
+					'Box Banner Inf'=>'BoxInf',
+					'BoxBannerSimple'=>'BoxSup');
+$keys = array_keys($this->variableTemp);
+$setTargetingCat = '';
+$setTargetingIdNota = '';
+$setTargetingEntryId = '';
+if(array_key_exists('categoriasRel',$this->variableTemp[$keys[0]])) {
+	$categoriasArr = $this->variableTemp[$keys[0]]['categoriasRel'][0];
+	$setTargetingCat = ".setTargeting('Cat','".$categoriasArr['idCategoria']."')";
+	$setTargetingCatId = $categoriasArr['idCategoria'];
+}
+
+if(array_key_exists('categoriasRel',$this->variableTemp[$keys[1]])) { 
+$categoriasArr = $this->variableTemp[$keys[1]]['categoriasRel'][0];
+$setTargetingCat = ".setTargeting('Cat','".$categoriasArr['idCategoria']."')";
+$setTargetingCatId = $categoriasArr['idCategoria'];
+}
+
+if(isset($this->categoria) && $this->categoria != 0) {
+	$setTargetingCat = ".setTargeting('Cat','".$this->categoria."')";
+	$setTargetingCatId = $this->categoria;
+}
+
+/******* Id Nota *******/
+if($this->variableTemp['notanew'][0]) {
+	$setTargetingIdNota = ".setTargeting('IDNOTA','".$this->variableTemp['notanew'][0]['idNotaGenerica']."')";
+}
+/******* entryId Videos *******/
+if($this->variableTemp['videonew'][0]) {
+	$setTargetingEntryId = ".setTargeting('Entre_ID','".$this->variableTemp['videonew'][0]['entryId']."')";
+}
+if($this->variableTemp['videogenerico2018'][0]) {
+	$setTargetingEntryId = ".setTargeting('Entre_ID','".$this->variableTemp['videogenerico2018'][0]['entryId']."')";
+}
+/******* entryId Capitulos *******/
+if($this->variableTemp["capitulonew"][0]) {
+	$setTargetingEntryId = ".setTargeting('Entre_ID','".$this->variableTemp["capitulonew"][0]['entryId']."')";
+}
+if($this->variableTemp["capitulogenerico2018"][0]) {
+	$setTargetingEntryId = ".setTargeting('Entre_ID','".$this->variableTemp["capitulogenerico2018"][0]['entryId']."')";
+}
+?>
+<script src="http://aklc.img.e-planning.net/layers/hbdfp.js" id="hbepl" async data-isv="us.img.e-planning.net" data-sv="ads.us.e-planning.net" data-ci="1e4f2" data-usedivname=1></script>  
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script type="text/javascript">
+var gptAdSlots = [];
+googletag.cmd.push(function() {
+	var mapping = googletag.sizeMapping().
+	addSize([320, 400], [320, 50]).
+	addSize([320, 700], [320, 50]).
+	addSize([750, 200], [728, 90]).
+	addSize([1050, 200], [[728, 90],[970, 90],[970, 250]]).build();
+<?php
+		$slotCont = 0;
+		$slotP="";
+		if(!empty($this->slot)){
+			$slotP = $this->metadatos['configuracion'][0]['defineSlot']['defineSlotBase'].$this->slot;
+		}else{
+			$slotP = $this->metadatos['configuracion'][0]['defineSlot']['urlDefineSlot'].$programa;
+		}
+		
+		foreach($this->metadatos['oas'] as $key => $value) {
+			if(!empty($value['cScriptsDoubleclick'])) {
+				switch ($value['cDescripcion']) {
+					case "Layer":
+						//echo "gptAdSlots[".$slotCont."] = googletag.defineOutOfPageSlot('".$slotP."','div".str_replace(' ','', $value['cDescripcion'])."').addService(googletag.pubads()).setTargeting('intertype','layer')".$setTargetingCat.";"."\n";
+						$this->metadatos['oas'][$key]['cScriptsDoubleclick'] = '<div id="divLayer" ><script src="https://www.googletagservices.com/tag/js/gpt.js">googletag.pubads().defineOutOfPagePassback("'.$slotP.'")'.$setTargetingCat.$setTargetingIdNota.$setTargetingEntryId.'.display();</script></div>';
+						$this->metadatos['oas'][$key]['cScript'] = $this->metadatos['oas'][$key]['cScriptsDoubleclick'];
+						//$this->arrayOasUbicacion1[0]['cScript'] = $this->metadatos['oas'][$key]['cScript'];
+						foreach($this->arrayOasUbicacion1 as $key2=>$value2) {
+							if($value2['cDescripcion'] = 'Layer'){
+								$this->arrayOasUbicacion1[0]['cScript'] = $this->metadatos['oas'][$key]['cScript'];
+							}
+						}
+						break;
+					case "CintilloTop":
+						echo "gptAdSlots[".$slotCont."] = googletag.defineSlot('".$slotP."', [320, 50], 'divCintilloTop').defineSizeMapping(mapping).addService(googletag.pubads()).setTargeting('Pos','".$setTargeting[$value['cDescripcion']]."')".$setTargetingCat.$setTargetingIdNota.$setTargetingEntryId."; \n";
+						break;
+					case "FullBanner":
+					case "FullMed":
+					case "FullInf":
+					case "FullBanner3":
+					case "728x90":
+					case "full728_90":
+					case "CintilloBotom":
+						echo "gptAdSlots[".$slotCont."] = googletag.defineSlot('".$slotP."', [320, 50], 'div".str_replace(' ','', $value['cDescripcion'])."').defineSizeMapping(mapping).addService(googletag.pubads()).setTargeting('Pos','".$setTargeting[$value['cDescripcion']]."')".$setTargetingCat.$setTargetingIdNota.$setTargetingEntryId."; \n";
+						break;
+					case "BoxBanner":
+					case "BoxBannerbottom":
+						echo "gptAdSlots[".$slotCont."] = googletag.defineSlot('".$slotP."',[[300, 600], [300, 250]],'div".str_replace(' ','', $value['cDescripcion'])."').addService(googletag.pubads()).setTargeting('Pos','".$setTargeting[$value['cDescripcion']]."')".$setTargetingCat.$setTargetingIdNota.$setTargetingEntryId.";"."\n";
+						break;
+					case "DobleBoxBanner":
+						echo "gptAdSlots[".$slotCont."] = googletag.defineSlot('".$slotP."',[[300, 600]],'div".str_replace(' ','', $value['cDescripcion'])."').addService(googletag.pubads()).setTargeting('Pos','".$setTargeting[$value['cDescripcion']]."')".$setTargetingCat.$setTargetingIdNota.$setTargetingEntryId.";"."\n";
+						break;
+					case "BoxBannerGaleria":
+						//echo "gptAdSlots[".$slotCont."] = googletag.defineSlot('".$slotP."',[[300, 250]],'div".str_replace(' ','', $value['cDescripcion'])."').addService(googletag.pubads()).setTargeting('Pos','".$setTargeting[$value['cDescripcion']]."')".$setTargetingCat.";"."\n";
+						//$indiceBannerGal = $slotCont;
+						break;
+					case "Back":
+						break;
+					case "320x50":
+						break;
+					default:
+						echo "gptAdSlots[".$slotCont."] = googletag.defineSlot('".$slotP."',[".$value['cPosicion']."],'div".str_replace(' ','', $value['cDescripcion'])."').addService(googletag.pubads()).setTargeting('Pos','".$setTargeting[$value['cDescripcion']]."')".$setTargetingCat.$setTargetingIdNota.$setTargetingEntryId.".setCollapseEmptyDiv(true);"."\n";
+						break;
+				}
+				$slotCont ++;
+			}
+		}
+		if($this->metadatos['configuracion'][0]['idWidget'] == 4) {
+			//echo "gptAdSlots[".$slotCont."] = googletag.defineSlot('".$slotP."',[[300, 250]],'divBoxBannerGaleria').addService(googletag.pubads()).setTargeting('Pos','BoxGal')".$setTargetingCat.";\n";
+			$indiceBannerGal = $slotCont;
+		}
+	?>
+	<?php 
+	if($this->format == 'iphone') {
+		/*
+	?>
+	googletag.defineOutOfPageSlot('<?php echo $slotP;?>', 'divGptAd').addService(googletag.pubads());
+	
+	<?php */ }?>
+
+	googletag.pubads().enableSingleRequest();
+	googletag.pubads().collapseEmptyDivs();
+	googletag.pubads().enableVideoAds();
+	googletag.enableServices();
+});
+slotjs = '<?php echo $slotP; ?>';
+setTargetingCatId = '<?php echo $setTargetingCatId;?>';
+indiceBannerGal = '<?php echo $indiceBannerGal; ?>';
+
+var refreshFirstSlot = function() {
+	   googletag.cmd.push(function() {
+	   googletag.pubads().refresh([gptAdSlots[indiceBannerGal]]);
+	   });
+	 };
+
+var nextSlotId = 1;
+
+
+
+function moreContentFullBanner(slotName) {
+
+	console.log(slotName);
+	googletag.cmd.push(function() {
+		var mapping = googletag.sizeMapping().
+		addSize([320, 400], [320, 50]).
+		addSize([320, 700], [320, 50]).
+		addSize([750, 200], [728, 90]).
+		addSize([1050, 200], [[970, 250],[970, 90],[728, 90]]).build();
+		
+		var slotNew = googletag.defineSlot('<?php echo $slotP; ?>', [320, 50], slotName).defineSizeMapping(mapping).addService(googletag.pubads()).setTargeting('Pos','FullBannerMore')<?php echo $setTargetingCat.$setTargetingIdNota.$setTargetingEntryId; ?>; 
+
+		googletag.display(slotName);
+		googletag.pubads().refresh([slotNew]);
+	});
+}
+
+function moreContentBoxBanner(slotName) {
+
+	console.log(slotName);
+	googletag.cmd.push(function() {
+		var mapping = googletag.sizeMapping().
+		addSize([320, 400], [320, 50]).
+		addSize([320, 700], [320, 50]).
+		addSize([750, 200], [728, 90]).
+		addSize([1050, 200], [[970, 250],[970, 90],[728, 90]]).build();
+		
+		var slotNew = googletag.defineSlot('<?php echo $slotP; ?>', [300, 250], slotName).addService(googletag.pubads()).setTargeting('Pos','BoxBannerMore')<?php echo $setTargetingCat.$setTargetingIdNota.$setTargetingEntryId; ?>;
+
+		googletag.display(slotName);
+		googletag.pubads().refresh([slotNew]);
+	});
+}
+</script>
+<script type="text/javascript">
+	/* ::::::::::::::::::::::::::::::::::::::::::::::::: */
+            (function() {
+                if (typeof asiPlacements !== "undefined") {
+                    this.ASPQs = "";  //initialize ASPQs
+                    for (var p in asiPlacements) {
+                        var ASPQ = (asiPlacements[p]['default'] && asiPlacements[p].data) ? "PQ_" +p : "";
+                        if (ASPQ !== "") {
+                            for (var l in asiPlacements[p].data) {
+                                ASPQ += "_" + l;
+                                if (this.ASPQs === "") {
+                                    this.ASPQs = ASPQ;
+                                } else {
+                                    this.ASPQs += "," + ASPQ;
+                                }
+                            }
+                        }
+                    }
+                }
+            })();
+            if(typeof asiPlacements !== 'undefined') {
+                googletag.pubads().setTargeting('gwd', ASPQs);
+            }
+</script>
+<?php
+if($this->metadatos['configuracion'][0]['idWidget'] == '2' || $this->metadatos['configuracion'][0]['idWidget'] == '34' || $this->metadatos['configuracion'][0]['idWidget'] == '3') { ?>
+<!-- SCRIPT de AUDIENCE -->
+<script type="text/javascript" language="JavaScript">
+               var gwdTagDataAdGroup = "";
+               var gwdTagDataBlob = "";
+               var gwdTagDataAdserver = "";
+               var ASPQ_5ffd23 = "";
+               (function() {
+                var cb = new Date().getTime();
+                var asiPqTag = false;
+                var e = document.createElement("script");
+                var src = "http://pq-direct.revsci.net/pql?placementIdList=5ffd23&cb=" + cb;
+                var s = document.getElementsByTagName("script")[0];
+                e.async = true;
+                e.onload = function() {
+                      if (typeof asiPlacements["5ffd23"] != "undefined" && typeof asiPlacements["5ffd23"].default != "undefined") {
+                         gwdTagDataAdGroup = asiPlacements["5ffd23"].default.key;
+                         gwdTagDataBlob = asiPlacements["5ffd23"].blob;
+                         gwdTagDataAdserver = asiAdserver;
+                      }
+                     for(var p in asiPlacements) { window["ASPQ_"+p]=""; for(var key in asiPlacements[p].data) {window["ASPQ_"+p] += "PQ_"+p+"_"+key; } }
+                	
+					 gwd = "PQ_"+p+"_"+key;
+				}
+              e.src = src;
+                s.parentNode.insertBefore(e, s);
+                })();
+
+
+</script> 
+<?php } ?>
+<script id="navegg" type="text/javascript" src="//tag.navdmp.com/tm39306.js"></script>

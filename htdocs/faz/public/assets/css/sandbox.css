@@ -1,0 +1,156 @@
+body {
+  margin: 0 auto;
+  font-family: Montserrat,sans-serif;
+}
+.dark{
+  background: #333;
+}
+
+.boton {
+  position: absolute;
+  max-width: 100%;
+  top: 80%;
+  left: 40%; }
+
+.bg-indigo {
+  background: url(../img/azteka1.png) no-repeat center center fixed;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-indigob {
+  background: url(../img/azteka2.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.btn { 
+    display:inline-block; 
+    margin:0 auto; 
+    width:100%; 
+    background-color:transparent; 
+    padding:20px 10px; 
+    color:#fff;
+    font-size: 26px; 
+    text-decoration: none;
+    text-align: center;
+    }
+
+.bg-indigo h1 {
+  position: absolute;
+  color:#fff;
+  top:1%;
+  left:5%;
+}
+
+.bg-indigo img {
+  position: absolute;
+  max-width: 30%;
+  top:1%;
+  left:5%;
+}
+.texto {
+  position: absolute;
+  max-width: 50%;
+  top: 60%;
+  left: 35%; }
+
+  .tex{
+    text-align: justify;
+    color:#fff;
+  }
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+.item {
+  color: #fff;
+  padding-top:0;
+  padding-bottom:0;
+}
+
+.col {
+  display: inline-block;
+}
+.bg-pink {
+  background-color: #E91E63;
+}
+.bg-purple {
+  background-color: #673AB7;
+}
+.bg-cyan {
+  background-color: #00BCD4;
+}
+.bg-yellow {
+  background-color: #FFEB3B;
+}
+.bg-green {
+  background-color: #4CAF50;
+}
+.bg-brown {
+  background-color: #795548;
+}
+.bg-blueGrey {
+  background-color: #607D8B;
+}
+.bg-black {
+  background-color: #000;
+}
+
+@media only screen and (max-width: 800px){
+  .bg-indigo {
+  background: url(../img/azteka1b.png) no-repeat center center fixed;
+  background-size: cover;
+  }
+
+  .bg-indigob {
+  background: url(../img/azteka2b.png) no-repeat center center scroll;
+  height: 80vh;}
+
+  .bg-indigo img {
+  position: absolute;
+  max-width: 40%;
+  top:1%;
+  left:5%;}
+
+  .texto {
+  max-width: 90%;
+  top: 55%;
+  left: 5%; }  
+}
+
+@media only screen and (max-width: 600px){
+
+  .boton {
+  position: absolute;
+  max-width: 100%;
+  top: 80%;
+  left: 35%; }
+}
+@media only screen and (max-width: 425px) {
+  .bg-indigob {
+    background: url(../img/azteka2b.png) no-repeat center -200px fixed;
+    height: 75vh;
+    background-attachment: fixed;
+  }
+}
+.btn { 
+    display:block; 
+    margin:0 auto; 
+    width:100%; 
+    background-color:transparent; 
+    padding:20px 10px; 
+    color:#fff; 
+    text-decoration: none;
+    text-align: center;
+}

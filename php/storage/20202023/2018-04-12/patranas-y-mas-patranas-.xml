@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Nota Documento="\redsocial\Twitt.xml">
+  <Titulo Tipo="String">Patrañas y más patrañas.</Titulo>
+  <Contenido Tipo="hypertext">{"data":{"type":"text","data":{"text":"No estaría mal que leyeras esta nota."}}}</Contenido>
+  <Url Tipo="Link">https://twitter.com/RaTaSoFt/status/219634138284703745</Url>
+  <FechaCreacion Tipo="Date">2018-04-12 0:28</FechaCreacion>
+  <Publicado Tipo="bool">false</Publicado>
+  <Autor Tipo="String">20202023|Chucho Rey</Autor>
+  <Activo Tipo="bool">true</Activo>
+</Nota>

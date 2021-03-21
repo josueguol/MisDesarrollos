@@ -1,0 +1,63 @@
+header{background-color:#fff;height:100px;text-align:center;padding:20px 0}header .logo{overflow:hidden;float:none;margin:0}header .logo a{overflow:hidden;float:left;width:100%}header .logo a img{width:100%}header nav.barsMenu>a{width:60px;height:60px;border-radius:60px;background-color:#fff;position:fixed;top:20px;left:40px;font-size:28px;color:#838383;line-height:100%;padding:17px;transition:all .3s ease-in-out .3s;z-index:2}header nav.barsMenu>a:hover{box-shadow:5px 5px 10px #b7b7b7;background-color:#eaeaea}header nav.barsMenu>a:hover i{animation:roll .6s}@keyframes roll{0%{transform:rotate(0)}100%{transform:rotate(180deg)}}.menuTab{padding-top:20px;top:0;position:fixed;margin-right:40px;height:100%;background-color:#fff;display:none;opacity:0;transition:all 2s ease-in-out;z-index:2}.menuTab li{text-decoration:none;font-size:21px;text-align:left;padding:15px}.menuTab li:first-of-type img{width:80%}.menuTab li:first-of-type i{position:absolute;top:20px;right:20px;font-size:30px}.menuTab li:last-of-type{margin-bottom:60px}.menuTab li a{text-decoration:none;width:100%;display:block}.menuTab li a span{font-size:18px}footer .tell{background-color:#e3e3e3;padding:80px 40px}footer .imaLft{text-align:center}footer .imaLft img{width:100%;max-width:351px}footer .texto{padding:0 20px;font-size:20px;color:#666}footer .texto b{font-weight:900}footer .data{overflow:hidden}footer .socials ul{display:inline-block}footer .socials ul li{list-style:none;float:left;margin:0 15px}footer .socials ul li a{color:#fff;font-size:32px;padding:10%}footer .blackened{background-color:#454545;padding:20px 0}footer .blackened .data{margin:0 auto;float:none;text-align:center}footer .adress{color:#fff}footer .adress .montes{font-size:12px}@media only screen and (max-width:1024px){footer .tell{padding:40px}}@media only screen and (max-width:667px){header{height:67px}header nav.barsMenu>a{top:7px;left:15px}.menuTab li a{font-size:18px}footer .tell{padding:16px}}
+/*
+ *    Estilos para el submenú de nosotros.
+ */
+.nosotros ul {
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.nosotros ul li {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.menuTab .subMenu li:last-of-type {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 667px){
+    .menuTab .subMenu li a {
+            color: #333;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+.nosotros ul {
+    background-color: #242424;
+    position: absolute;
+    top: 42px;
+}
+
+    .nosotros:hover ul {
+        display: block;
+    }
+}
+
+.subMenu.active {
+    display: block;
+}
+
+/*
+ *    Estilos para centrar contenido en las notas
+ */
+.cms-textAlign-center {
+    text-align: center!important;
+}
+
+/*
+ *    Estilos para botón de donar
+ */
+ .donativo {
+    background-color: #f6db1f;
+ }
+
+ .menuTab li.donativo a {
+    color: #000;
+    font-weight: 700;
+}

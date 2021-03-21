@@ -1,0 +1,274 @@
+footer { 
+  background: url('../img/pcb-bg-a.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 50px 0 0 0;
+}
+
+footer, footer > div > div {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+footer > div {
+  width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+footer > div > div {
+  padding: 40px 30px 0px 30px;
+  box-sizing: border-box;
+}
+
+footer > div > div > div {
+  float: left;
+}
+
+footer > div > div > div:first-child {
+  width: 30%;
+}
+
+footer > div > div > div:first-child > img {
+  width: 150px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+footer > div > div > div:first-child > a {
+  width: 50%;
+  float: left;
+  font-size: 1em;
+  margin: 0 0 10px 0;
+  color: #FFF;
+}
+
+footer > div > div > div:first-child > a:hover {
+  text-decoration: underline;
+}
+
+footer > div > div > div:first-child + div {
+  width: 40%;
+  text-align: center;
+}
+
+footer > div > div > div:first-child + div > img {
+  width: 240px;
+  margin: 50px 0 0 0;
+}
+
+footer > div > div > div:first-child + div + div {
+  width: 30%;
+  padding: 0 0 0 100px;
+  box-sizing: border-box;
+}
+
+footer > div > div > div:first-child + div + div > a.social {
+  width: 42px;
+  height: 42px;
+  float: right;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 42px;
+  border: 1px solid #FFF;
+  margin: 0 0 0 10px;
+  color: #FFF;
+}
+
+footer > div > div > div:first-child + div + div > a.social:hover {
+  background-color: #1BB293;
+}
+
+footer > div > div > div:first-child + div + div > strong {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin: 60px 0 10px 0;
+  color: #FFF;
+}
+
+footer > div > div > div:first-child + div + div > span {
+  display: block;
+  margin: 0 0 10px 0;
+  line-height: 1.6em;
+  position: relative;
+  color: #FFF;
+}
+
+footer > div > div > div:first-child + div + div > span i, footer > div > div > div:first-child + div + div > a.mail > i {
+  position: absolute;
+  left: -26px;
+  top: 2px;
+}
+
+.fa-phone {
+  transform: rotate(110deg);
+}
+
+footer > div > div > div:first-child + div + div > a {
+  display: block;
+  position: relative;
+  color: #FFF;
+}
+
+footer > div > div > div:first-child + div + div > a:hover {
+  text-decoration: underline;
+}
+
+footer > div > div > div:first-child + div + div + div {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 60px 0 40px 0;
+  font-size: 0.8em;
+  color: #9FA0A0;
+}
+
+footer > div > div > div:first-child + div + div + div > span {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  color: #9FA0A0;
+}
+
+footer > div > div > div:first-child + div + div + div > a {
+  margin: 0 5px 0 5px;
+  color: #9FA0A0;  
+}
+
+footer > div > div > div:first-child + div + div + div > a:hover {
+  text-decoration: underline;
+}
+
+footer > div:first-child + div {
+  width: 100%;
+  float: left;
+  margin: 0 0 60px 0;
+  background-color: #FFF;
+}
+
+footer > div:first-child + div > div {
+  width: 1280px;
+  float: none;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+
+footer > div:first-child + div > div img {
+  height: 40px;
+  margin: 0 20px 40px 20px;
+}
+
+@media only screen and (max-width: 1280px) {
+  footer > div, footer > div:first-child + div > div {
+    width: 100%;
+  }
+  footer > div > div > div:first-child + div + div {
+    padding: 0 0 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer > div:first-child > div {
+    padding: 40px 30px 180px 30px;
+  }
+  footer > div > div > div:first-child, footer > div > div > div:first-child + div + div {
+    width: 50%;
+  }
+  footer > div > div > div:first-child + div {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 60px;
+  }
+  footer > div > div > div:first-child + div > img {
+    margin-top: 0;
+  }
+  footer > div > div > div:first-child + div + div {
+    padding: 0 0 0 120px;
+  }
+  footer > div > div > div:first-child + div + div + div {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: -20px;
+    padding: 60px 20px 40px 20px;
+    box-sizing: border-box;
+  }
+  footer > div > div > div:first-child + div + div + div > span {
+    left: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer > div > div > div:first-child > img {
+    display: inline-block;
+    margin: 0 0 40px 0;
+  }
+  footer > div > div > div:first-child, footer > div > div > div:first-child + div + div {
+    width: 100%;
+    text-align: center;
+  }
+  footer > div > div > div:first-child + div + div {
+    padding: 0 0 0 0;
+  }
+  footer > div > div > div:first-child + div + div > span i, footer > div > div > div:first-child + div + div > a.mail > i {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  footer > div > div > div:first-child + div + div > a.social {
+    float: none;
+    display: inline-block;
+    margin: 30px 10px 0 10px;
+  }
+  footer > div > div > div:first-child + div + div > strong { 
+    margin-top: 30px;
+  }
+  footer > div > div > div:first-child + div {
+    bottom: 70px;
+  }
+  footer > div > div > div:first-child + div + div + div > span {
+    width: 100%;
+    float: left;
+    top: auto;
+    left: auto;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  footer > div:first-child > div {
+    padding: 40px 30px 240px 30px;
+  }
+  footer > div > div > div:first-child + div {
+    bottom: 140px;
+  }
+  footer > div > div > div:first-child + div + div + div {
+    bottom: -20px;
+  }
+  footer > div > div > div:first-child + div + div + div > a {
+    width: 100%;
+    float: left;
+    margin: 14px 0 0 0;
+  }
+  footer > div > div > div:first-child + div + div + div > strong {
+    display: none;
+  }
+  footer > div > div > div:first-child > a {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer > div > div {
+    padding: 20px 30px 0px 30px;
+  }
+  footer > div:first-child + div > div img {
+    height: 30px;
+    margin: 0 10px 20px 10px;
+  }
+}

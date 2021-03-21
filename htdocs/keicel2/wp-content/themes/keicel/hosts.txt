@@ -1,0 +1,157 @@
+hosts linux locales
+
+DGC
+
+<VirtualHost dongutycode.local:80>
+  ServerAdmin webmaster@dongutycode.local
+  ServerName dongutycode.local
+
+  DocumentRoot "/home/josueguol/Yandex.Disk/htdocs/dgc"
+
+  ErrorLog ${APACHE_LOG_DIR}/dgc_error.log
+  CustomLog ${APACHE_LOG_DIR}/dgc_access.log combined
+
+  <Directory "/home/josueguol/Yandex.Disk/htdocs/dgc">
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Require all granted
+        Allow from All
+  </Directory>
+</VirtualHost>
+
+
+lnya
+
+<VirtualHost lnyaabogados.com:80>
+  ServerAdmin webmaster@lnyaabogados.com
+  ServerName lnyaabogados.com
+
+  DocumentRoot "/var/www/html/lnya"
+
+  SetEnv CI_ENV development
+
+  ErrorLog ${APACHE_LOG_DIR}/lnya_error.log
+  CustomLog ${APACHE_LOG_DIR}/lnya_access.log combined
+
+  <Directory "/var/www/html/lnya">
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Require all granted
+        Allow from All
+
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} -s [OR]
+        RewriteCond %{REQUEST_FILENAME} -l [OR]
+        RewriteCond ${REQUEST_FILENAME} -d
+        RewriteRule ^.*$ - [NC,L]
+        RewriteRule ^.*$ /index.php [NC,L]
+  </Directory>
+</VirtualHost>
+
+
+lnyassl
+<IfModule mod_ssl.c>
+  <VirtualHost lnyaabogados.com:443>
+    SSLEngine on
+    SSLCertificateFile /home/josueguol/Giovaz/ssl/serverSSL.crt
+    SSLCertificateKeyFile /home/josueguol/Giovaz/ssl/serverSSLnew.key
+
+    ServerAdmin webmaster@lnyaabogados.com
+    ServerName lnyaabogados.com
+
+    DocumentRoot "/var/www/html/lnya"
+
+    SetEnv CI_ENV development
+
+    ErrorLog ${APACHE_LOG_DIR}/lnya_error.log
+    CustomLog ${APACHE_LOG_DIR}/lnya_access.log combined
+
+    <Directory "/var/www/html/lnya">
+      Options Indexes FollowSymLinks Includes ExecCGI
+      AllowOverride All
+      Require all granted
+      Allow from All
+
+      RewriteEngine On
+      RewriteCond %{REQUEST_FILENAME} -s [OR]
+      RewriteCond %{REQUEST_FILENAME} -l [OR]
+      RewriteCond ${REQUEST_FILENAME} -d
+      RewriteRule ^.*$ - [NC,L]
+      RewriteRule ^.*$ /index.php [NC,L]
+    </Directory>
+  </VirtualHost>
+</IfModule>
+
+
+mcms
+<VirtualHost mcms.local:80>
+  ServerAdmin webmaster@mcms.local
+  ServerName mcms.local
+
+  DocumentRoot "/home/josueguol/Yandex.Disk/htdocs/mcms/public"
+
+  SetEnv CI_ENV development
+
+  ErrorLog ${APACHE_LOG_DIR}/mcms_error.log
+  CustomLog ${APACHE_LOG_DIR}/mcms_access.log combined
+
+  <Directory "/home/josueguol/Yandex.Disk/htdocs/mcms/public">
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Require all granted
+        Allow from All
+
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} -s [OR]
+        RewriteCond %{REQUEST_FILENAME} -l [OR]
+        RewriteCond ${REQUEST_FILENAME} -d
+        RewriteRule ^.*$ - [NC,L]
+        RewriteRule ^.*$ /index.php [NC,L]
+  </Directory>
+</VirtualHost>
+
+mcmsssl
+<IfModule mod_ssl.c>
+  <VirtualHost mcms.local:443>
+    SSLEngine on
+    SSLCertificateFile /home/josueguol/Yandex.Disk/htdocs/mcms/mcms.crt
+    SSLCertificateKeyFile /home/josueguol/Yandex.Disk/htdocs/mcms/mcms.key
+
+    ServerAdmin webmaster@mcms.local
+    ServerName mcms.local
+
+    DocumentRoot "/home/josueguol/Yandex.Disk/htdocs/mcms/public"
+
+    SetEnv CI_ENV development
+
+    ErrorLog ${APACHE_LOG_DIR}/mcms_error.log
+    CustomLog ${APACHE_LOG_DIR}/mcms_access.log combined
+
+    <Directory "/home/josueguol/Yandex.Disk/htdocs/mcms/public">
+      Options Indexes FollowSymLinks Includes ExecCGI
+      AllowOverride All
+      Require all granted
+      Allow from All
+
+      RewriteEngine On
+      RewriteCond %{REQUEST_FILENAME} -s [OR]
+      RewriteCond %{REQUEST_FILENAME} -l [OR]
+      RewriteCond ${REQUEST_FILENAME} -d
+      RewriteRule ^.*$ - [NC,L]
+      RewriteRule ^.*$ /index.php [NC,L]
+    </Directory>
+  </VirtualHost>
+</IfModule>
+
+
+
+
+
+phpmyadmin
+<VirtualHost phpmyadmin.local:80>
+    ServerName phpmyadmin.local
+    DocumentRoot /usr/share/phpmyadmin
+
+    ErrorLog ${APACHE_LOG_DIR}/pma.error.log
+    CustomLog ${APACHE_LOG_DIR}/pma.access.log combined
+</VirtualHost>

@@ -1,0 +1,162 @@
+<?php 
+
+	$Imagen = new My_Helper_CrearImagen();
+	$existeArticulo 	= 1;
+	$datos				= $this->articulo;
+	if(empty($datos)) 	$existeArticulo = 0;
+	
+	$relacionados = $this->otrosArticulos;
+	$name = $datos['autor'];
+	$name = explode(" ", $name, 2);
+
+	$newformat = $datos["fecha"];	
+	
+	//$string_1 			=  	preg_replace('/style=\\"[^\\"]*\\"/', '', 		$datos['cContenido']);
+	//$string_2 			= 	preg_replace('/ style=("|\')(.*?)("|\')/','',	$datos['cContenido']);
+	$string_1 			 	=  	preg_replace('/ style=\\"[^\\"]*\\"/', '', 		$datos['contenido']); //Quita los styles
+	
+	$datos['contenido']    = 	str_replace("<span>&nbsp;</span>","<!-- remove <span>&nbsp;</span> -->", $string_1);//Quita los espacios inncesarios despues de quitar los styles...
+	//$datos['contenido']    = 	str_replace("<br/>","<!-- remove <br/> -->", $string_1);//Elimina un par de nueva linea...
+	
+	$cantidadC  	= 140;
+	$tresPuntos 	= "";
+	$titulo		 	= $datos["titulo"];
+	$desc 			= str_replace("&nbsp;", "", strip_tags($datos["contenido"]));
+	$urlImagen		= $datos["imagen"];
+	$descripcion 	= explode("||",wordwrap($desc,$cantidadC,"||"));
+	$descripcion	= htmlspecialchars($descripcion[0]."...", ENT_QUOTES);
+
+	/****Metadata HTML ***/
+	$this->metadatos["configuracion"][0]["cTitulo"] 			= htmlspecialchars("Punto Casa Bolsa - ".$titulo, ENT_QUOTES);
+	$this->metadatos["configuracion"][0]["cMetaDescripcion"] 	= htmlspecialchars($descripcion, ENT_QUOTES);
+	$cMetaKeywords = $descripcion.$titulo;
+	$cMetaKeyWord  = '';
+	foreach(explode(' ',$cMetaKeywords) as $keyWord){
+		if(strlen($keyWord) > 2){
+			$conservar = '0-9a-zñáéíóú'; // juego de caracteres a conservar
+			$regex = sprintf('~[^%s]++~i', $conservar); // case insensitive
+			$keyWord = preg_replace($regex, '', $keyWord);
+			$cMetaKeyWord[] =   $keyWord;
+		}
+	}
+	$this->metadatos["configuracion"][0]["cMetaKeywords"] = implode(',', $cMetaKeyWord);
+	/****Metadata HTML ***/
+	
+	
+	$crop ="";
+	$this->imgHisFB = $crop . $urlImagen;
+	
+	$this->metaFacebook =  @<<<METANOTA
+  	<meta property="og:type"   content="article" />
+	<meta property="og:url"    content="http://{$this->site}" />
+	<meta property="og:title"  content="{$titulo}" />
+	<meta property="og:image"  content="{$this->imgHisFB}" />
+	<meta property="og:description"  content="{$descripcion}" />
+METANOTA;
+	
+	$this->metaFacebook .= @<<<METATWITTER
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$titulo}">
+	<meta name="twitter:description" content="{$descripcion}">
+	<meta name="twitter:image:src" content="{$urlImagen}">
+	<meta name="twitter:domain" content="http://{$this->site}">
+	<meta name="twitter:site" content="http://{$this->site}">
+	
+METATWITTER;
+?>
+
+<link rel="stylesheet" href="/portal/styles/blog.css">
+<link rel="stylesheet" href="/portal/styles/home.css">
+  <div class="contentBox">
+    <div>
+      <div>
+        <div class="article">
+          <h2><strong><?php if($existeArticulo == 1 ) {echo $titulo;}else{echo "Lo sentimos, la página que solicitaste ya no se encuentra disponible <br/>";} ?></strong></h2>
+          <h3>
+          <?php
+          if($existeArticulo == 0 ) { echo '<div class="pcb-buttonBox"><a href="/blogs/index" class="buttonP">ir a blog financiero</a></div>'; }
+          if($existeArticulo == 1 )          
+          	echo $newformat;
+	       ?>
+	       </h3>
+          <img    src="<?php echo $datos["imagen"]; ?>"    	alt="<?php echo $datos["titulo"]; ?>" width="800px" height="480px" name="imagencrop">
+				
+          <p style="width: 100%;">
+			<?php  echo $datos['contenido']; ?>
+          </p>
+		<?php if($existeArticulo == 1): ?>
+		          <div class="by">
+		            <a href="<?php echo $datos['urlAutor']; ?>">
+		            	<div>
+			              <h3>Artículo escrito por:</h3>
+			              <?php 
+			              $imagenAutor = "";
+			              if ($datos['imagenAutor'] != null){
+			              		$imagenAutor =	$datos['imagenAutor'];
+			              }else{
+			              		$imagenAutor =	"https://tvazteca.brightspotcdn.com/d3/8a/7e7f6bdd48f9b1ed91b2cf9e15b6/defaultautor.png";
+			              }
+			              ?>
+			              <img src="<?php echo $imagenAutor;?>" alt="<?php echo (sizeof($name)>1) ? $name[0] :"No se cargo la imagen...";?>">
+			              <h2>
+			              <?php
+				          	if (sizeof($name)>1){
+				          		echo $name[0];
+				          	?>
+				          	<strong><?php echo $name[1];?></strong> 
+				          	<?php
+				          	}else{
+				          		echo $name[0];
+				          	}       	 
+				          ?>
+			              <span>conoce más</span>
+		             	</div>
+		            </a>
+		          </div>
+
+		          <div>
+		            <h2>Notas <strong>Relacionadas</strong></h2>
+		            <?php 
+		            foreach ($relacionados as $key => $datos):
+		            	if($key <= 1):
+		            ?>           	
+			            <a href="<?php echo $datos['urlC'];?>">
+			            	<div>
+			              		<img src="<?php echo $datos['imagen'];?>" style="" alt="<?php echo $datos['temaC'];?>" width="376px" height="239px" name="imagencrop">
+			              		<strong><?php echo $datos['tituloC'];?></strong>
+			              		<h6><?php echo $datos['autor'];?></h6>
+			              		<?php echo $datos['contenidoC'];?>
+			              		<span>leer más</span>
+			              	</div>
+			            </a>
+		            <?php 
+		            	endif;
+		            endforeach;?>
+		          </div>
+		<?php endif; //Fin valida si existe el articulo... ?>
+        </div>
+        <div>
+			
+		  <div class="mod">
+		  		<h2><?php  if(count($relacionados) >=3):?>Lo más <strong>visto</strong><?php endif;?></h2>
+               
+           	<?php 
+           	foreach ($relacionados as $key => $datos):
+           	if($key >= 2 && $key<= 11):
+            ?>   
+             <a href="<?php echo $datos['urlC'];?>" class="artcls">
+              <span></span>
+              <?php echo $datos['titulo'];?>
+            </a>
+            <?php 	
+            endif;
+            endforeach;?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/portal/scripts/header.js"></script>
+  <script src="/js/detecta-dispositivo.js"> </script>

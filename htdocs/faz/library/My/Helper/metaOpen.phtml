@@ -1,0 +1,66 @@
+<div id="fb-root"></div>
+     <script>
+<!--
+
+		
+    	 <?php switch ($this->module) { 
+    	     case "notas": ?>
+
+
+
+    window.onload = function () {
+    	setTimeout('postArticle();', 12000);
+    };
+		function postArticle() {
+    	     if(Cookie.read('aztkSocTog') != 'off'){
+	    	     FB.getLoginStatus(function(response) {
+	    	    	  if (response.status === 'connected') {
+		    	      	    fbtkn = response.authResponse.accessToken;
+		    	      	  FB.api(
+									'/me/news.reads',
+									'POST',
+										{ article: 'http://<?php echo $this->site; ?>',
+										access_token: fbtkn },
+										function(response) {
+											if (!response || response.error) {
+												console.log(response.error.message);
+											} else {
+												console.log('ID: ' + response.id);
+											}
+										}
+								);
+	    	    	  }
+	    	     });
+    	     }
+		}
+         <?php break; ?>
+         <?php case "capitulos": ?>
+         <?php case "videos": ?>
+         window.onload = function () {
+         	setTimeout('postVideo();', 12000);
+         };
+     		function postVideo() {
+         	     if(Cookie.read('aztkSocTog') != 'off'){
+     	    	     FB.getLoginStatus(function(response) {
+     	    	    	  if (response.status === 'connected') {
+     		    	      	    fbtkn = response.authResponse.accessToken;
+     		    	      	 FB.api(
+     								'/me/video.watches',
+     								'POST',
+     								{ video: 'http://<?php echo $this->site; ?>',
+     								access_token: fbtkn },
+     								function(response) {
+     									if (!response || response.error) {
+     										console.log(response.error.message);
+     									} else {
+     										console.log('ID: ' + response.id);
+     									}
+     								}
+     							);
+     	    	    	  }
+     	    	     });
+         	     }
+     		}
+         <?php break; ?>
+         <?php } ?>-->
+   </script>

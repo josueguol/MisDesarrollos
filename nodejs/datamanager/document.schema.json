@@ -1,0 +1,24 @@
+{
+    "nombre": "Nota",
+    "alias": "Notas",
+    "visible": true,
+    "elementos": [{
+            "etiqueta": "Título",
+            "longitud": 256,
+            "obligatorio": true,
+            "visible": true,
+            "control": "TextField",
+            "validacion": "",
+            "llave": true
+        }, {
+            "etiqueta": "Introducción",
+            "longitud": 0,
+            "obligatorio": false,
+            "visible": true,
+            "control": "TextField",
+            "validacion": "",
+            "llave": false
+        }
+    ]
+
+}

@@ -1,0 +1,440 @@
+.contentBox {
+  width: 100%;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.contentBox>div {
+  width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+.contentBox>div>div {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box10 {
+  margin: 0 0 80px 0;
+}
+
+.pcb-box10>div>div>div:first-child {
+  width: 60%;
+  float: left;
+}
+
+.pcb-box10>div>div>div:first-child+div {
+  width: 40%;
+  float: left;
+  margin-top: 2.6%;
+  background-color: #EEEDEC;
+}
+
+.pcb-box10>div>div>div>img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  float: left;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5)
+}
+
+.pcb-box10>div>div>div>form {
+  text-align: center;
+  padding: 20px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+.pcb-box10>div>div>div>form h4 {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  display: block;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  color: #492F63;
+}
+
+.pcb-box10>div>div>div>form h4 span {
+  color :#7F8083;
+}
+
+.pcb-box10>div>div>div>form>button.buttonP {
+  display: inline-block;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  padding: 12px 40px 12px 40px;
+  margin: 0 0 0 0;
+  border: none;
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+
+.pcb-box10>div>div>div>form>p#errorMsg2 {
+  width:70%;
+  display: none;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid rgb(243, 205, 205);
+  background-color: #FFEFEF;
+  color: #B92424;
+}
+
+.pcb-box10>div>div>div>form>div {
+  width: 100%;
+  display: inline-block;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+}
+
+.pcb-box10>div>div>div>form>div>input {
+  width: 49%;
+  float: left;
+  height: 42px;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  margin: 0 0.5% 5px 0.5%;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+.pcb-box10>div>div>div>form>div>input[name="phone"] {
+  width: 99%;
+}
+
+.pcb-box10>div>div>div>form>div>input::placeholder {
+  color: #9FA1A0;
+}
+
+.pcb-box10>div>div>div>form>div>span {
+  width: 100%;
+  float: left;
+  font-size: 0.7em;
+  text-align: left;
+  margin: 10px 0 0 0;
+  color: #7F8083;
+}
+
+.pcb-box10>div>div>div>form>div>span input {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+.pcb-box13 {
+  margin: 40px 0 80px 0;
+}
+
+.pcb-box13>div>div>div {
+  float: left;
+}
+
+.pcb-box13>div>div>div h6 {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  color: #7F8083;
+}
+
+.pcb-box13>div>div>div h6 strong {
+  font-weight: bold;
+  color: #492F63;
+}
+
+.pcb-box13>div>div>div>ul {
+  width: 100%;
+  float: left;
+  list-style: none;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+}
+
+.pcb-box13>div>div>div>ul>li {
+  width: 100%;
+  list-style-position: outside;
+  float: left;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  color: #7F8083;
+}
+
+.pcb-box13>div>div>div>ul>li::before {
+  width: 0.8em;
+  content: "•";
+  display: inline-block;
+  margin-left: -15px;
+  color: #5B296E
+}
+
+.pcb-box13>div>div>div:first-child {
+  width: 45%;
+  padding: 0 30px 0 30px;
+  box-sizing: border-box;
+}
+
+.pcb-box13>div>div>div:first-child+div {
+  width: 55%;
+}
+
+.video16-9 {
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video16-9>div {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #ebebeb;
+}
+
+.video16-9>div>iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.pcb-box14 {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box14 > div > div h2 {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  text-align: center;
+  margin: 0 0 30px 0;
+  color: #7F8083;
+}
+
+.pcb-box14 > div > div h2 strong {
+  font-weight: bold;
+  color: #5B296E;
+}
+
+.pcb-box14 .faq {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box14 .faq button {
+  width: 100%;
+  float: left;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: left;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #7F8083;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pcb-box14 .faq button.active {
+  font-weight: bold;
+  color: #5B296E;
+}
+
+.pcb-box14 .faq button span {
+  width: 35px;
+  height: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 1.5px;
+  margin-right: 5px;
+  background-color: #7F8083;
+}
+
+.pcb-box14 .faq button.active span {
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #5B296E;
+}
+
+.pcb-box14 .faq button * {
+  pointer-events: none;
+}
+
+.pcb-box14 .faq button:hover {
+  color: #FFF;
+  background-color: #5B296E;
+}
+
+.pcb-box14 .faq button:hover span {
+  background-color: #FFF;
+}
+
+.pcb-box14 .faq div {
+  width: 100%;
+  height: 0px;
+  float: left;
+  overflow: hidden;
+  transition: height 0.2s;
+}
+
+.pcb-box14 .faq div.active {
+  height: auto;
+  padding: 10px 40px 30px 66px;
+  box-sizing: border-box;
+}
+
+.pcb-box14 .faq div p, .pcb-box14 .faq div ul {
+  font-size: 1em;
+  line-height: 1.4em;
+  list-style: none;
+  color: #7F8083;
+}
+
+.pcb-box14 .faq div p a {
+  color: #5B296E;
+}
+
+.pcb-box14 .faq div ul {
+  margin-top: 20px;
+}
+
+.pcb-box14 .faq div ul li {
+  list-style-position: outside;
+}
+
+.pcb-box14 .faq div ul li::before {
+  width: 0.8em;
+  content: "·";
+  display: inline-block;
+  margin-left: -15px;
+  color: #5B296E
+}
+
+.pcb-box14 > div > div {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+footer {
+  margin: 0 0 0 0;
+}
+
+@media only screen and (max-width: 1280px) {
+  .contentBox>div {
+    width: 100%;
+  }
+  .pcb-box13>div>div>div h6 {
+    font-size: 1.3em;
+  }
+  .pcb-box13>div>div>div>ul>li {
+    font-size: 1em;
+  }
+  .pcb-box10>div>div>div:first-child+div {
+    margin-top: 0;
+  }
+  .pcb-box10>div>div>div>form>button.buttonP {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .pcb-box13>div>div>div:first-child, .pcb-box13>div>div>div:first-child+div, .pcb-box10>div>div>div:first-child, .pcb-box10>div>div>div:first-child+div {
+    width: 100%;
+  }
+  .pcb-box10>div>div>div:first-child+div {
+    margin-top: 80px;
+  }
+  .pcb-box13>div>div>div:first-child+div {
+    margin-top: 30px;
+  }
+  .pcb-box13>div>div>div h6 {
+    font-size: 1.6em;
+  }
+  .pcb-box13>div>div>div>ul>li {
+    font-size: 1.2em;
+  }
+  .pcb-box13 {
+    margin: 40px 0 40px 0
+  }
+  .pcb-box10>div>div>div:first-child+div {
+    margin-top: 40px;
+  }
+  .pcb-box10 {
+    margin: 0 0 40px 0;
+  }
+  .pcb-box14 .faq button:hover {
+    color: #5B296E;
+    background-color: #FFF;
+  }
+  .pcb-box14 .faq button:hover span {
+    background-color: #5B296E;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pcb-box13>div>div>div h6 {
+    font-size: 1.3em;
+  }
+  .pcb-box13>div>div>div>ul>li {
+    font-size: 1em;
+  }
+  .pcb-box14 .faq div.active {
+    padding: 10px 20px 30px 20px;
+  }
+  .pcb-box10>div>div>div>form>button.buttonP {
+    font-size: 0.7em;
+    line-height: 1.4em;
+  }
+  .pcb-box14 .faq div p, .pcb-box14 .faq div ul {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pcb-box13 {
+    margin: 20px 0 80px 0;
+  }
+  .pcb-box13>div>div>div:first-child {
+    padding: 0 20px 0 20px;
+  }
+  .pcb-box13>div>div>div h6 {
+    font-size: 1.1em;
+  }
+  .pcb-box13>div>div>div>ul>li {
+    font-size: 0.9em;
+  }
+  .pcb-box13>div>div>div:first-child+div {
+    margin-top: 0;
+  }
+  .pcb-box13 {
+    margin: 20px 0 40px 0;
+  }
+  .pcb-box14 > div > div h2 {
+    font-size: 1.4em;
+  }
+  .pcb-box14 .faq button {
+    font-size: 1em;
+  }
+  .pcb-box10>div>div>div>form h4 span {
+    font-size: 0.8em;
+  }
+}

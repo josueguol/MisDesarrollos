@@ -1,0 +1,382 @@
+body {
+	overflow-x: hidden
+}
+
+.slideItem {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center
+}
+
+.slideItem a {
+	overflow: hidden;
+	float: left;
+	width: 100%;
+	padding: 25%
+}
+
+.slideItem a img {
+	width: 100%
+}
+
+.controles {
+	/* display: none; */
+	position: relative;
+	top: 275px;
+	width: 100%
+}
+
+.controles a {
+	position: absolute;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+	font-size: 25;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: rgba(35, 35, 35, .1)
+}
+
+.controles a.left {
+	left: 60px
+}
+
+.controles a.right {
+	right: 60px
+}
+
+.fstRow {
+	background-image: url(../images/azteka2.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 25%
+}
+
+.hpep {
+	margin: 0 auto;
+	float: none;
+	padding: 0 16px
+}
+
+.hpep img {
+	width: 100%;
+	margin-bottom: 40px
+}
+
+.dataGreen {
+	background-color: #e5eede;
+	color: #4c4c4c;
+	padding: 40px 0;
+	display: none;
+}
+
+.dataGreen h3 {
+	font-family: Montserrat;
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 40px
+}
+
+.dataGreen .wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	overflow: hidden
+}
+
+.dataGreen .wrapper .single {
+	text-align: center;
+	font-size: 21px
+}
+
+.dataGreen .wrapper .single span {
+	color: #8db049;
+	font-size: 54px;
+	font-family: Montserrat
+}
+
+.conLogo {
+	/* background-image: url(../images/logo_row.png); */
+	background-position: right;
+	background-repeat: no-repeat;
+	font-size: 21px;
+	padding: 50px 120px;
+	overflow: hidden
+}
+
+.conLogo h4 {
+	font-family: Montserrat;
+	font-size: 32px
+}
+
+.threesome .single {
+	text-align: center;
+	padding: 100px 60px;
+	height: 450px;
+	transition: width .4s ease-in-out
+}
+
+.threesome .single.yellow {
+	background-color: #e9c42d;
+	background-image: url(../images/FA_img_Comunidad.jpg);
+	background-size: cover;
+	background-position: top center
+}
+
+.threesome .single.red {
+	background-color: #cf5658;
+	background-image: url(../images/FA_img_educacion.jpg);
+	background-size: cover;
+	background-position: top center
+}
+
+.threesome .single.green {
+	background-color: #50b678;
+	background-image: url(../images/FA_img_ambiente.jpg);
+	background-size: cover;
+	background-position: top center
+}
+
+.inner a {
+	overflow: hidden;
+	float: left;
+	text-decoration: none
+}
+
+.inner h3 {
+	text-align: left;
+	font-family: MontseBold;
+	font-weight: bolder
+}
+
+.inner p {
+	text-align: left;
+	font-weight: bolder;
+	font-size: 18px
+}
+
+.videoRow {
+	margin: 40px 0
+}
+
+.video {
+	margin: 0 auto;
+	float: none
+}
+
+.video span {
+	color: #dd292e;
+	text-transform: uppercase;
+	letter-spacing: 2px
+}
+
+.video h3 {
+	font-family: Montserrat;
+	font-weight: bolder
+}
+
+.int-video {
+	width: 100%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 20px 0
+}
+
+.int-video:before {
+	content: '';
+	display: block;
+	padding-top: 61%
+}
+
+.int-vinner {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+
+.textos span.first {
+	color: #e9820d;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 15px
+}
+
+.textos h2 {
+	font-family: MontseBold
+}
+
+.textos h3 {
+	font-family: Montserrat
+}
+
+.textos p.flow {
+	font-size: 26px;
+	color: #7a7a7a
+}
+
+.textos p.flow span {
+	color: #e87d00
+}
+
+.newsRow {
+	margin: 40px 0
+}
+
+.news h3 {
+	font-family: MontseBold;
+	color: #0180c1;
+	text-align: center
+}
+
+.wraprNews {
+	max-width: 1200px;
+	margin: 40px auto;
+	float: none;
+	overflow: hidden
+}
+
+.newItem {
+	padding: 0 5px
+}
+
+.newItem a {
+	overflow: hidden;
+	float: left;
+	width: 100%;
+	text-decoration: none
+}
+
+.newItem a .itm-ima {
+	width: 100%;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 0 20px 0;
+	max-height: 180px;
+	overflow: hidden;
+	float: left
+}
+
+.newItem a .itm-ima::before {
+	content: '';
+	display: block;
+	padding-top: 50%
+}
+
+.newItem a .inner-ima {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+
+.newItem a .inner-ima img {
+	width: 100%
+}
+
+.newItem a span {
+	width: 100%;
+	display: block;
+	margin: 10px 0
+}
+
+.newItem a span.ttl {
+	font-weight: bolder;
+	color: #0180c1
+}
+
+.btnMrNws {
+	overflow: hidden;
+	float: left;
+	display: flex
+}
+
+.btnMrNws a {
+	text-align: center;
+	text-decoration: none;
+	background-color: #0180c1;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	border-radius: 40px;
+	margin: 0 auto;
+	float: none
+}
+
+@media only screen and (max-width:1080px) {
+    .slideItem {
+		background-size: contain;
+		/* background-position-y: 70px; */
+	}
+	.controles {
+		top: 200px;
+	}
+    .newsRow {
+		padding: 0 16px
+	}
+}
+
+@media only screen and (max-width:810px) {
+	.controles {
+		top: 150px;
+	}
+	.dataGreen .wrapper .single span {
+		font-size: 44px
+	}
+}
+
+@media only screen and (max-width:667px) {
+	.controles {
+		top: 130px;
+	}
+	.controles a.right {
+		right: 15px
+	}
+	.controles a.left {
+		left: 15px
+	}
+	.dataGreen h3 {
+		font-size: 24px
+	}
+	.threesome .single {
+		padding: 60px 20px
+	}
+	.videoRow>div {
+		padding: 0 16px
+	}
+	.conLogo {
+		padding: 40px
+	}
+	.dataGreen .wrapper .single span {
+		font-size: 34px
+	}
+}
+
+@media only screen and (max-width:520px) {
+	.controles {
+		top: 95px;
+	}
+}
+
+@media only screen and (max-width:425px) {
+	.controles {
+		top: 80px;
+	}
+	.conLogo {
+		background-position: center;
+		background-size: contain
+	}
+}
+
+@media only screen and (max-width:375px) {
+	.controles {
+		top: 50px;
+	}
+}

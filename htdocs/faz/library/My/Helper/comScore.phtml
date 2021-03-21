@@ -1,0 +1,35 @@
+<!-- Begin comScore UDM code 1.1104.26 -->
+<script type="text/javascript">
+// <![CDATA[
+function comScore(t){
+	var b="comScore",o=document,f=o.location,a="",e="undefined",g=2048,s,k,p,h,r="characterSet",n="defaultCharset",m=(typeof encodeURIComponent!=e?encodeURIComponent:escape);
+	if(o.cookie.indexOf(b+"=")!=-1){p=o.cookie.split(";");
+	for(h=0,f=p.length;h<f;h++){
+		var q=p[h].indexOf(b+"=");
+		if(q!=-1){
+			a="&"+unescape(p[h].substring(q+b.length+1))}}}t=t+"&ns__t="+(new Date().getTime());
+			t=t+"&ns_c="+(o[r]?o[r]:(o[n]?o[n]:""))+"&c8="+m(o.title)+a+"&c7="+m(f&&f.href?f.href:o.URL)+"&c9="+m(o.referrer);
+			if(t.length>g&&t.indexOf("&")>0){
+				s=t.substr(0,g-8).lastIndexOf("&");
+				t=(t.substring(0,s)+"&ns_cut="+m(t.substring(s+1))).substr(0,g)
+			}
+			if(o.images){k=new Image();
+				if(typeof ns_p==e){
+					ns_p=k
+				}
+				k.src=t
+			}else{
+				o.write('<p><'+'img src="'+t+'" height="1" width="1" alt="*"></p>')
+			}
+		};
+	comScore('http'+(document.location.href.charAt(4)=='s'?'s://sb':'://b')+'.scorecardresearch.com/p?c1=2&c2=6408339&ns_site=tv-azteca&&name=<?php echo @$this->nameCertifica; ?>');
+// ]]>
+</script>
+<noscript>
+	<p>
+		<img
+			src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6408339&amp;ns_site=tv-azteca&&amp;name=<?php echo @$this->nameCertifica; ?>"
+			height="1" width="1" alt="*">
+	</p>
+</noscript>
+<!-- End comScore UDM code -->

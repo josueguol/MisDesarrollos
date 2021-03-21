@@ -1,0 +1,95 @@
+bio-sb
+
+Depues de mover el div del las listas 
+
+1. agregar a #u14516 background-size: cover;
+    meyer u15651
+    hycel u15056
+    sartoius u14878
+    deltalab u15231
+    simport u15373
+    icr u15512
+    sakura u15783
+    erma u15919
+
+2. cambiar en #ppu21292 a width: 100%;
+    meyer ppu21759
+    hycel ppu21505
+    sartorius ppu21339
+    deltalab ppu21567
+    simport ppu21633
+    icr ppu21699
+    sakura ppu21821
+    erma ppu21885
+
+3. eliminar en #ppu21292 margin-left: -40%;
+    meyer ppu21759
+    hycel ppu21505
+    sartorius ppu21339
+    deltalab ppu21567
+    simport ppu21633
+    icr ppu21699
+    sakura ppu21292
+    erma ppu21885
+
+5. cambiar en #pu18800 width 100%
+    meyer pu18770
+    hycel pu18782
+    sartoryius pu18794
+    deltalab pu18744
+    simport pu18807
+    icr pu18823
+    sakura pu18776
+    erma pu18788
+
+5. cambiar en #u18800 width 100%
+    meyer u18770
+    hycel u18782
+    sartorious u18794
+    deltalab u18744
+    simport u18807
+    icr u18823
+    sakura u18776
+    erma u18788
+
+6. eliminar en #u18800 background " left top"
+    meyer u18770
+    hycel u18782
+    sartorious u18794
+    deltalab u18744
+    simport u18807
+    icr u18823
+    sakura u18776
+
+7. cambiar en #u19153-4 a left: 35.25%; margin-top: 12%;line-height: 26px;font-size: 22px;
+    meyer u21187-5
+    hycel u19156-4
+    sartorius u19175-6
+    deltalab u19166-4
+    simport u19172-6
+    icr u19169-4
+    sakura u19163-7
+    erma u19150-5
+
+SIMPORT ONLY
+    z-index: 162;min-height: 148px;background-color: transparent;color: #FFFFFF;font-size: 22px;line-height: 26px;font-family: roboto, sans-serif;font-weight: 300;position: relative;margin-right: -10000px;width: 45.62%;left: 35.25%;margin-top: 12%;text-transform: uppercase;
+
+
+8. cmbiar en #pamphletu21209 a margin-left: 13.58%;
+    meyer pamphletu21744
+    hycel pamphletu21490
+    sartorius pamphletu21324
+    deltalab pamphletu21552
+    simport pamphletu21618
+    icr pamphletu21684
+    sakura pamphletu21806
+    erma pamphletu21870
+
+9. Eliminar id=U20980...   
+    meyer u18771-13
+    hycel ?
+    sarotorius U18795
+    deltalab u18767-27
+    icr u18824-15
+    sakura u18777-13
+    erma id="u18789-7"

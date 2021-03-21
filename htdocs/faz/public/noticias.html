@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html style="width: 100%;">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Fundación Azteca</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" href="assets/css/styles.min.css">
+	<link rel="stylesheet" href="assets/css0/estilo.css" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css2/menu_elastic.css" />
+	<script src="assets/js2/snap.svg-min.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1725851-78"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-1725851-78');
+	</script>
+</head>
+<body>
+	<style>
+        @font-face {
+            font-family: 'Cabin';
+            src: url('Cabin-Regular.eot');
+            src: url('assets/fonts/Cabin-Regular.eot?#iefix') format('embedded-opentype'),
+                url('assets/fonts/Cabin-Regular.woff2') format('woff2'),
+                url('assets/fonts/Cabin-Regular.woff') format('woff'),
+                url('assets/fonts/Cabin-Regular.ttf') format('truetype'),
+                url('assets/fonts/Cabin-Regular.svg#Cabin-Regular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Fredoka+One';
+            src: url('assets/fonts/FredokaOne-Regular.eot');
+            src: url('assets/fonts/FredokaOne-Regular.eot?#iefix') format('embedded-opentype'),
+                url('assets/fonts/FredokaOne-Regular.woff2') format('woff2'),
+                url('assets/fonts/FredokaOne-Regular.woff') format('woff'),
+                url('assets/fonts/FredokaOne-Regular.ttf') format('truetype'),
+                url('assets/fonts/FredokaOne-Regular.svg#FredokaOne-Regular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('assets/fonts/Montserrat-Regular.eot');
+            src: url('assets/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+                url('assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+                url('assets/fonts/Montserrat-Regular.woff') format('woff'),
+                url('assets/fonts/Montserrat-Regular.ttf') format('truetype'),
+                url('assets/fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+	<div class="menu-wrap">
+                <nav class="menu">
+                    <div class="icon-list">
+                        <img src="assets/img/fundacionazteca.png" style="width: 90%;margin-left: 10px;">
+                        <a href="home.html"><span style="color:#666; font-family: Montserrat, sans-serif; text-align: left;">Inicio</span></a>
+                        <a href="#"><span style="color:#666; font-family: Montserrat, sans-serif; text-align: left;">Nosotros</span></a>
+                        <a href="comunidad.html"><span style="color:#666; font-family: Montserrat, sans-serif; text-align: left;">Comunidad</span></a>
+                        <a href="educativos.html"><span style="color:#666; font-family: Montserrat, sans-serif; text-align: left;">Programas Educativos</span></a>
+                        <a href="ambientales.html"><span style="color:#666; font-family: Montserrat, sans-serif; text-align: left;">Programas Ambientales</span></a>
+						<a href="https://dimefundacionazteca.dialogus.com.mx/hc/es" target="_blank"><span style="color:#666; font-family: Montserrat, sans-serif; text-align: left;">Dime<br><p style="font-size: 13px; font-weight: normal;">(Contacto, Dudas y Sugerencias)</p></span></a>
+						<a href="noticias.html"><span style="color:#666; font-family: Montserrat, sans-serif; text-align: left;">Noticias</span></a>
+                    </div>
+                </nav>
+            <button class="close-button" id="close-button">Close Menu</button>
+
+                <div class="morph-shape" id="morph-shape" data-morph-open="M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                        <path d="M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z"/>
+                    </svg>
+                </div>
+            </div>
+            <button class="menu-button" id="open-button"></button>
+
+			<div class="logo">
+            <img src="assets/img/fundacionazteca.png">
+            </div>
+        </div>
+        
+        <!-- noticias grid -->
+        <style>
+            .contGrid { width: 1200px; margin: 0 auto; float: none; padding-top: 100px; }
+            .contGrid .title { position: relative; }
+            .contGrid .title h2 { font-family: Montserrat, sans-serif; font-weight: bolder; }
+            .contGrid .title hr{ position: relative; top: -33px; width: 85%; right: -15%; margin: 0; }
+
+            .gridIndeed { width: 100%; }
+            .gridIndeed .gridItem { width: 33.11%; padding: 0 16px; margin: 40px 0; display: inline-block; }
+            .gridIndeed .gridItem a.item { width: 100%; float: none; overflow: hidden; }
+            .gridIndeed .gridItem a.item img { width: 100%; border-radius: 25px; }
+            .gridIndeed .gridItem a.item span { color: #000000; font-weight: normal; text-align: justify; font-size: 18px; padding: 5px 15px; }
+
+            .paginator { text-align: center; }
+            .paginator ul { list-style-type: none; display: inline-block; padding: 0; margin: 0 auto; }
+            .paginator ul li { float: left; margin: 0 10px; }
+            .paginator ul li a { padding: 10px; font-size: 24px; }
+        </style>
+        <div class="contGrid">
+            <div class="title">
+                <h2>Noticias</h2>
+                <hr>
+            </div>
+            <div class="gridIndeed">
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-plantel.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-redsocial.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-plantel.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-redsocial.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-plantel.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-redsocial.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-plantel.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-redsocial.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+                <div class="gridItem">
+                    <a class="item" href="#">
+                        <img src="assets/img/foto-plantel.png" alt="FundacionAzteca">
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus impedit natus voluptas, tempora magni rem, modi dolorem.</span>
+                    </a>
+                </div>
+            </div>
+            <div class="paginator">
+                <ul>
+                    <li><a href="#"><img src="assets/img/left-arrow.png" alt="fundacionazteca"></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><img src="assets/img/right-arrow.png" alt="fundacionazteca"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- eo noticias grid -->
+
+		<div class="cajas1a" >
+			<div class="caja1a">
+				<img src="assets/img/dime.png">
+			</div>
+
+			<div class="caja2">
+				<p>A través de Dime... Fundación Azteca compártenos tus dudas, sugerencias, reconocimientos o cualquier inquietud que nos ayude a seguir generando acciones positivas para transformar nuestro país.<a href="https://dimefundacionazteca.dialogus.com.mx/hc/es" target="_blank" style="color:#666; font-weight: bold; padding-left: 10px; text-decoration: underline;">Contáctanos aquí</a></p>
+			</div>
+		</div>
+    </div>
+
+	<footer>
+		<div class="redes">
+		<div class="red1"><a href="https://www.facebook.com/FundacionAzteca" target="_blank"><img src="assets/img/fb.png"></a></div>
+		<div class="red2"><a href="https://twitter.com/FundacionAzteca" target="_blank"><img src="assets/img/tw.png"></a></div>
+		<div class="red3"><a href="https://www.instagram.com/fundacionazteca/" target="_blank"><img src="assets/img/in.png"></a></div>
+		<div class="red4"><a href="https://www.youtube.com/user/FundacionAztecaOf" target="_blank"><img src="assets/img/yt.png"></a></div>
+
+		<div class="logo-footer">
+		<div class="logo-f"><img src="assets/img/logo-fazteca.png"></div>
+		<div class="logo-f" style="color:#fff;">Todos los derechos reservados ©Fundación Azteca 2020</div>
+		<div style="text-align: center;"><span style="font-size: 10px; color: #fff;">Montes Urales 460, Lomas de Chapultepec III Sección C.P. 11000, CDMX, Piso 2.</span></div>
+		</div>
+	</footer>
+
+
+	<script src="assets/js2/classie.js"></script>
+	<script src="assets/js2/main3.js"></script>
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-37524344-3', 'janpaepke.github.io');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>

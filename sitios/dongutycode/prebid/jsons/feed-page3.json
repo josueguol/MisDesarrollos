@@ -1,0 +1,34 @@
+{
+    "items": [
+        {
+            "autor": "Redacción ADN40",
+            "compartir": "https://qa5.tv-azteca.psdops.com/adn40/noticia/mexico/notas/2020-02-03-20-32/cinco-hospitales-en-mexico-atenderan-los-casos-de-coronavirus",
+            "fecha": "2020-02-03T20:32:24-06:00",
+            "fechacap": "2020-02-03T20:32:24-06:00",
+            "galeria": "",
+            "imagen": "https://tv-azteca-brightspot.s3.amazonaws.com/9f/54/132efa1a4f27865452491ac7f4c4/92.jpg",
+            "imgDefault": 0,
+            "nota": "https://qa5.tv-azteca.psdops.com/adnapp/noticia/mexico/notas/2020-02-03-20-32/cinco-hospitales-en-mexico-atenderan-los-casos-de-coronavirus.zip",
+            "sourceImageUrl": "https://tv-azteca-brightspot.s3.amazonaws.com/ce/c5/e827af739d94383774d81dacab85/logoadn-2268863.png",
+            "teaser": "En una reunión encabezada por Marcelo Ebrard se establecieron los hospitales encargados del diagnóstico y referencia de casos de coronavirus.",
+            "titulo": "Cinco hospitales en México atenderán los casos de coronavirus ",
+            "video": ""
+        },
+        {
+            "autor": "Redacción ADN40",
+            "compartir": "https://qa5.tv-azteca.psdops.com/adn40/noticia/cultura/notas/2020-02-03-20-16/guns-n-roses-iniciara-su-gira-en-mexico",
+            "fecha": "2020-02-03T20:16:07-06:00",
+            "fechacap": "2020-02-03T20:16:07-06:00",
+            "galeria": "",
+            "imagen": "https://tv-azteca-brightspot.s3.amazonaws.com/fd/14/5eb0788e4e888054857ca965ce54/91.jpg",
+            "imgDefault": 0,
+            "nota": "https://qa5.tv-azteca.psdops.com/adnapp/noticia/cultura/notas/2020-02-03-20-16/guns-n-roses-iniciara-su-gira-en-mexico.zip",
+            "sourceImageUrl": "https://tv-azteca-brightspot.s3.amazonaws.com/ce/c5/e827af739d94383774d81dacab85/logoadn-2268863.png",
+            "teaser": "La gira de la agrupación tendrá 44 fechas en diferentes países de América y Europa.",
+            "titulo": "Guns N’ Roses iniciará su gira mundial en México ",
+            "video": ""
+        }
+    ],
+    "page": "3",
+    "totalPages": "3"
+}

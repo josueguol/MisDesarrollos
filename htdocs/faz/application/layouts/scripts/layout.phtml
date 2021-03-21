@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Fundaci&oacute;n Azteca</title>
+    <meta name="medium" content="blog" />
+	<meta name="title" content="<?php echo $this->metadatos["configuracion"][0]["cTitulo"] ?>" />
+	<meta name="description" content='<?php echo $this->metadatos["configuracion"][0]["cMetaDescripcion"] ?>' />
+	<meta name="keywords" content='<?php echo $this->metadatos["configuracion"][0]["cMetaKeywords"] ?>' />
+	<link rel="shortcut icon" href="favicon.ico">
+    
+    <link rel="icon" type="image/png" href="/assets/v2/images/favicon-32x24.png">
+    <link rel="icon" type="image/png" href="/assets/v2/images/favicon-16x12.png">
+
+    <link rel="stylesheet" href="/assets/v2/styles/stylesheet.css?v=3">
+    <link rel="stylesheet" href="/assets/v2/styles/base.css?v=3">
+    <link rel="stylesheet" href="/assets/v2/styles/headfoot.css?v=5">
+    <link rel="stylesheet" href="/assets/v2/styles/home.css?v=5">
+
+<?php
+/* Incluye metatags desde las vistas de homes*/
+echo $this->headMeta();
+
+
+if($this->metaFacebook != "" ){
+	echo $this->metaFacebook ;
+}
+
+echo $this->headStyle(); 
+echo $this->headLink();
+echo $this->headScript();
+?>	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1725851-78"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-1725851-78');
+    </script>
+</head>
+<body>
+<div class="w3-col s12 m12 l12 container">
+    <?php
+    echo $this->render('header.phtml');
+    echo $this->layout()->content;      
+    echo $this->render('footer.phtml');  
+    ?>
+</div>
+</body>
+
+</html>

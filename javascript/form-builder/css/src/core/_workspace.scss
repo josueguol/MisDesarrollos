@@ -1,0 +1,143 @@
+.work-space {
+    height: calc(100% - 71px)/* 71px topnavbar + margin + padding + border */
+}
+
+.work-space .row {
+    height: 100%
+}
+
+.work-space .row>div {
+    height: 100%
+}
+
+.work-area {
+    height: 100%;
+    padding-bottom: 15px
+}
+
+.workarea-builder {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #fbfbfb;
+    position: relative;
+}
+
+.workarea-elements {
+    position: absolute;
+}
+
+.workarea-elements,
+.workarea-element {
+    height: calc(100% - 120px - 60px); /* - 60px element */
+    width: 100%
+}
+
+.workarea-buttons {
+    margin: 5px 20px 20px 15px
+}
+
+.workarea-actions {
+    width:100%;
+    height: calc(80px + 60px) /* + 60px element */
+}
+
+.workarea-actions {
+    margin-bottom: 10px;
+    /*padding-bottom: 10px;*/
+    border-bottom: 1px solid #ddd
+}
+
+.workarea-place {
+    width: 100%
+}
+
+.workarea-place .content {
+    padding: 5px 0
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+.workarea-droppable {
+    height: 5px
+}
+
+.workarea-droppable {
+    border: 2px dashed transparent;
+    position: relative
+}
+
+.workarea-plus {
+    border: 2px dashed transparent;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative
+}
+
+.workarea-plus:hover,
+.workarea-plus-hover {
+    display: block;
+    border-color: #39c;
+    border-radius: 5px
+}
+.workarea-draggable {
+    border: 2px dashed transparent;
+    padding-top: 10px;
+    position: relative
+}
+.workarea-draggable:hover {
+    background-color: #d9edf7;
+    display: block;
+    border-color: #39c;
+    border-radius: 5px
+}
+
+.workarea-droppable-hover {
+    height: 80px;
+    display: block;
+    border-color: #39c;
+    border-radius: 5px
+}
+
+.workarea-draggable.ui-draggable-dragging {
+    z-index: 500;
+    opacity: 0.5;
+    filter: alpha(opacity=50)
+}
+
+.full-height {
+    height: 100%
+}
+
+.full-height-body {
+    height: calc(100% - 30px)
+}
+
+.workarea-scroll-y {
+    overflow-y: auto
+}
+
+.workarea-scroll-x {
+    overflow-x: auto
+}
+
+.sizer {
+    height: 3px;
+    width: 100%;
+    cursor: row-resize;
+    position: absolute
+}
+
+.margin-sides {
+    margin: 0 15px;
+}
+
+.form-group-bottom {
+    margin-bottom: 10px
+}

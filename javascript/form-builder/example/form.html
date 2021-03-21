@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registro de nuevo usuario</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.css">
+
+</head>
+<body>
+	<div class="container">
+		<div id="formNewUser"></div>
+		<center>
+			<button class="btn btn-default" id="btnSave">Guardar registro</button>
+		</center>
+	</div>
+
+	<script src="js/jsoneditor.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.js"></script>
+	<script>
+		var newUser = {
+						   "title": "Registro Proyecto40",
+						   "id": "User",
+						   "type": "object",
+						   "required": ["email", "name", "age", "sections", "numbers_news_by_section"],
+						   "properties": {
+						       "email": {
+						           "type": "string",
+						           "format": "email",
+						           "title": "Email",
+						           default: "isra.iiss@gmail.com"
+						       },
+						       "name": {
+						           "type": "string",
+						           "format": "text",
+						           "title": "Nombre",
+						           "minLength": 3,
+						           default: "israel"
+						       },
+						       "lastname": {
+						           "type": "string",
+						           "format": "text",
+						           "title": "Apellido",
+						           "minLength": 3,
+						           default: "salgado"
+						       },
+						       "age": {
+						           "type": "integer",
+						           "format": "number",
+						           "title": "Edad",
+						           "minimum": 18,
+						           "maximum": 99,
+						           "default": 18
+						       },
+						       "optional_information": {
+						           "title": "Información opcional",
+						           "type": "object",
+						           "properties": {
+						               "birth_date": {
+						                   "type": "string",
+						                   "format": "date",
+						                   "title": "Fecha de nocimiento",
+						                   "description": "Probablemente tengas una sorpresa de nuestra parte :)"
+						               },
+						               "state": {
+						                   "type": "string",
+						                   "enum": [
+						                       "Aguascalientes",
+						                       "Baja California",
+						                       "Baja California Sur",
+						                       "Campeche",
+						                       "Coahuila de Zaragoza",
+						                       "Colima",
+						                       "Chiapas",
+						                       "Chihuahua",
+						                       "Distrito Federal",
+						                       "Durango",
+						                       "Guanajuato",
+						                       "Guerrero",
+						                       "Hidalgo",
+						                       "Jalisco",
+						                       "México",
+						                       "Michoacán de Ocampo",
+						                       "Morelos",
+						                       "Nayarit",
+						                       "Nuevo León",
+						                       "Oaxaca",
+						                       "Puebla",
+						                       "Querétaro",
+						                       "Quintana Roo",
+						                       "San Luis Potosí",
+						                       "Sinaloa",
+						                       "Sonora",
+						                       "Tabasco",
+						                       "Tamaulipas",
+						                       "Tlaxcala",
+						                       "Veracruz de Ignacio de la Llave",
+						                       "Yucatán",
+						                       "Zacatecas"
+						                   ]
+						               },
+						               "gender": {
+						               	"type": "string",
+						               	"enum": [
+						               		"Hombre",
+						               		"Mujer"
+						               	]
+						               }
+						           }
+						       },
+						       "sections": {
+						       	"type": "array",
+						       	"uniqueItems": true,
+						       	"items": {
+						       		"type": "string"
+						       	},
+						       	"default": [
+						       		"Deportes",
+						       		"Entretenimineto",
+						       		"Ciudad MX",
+						       		"Cultura",
+						       		"Mundo",
+						       		"Finanzas"
+						       	]
+
+						       },
+						       "numbers_news_by_section": {
+						       	"type": "integer",
+						       	"format": "number",
+						       	"minimum": 1,
+						       	"maximum": 10,
+						       	"title": "Noticas por sección",
+						       	"description": "De 1 hasta 10 noticias por sección al correo",
+						       	"default": 2
+						       }
+						   }
+						};
+
+		JSONEditor.plugins.selectize.enable = true;
+		JSONEditor.defaults.options.theme = 'bootstrap2';
+		var editor = new JSONEditor(document.getElementById('formNewUser'), {
+			disable_edit_json: true,
+			disable_properties: true,
+			disable_collapse: true,
+			schema: newUser,
+		});
+
+
+		$('#btnSave').on('click', function(){
+			var user = editor.getValue();
+			user.sections = user.sections.join(',');
+			$.ajax({
+				method: "POST",
+				dataType: "json",
+				url: "http://localhost:8080/user/",
+				data: user,
+				success: function(data){
+					console.log(data);
+					alert("agregado");
+				}
+			});
+		});
+
+
+	</script>
+</body>
+</html>

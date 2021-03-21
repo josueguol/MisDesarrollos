@@ -1,0 +1,8 @@
+"theme1" Es un ejemplo de controles personalizados siga los siguientes pasos para generar sus controles.
+
+Pasos:
+
+	1. Genere un directorio con el nombre del tema.
+	2. Genere los controles con los nombres existentes lo que provocara la sobreescritura.
+
+	Nota: Si no existen en defaults coloque los nuevos en esta carpeta esta libreria buscara su control si se especifica este tema, si no lo encuentra colocara un control default.

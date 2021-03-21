@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu>
+    <Menu>
+        <Divider ValueType="Boolean"></Divider>
+        <Title ValueType="Boolean"></Title>
+        <Name ValueType="String">Dashboard</Name>
+        <Wrapper ValueType="String" />
+        <Url ValueType="String">/dashboard</Url>
+        <Icon ValueType="String">icon-speedometer</Icon>
+        <Badge ValueType="Badge">
+            <Variant ValueType="String">info</Variant>
+            <Text ValueType="String">NUEVO</Text>
+        </Badge>
+        <Class ValueType="String" />
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children />
+    </Menu>
+    <Menu>
+        <Divider ValueType="Boolean">true</Divider>
+        <Title ValueType="Boolean"/>
+        <Name ValueType="String"/>
+        <Wrapper ValueType="String"/>
+        <Url ValueType="String" />
+        <Icon ValueType="String" />
+        <Badge ValueType="String" />
+        <Class ValueType="String"/>
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children />
+    </Menu>
+    <Menu>
+        <Divider ValueType="Boolean" />
+        <Title ValueType="Boolean">true</Title>
+        <Name ValueType="String">Almacenamiento</Name>
+        <Wrapper ValueType="String">
+            <Element ValueType="String"></Element>
+            <Attributes ValueType="Attributes"></Attributes>
+        </Wrapper>
+        <Url ValueType="String" />
+        <Icon ValueType="String" />
+        <Badge ValueType="String" />
+        <Class ValueType="String"></Class>
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children />
+    </Menu>
+    <Menu>
+        <Divider ValueType="Boolean" />
+        <Title ValueType="Boolean" />
+        <Name ValueType="String">Contenido</Name>
+        <Wrapper ValueType="String" />
+        <Url ValueType="String">/contenido</Url>
+        <Icon ValueType="String">icon-pencil</Icon>
+        <Badge ValueType="String" />
+        <Class ValueType="String" />
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children>
+            <Menu>
+                <Divider ValueType="Boolean" />
+                <Title ValueType="Boolean" />
+                <Name ValueType="String">Notas</Name>
+                <Wrapper ValueType="String" />
+                <Url ValueType="String">/contenido/notas</Url>
+                <Icon ValueType="String">icon-doc</Icon>
+                <Badge ValueType="String" />
+                <Class ValueType="String" />
+                <Variant ValueType="String" />
+                <Attributes ValueType="String" />
+                <Children />
+            </Menu>
+            <Menu>
+                <Divider ValueType="Boolean" />
+                <Title ValueType="Boolean" />
+                <Name ValueType="String">Galerias</Name>
+                <Wrapper ValueType="String" />
+                <Url ValueType="String">/contenido/galerias</Url>
+                <Icon ValueType="String">icon-doc</Icon>
+                <Badge ValueType="String" />
+                <Class ValueType="String" />
+                <Variant ValueType="String" />
+                <Attributes ValueType="String" />
+                <Children />
+            </Menu>
+        </Children>
+    </Menu>
+    <Menu>
+        <Divider ValueType="Boolean" />
+        <Title ValueType="Boolean"/>
+        <Name ValueType="String">Documentos</Name>
+        <Wrapper ValueType="String" />
+        <Url ValueType="String">/documentos</Url>
+        <Icon ValueType="String">icon-docs</Icon>
+        <Badge ValueType="String" />
+        <Class ValueType="String" />
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children>
+            <Menu>
+                <Divider ValueType="Boolean" />
+                <Title ValueType="Boolean" />
+                <Name ValueType="String">Nota</Name>
+                <Wrapper ValueType="String" />
+                <Url ValueType="String">/documentos/notas</Url>
+                <Icon ValueType="String">icon-doc</Icon>
+                <Badge ValueType="String" />
+                <Class ValueType="String" />
+                <Variant ValueType="String" />
+                <Attributes ValueType="String" />
+                <Children />
+            </Menu>
+            <Menu>
+                <Divider ValueType="Boolean" />
+                <Title ValueType="Boolean" />
+                <Name ValueType="String">Galeria</Name>
+                <Wrapper ValueType="String" />
+                <Url ValueType="String">/documentos/galerias</Url>
+                <Icon ValueType="String">icon-doc</Icon>
+                <Badge ValueType="String" />
+                <Class ValueType="String" />
+                <Variant ValueType="String" />
+                <Attributes ValueType="String" />
+                <Children />
+            </Menu>
+        </Children>
+    </Menu>
+    <Menu>
+        <Divider ValueType="Boolean" />
+        <Title ValueType="Boolean">true</Title>
+        <Name ValueType="String">Configuración</Name>
+        <Wrapper ValueType="String">
+            <Element ValueType="String"></Element>
+            <Attributes ValueType="Attributes"></Attributes>
+        </Wrapper>
+        <Url ValueType="String" />
+        <Icon ValueType="String" />
+        <Badge ValueType="String" />
+        <Class ValueType="String"></Class>
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children />
+    </Menu>
+    <Menu>
+        <Divider ValueType="Boolean" />
+        <Title ValueType="Boolean" />
+        <Name ValueType="String">Usuarios</Name>
+        <Wrapper ValueType="String" />
+        <Url ValueType="String">/usuario</Url>
+        <Icon ValueType="String">icon-docs</Icon>
+        <Badge ValueType="String" />
+        <Class ValueType="String" />
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children />
+    </Menu>
+    <Menu>
+        <Divider ValueType="Boolean" />
+        <Title ValueType="Boolean" />
+        <Name ValueType="String">Sitios</Name>
+        <Wrapper ValueType="String" />
+        <Url ValueType="String">/sitios</Url>
+        <Icon ValueType="String">icon-docs</Icon>
+        <Badge ValueType="String" />
+        <Class ValueType="String" />
+        <Variant ValueType="String" />
+        <Attributes ValueType="String" />
+        <Children />
+    </Menu>
+</NavigationMenu>

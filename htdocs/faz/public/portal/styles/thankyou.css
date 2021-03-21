@@ -1,0 +1,127 @@
+.contentBox {
+  width: 100%;
+  float: left;
+}
+
+.contentBox>div {
+  width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+.contentBox>div>div {
+  width: 100%;
+  float: left;
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+.contentBox>div>div>div {
+  width: 50%;
+}
+
+.contentBox>div>div>div:first-child {
+  float: right;
+  padding: 100px 0 0 60px;
+  box-sizing: border-box;
+}
+
+.contentBox>div>div>div:first-child + div {
+  float: left;
+}
+
+.contentBox>div>div>div:first-child + div img {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box12 {
+  background-image: url('../img/tpbg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.contentBox>div>div>div:first-child h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #5B2D6E;
+}
+
+.contentBox>div>div>div:first-child span {
+  width: 32px;
+  height: 3px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: #6CBE84;
+}
+
+.contentBox>div>div>div:first-child p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin-bottom: 40px;
+  color: #515151;
+}
+
+.contentBox>div>div>div:first-child a {
+  float: left;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 40px;
+  color: #FFF;
+  cursor: pointer;
+  padding: 12px 20px 12px 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+footer {
+  margin-top: 0px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .contentBox>div {
+    width: 100%;
+  }
+  .contentBox>div>div>div:first-child {
+    padding: 40px 0 0 60px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .contentBox>div>div>div:first-child {
+    padding: 40px 0 0 30px;
+  }
+  .contentBox>div>div>div:first-child p {
+    font-size: 1em;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contentBox>div>div>div {
+    width: 100%;
+  }
+  .contentBox>div>div>div:first-child {
+    padding: 0 0 0 0;
+  }
+  .contentBox>div>div>div:first-child + div {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .contentBox>div>div>div:first-child + div img {
+    width:70%;
+    float: none;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contentBox>div>div {
+    padding: 30px;
+  }
+}

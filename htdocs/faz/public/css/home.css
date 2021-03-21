@@ -1,0 +1,863 @@
+.pcb-box0 {
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-top: 50%;
+  margin-bottom: 100px;
+}
+
+.pcb-box0 > div {
+  width: 100%;
+  float: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.pcb-box0 > div > a, .pcb-box0 > div > img {
+  width: 100%;
+  float: left;
+  display: none;
+}
+
+.pcb-box0 > div > a img {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box0 > div > a:first-child, .pcb-box0 > div > img:first-child {
+  display: block;
+}
+
+.pcb-box0 .edgeBtn {
+  width: 230px;
+  float: right;
+  height: 46px;
+  position: absolute;
+  bottom: -23px;
+  right: 0px;
+  left: auto;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  line-height: 46px;
+  padding: 0 0 0 26px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: 30px 0 0 30px;
+  color: #FFF;
+}
+
+.pcb-box0 a p {
+  position: absolute;
+  bottom: 50%;
+  left: 7%;
+  font-size: 4em;
+  letter-spacing: 2px;
+  line-height: 1.3em;
+  transition: all 0.2s;
+  color: #5B296E;
+}
+
+.pcb-box0 a p strong {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pcb-box0 a span {
+  position: absolute;
+  bottom: 32%;
+  left: 8%;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 20px 40px 20px 40px;
+  border-radius: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+
+.pcb-box0 .edgeBtn i {
+  margin-left: 10px;
+}
+
+.pcb-box1 {
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-bottom: 250px;
+}
+
+.pcb-box1>img {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.pcb-box1>div {
+  position: absolute;
+  width: 1056px;
+  height: 260px;
+  bottom: -195px;
+  left: 50%;
+  margin: 0 auto 0 -528px;
+  padding: 34px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #FFF;
+}
+
+.pcb-box1>div>div {
+  width: 33.33%;
+  float: left;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.pcb-box1>div>div>h3 {
+  font-size: 1.4em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #5B296E;
+}
+
+.pcb-box1>div>div>p {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: #7F8083;
+}
+
+.contentBox {
+  width: 100%;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.contentBox>div {
+  width: 1280px;
+  margin: 0 auto 0 auto;
+}
+
+.contentBox>div>div {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box2>img {
+  width: 35%;
+  float: left;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.pcb-box2>div {
+  width: 65%;
+  float: left;
+  padding: 20px 20px 0 40px;
+  box-sizing: border-box;
+}
+
+.pcb-box2>div>h2 {
+  font-size: 2.3em;
+  line-height: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5B296E;
+}
+
+.pcb-box2>div>p {
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #7F8083;
+}
+
+.pcb-box2>div>ul {
+  width: 100%;
+  float: left;
+  list-style: none;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+}
+
+.pcb-box2>div>ul>li {
+  width: 100%;
+  list-style-position: outside;
+  float: left;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  color: #7F8083;
+}
+
+.pcb-box2>div>ul>li::before {
+  width: 0.8em;
+  content: "•";
+  display: inline-block;
+  margin-left: -15px;
+  color: #5B296E
+}
+
+.pcb-box3 {
+  width: 100%;
+  float: left;
+  background: url('../img/pcb-bg-b.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+  padding: 40px 0 60px 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pcb-box3>div>div>div {
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.pcb-box3 h2 {
+  font-size: 1.7em;
+  line-height: 1.4em;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.pcb-box3 p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 45px;
+}
+
+.pcb-box3 a {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 12px 40px 12px 40px;
+  border-radius: 30px;
+  font-size: 0.9em;
+  color: #FFF;
+  background-color: rgba(22, 7, 27, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  transition: all 0.2s;
+}
+
+.pcb-box3 a:hover {
+  background-color: #5B296E;
+}
+
+.pcb-box3 .contentBox {
+  margin-bottom: 0;
+}
+
+.pcb-box4 {
+  text-align: center;
+}
+
+.pcb-box4 h2 {
+  font-size: 2.2em;
+  line-height: 1.4em;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  color: #686D79;
+}
+
+.pcb-box4 h2 strong {
+  font-weight: bold;
+  color: #5B296E;
+}
+
+.pcb-box4 a {
+  width: 126px;
+  display: inline-block;
+  margin: 0 16px 40px 16px;
+}
+
+.pcb-box4 a span {
+  width: 126px;
+  height: 126px;
+  float: left;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #FFF;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.pcb-box4 a.pcb-prd3:hover span {
+  background-color: #18c7a4;
+}
+
+.pcb-box4 a:hover span {
+  background-color: #f3f3f3;
+}
+
+.pcb-box4 a span img {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box4 a strong {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: #686D79;
+}
+
+.pcb-prd1 span {
+  padding: 36px;
+}
+
+.pcb-prd2 span {
+  padding: 38px;
+}
+
+.pcb-prd3 span {
+  padding: 40px 18px 0 18px;
+}
+
+.pcb-prd4 span {
+  padding: 34px 20px 0 20px;
+}
+
+.pcb-prd5 span {
+  padding: 30px 28px 0 28px;
+}
+
+.pcb-prd6 span {
+  padding: 28px;
+}
+
+.pcb-prd7 span {
+  padding: 30px 42px 0 42px;
+}
+
+.pcb-box5 {
+  margin-bottom: 80px;
+}
+
+.pcb-box5 div.swipeBar {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.swipeBar {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.swipeBar button {
+  width: 110px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 10px 0 0 0;
+  margin: 0 8px 30px 8px;
+  cursor: pointer;
+}
+
+.swipeBar button img {
+  width: 66px;
+  height: 66px;
+  display: inline-block;
+}
+
+.swipeBar button span {
+  width: 100%;
+  float: left;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 8px 0 0 0;
+  padding: 5px 0 3px 0;
+  border-bottom: 2px solid #5B296E;
+  color: #5B296E;
+  transition: all 0.2s;
+}
+
+.swipeBar button:hover span {
+  background-color: #18c7a4;
+  border-radius: 6px 6px 0 0;
+  color: #FFF;
+}
+
+.swipeBar button.active {
+  cursor: default;
+  background-color: #f7f7f7;
+}
+
+.swipeBar button.active span {
+  color: #FFF;
+  background-color: #5B296E;
+  border-color: #18c7a4;
+}
+
+.swipeBar div {
+  width: 100%;
+  float: left;
+}
+
+.pcb-box5>div>div>span {
+  width: 46px;
+  float: right;
+  position: relative;
+  display: none;
+  font-size: 0.6em;
+  padding: 5px 10px 5px 10px;
+  box-sizing: border-box;
+  border-radius: 16px 0 0 16px;
+  color: #FFF;
+  background-color: #5B296E;
+}
+
+@keyframes arrow {
+  from {
+    right: 16px;
+    opacity: 0;
+  }
+  to {
+    right: 7px;
+    opacity: 1;
+  }
+}
+
+.pcb-box5>div>div>span i.fa-arrow-right {
+  position: absolute;
+  right: 16px;
+  top: 5px;
+}
+
+.pcb-box5>div>div>span i:first-child {
+  margin-right: 5px;
+}
+
+.pcb-box5>div>div>span i:first-child+i {
+  opacity: 0.6;
+}
+
+.pcb-box5 h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+  line-height: 1.4em;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  color: #5B296E;
+}
+
+.collections,
+.collections>div {
+  width: 100%;
+  float: left;
+}
+
+.collections>div {
+  display: none;
+}
+
+.collections>div:first-child {
+  display: block;
+}
+
+.collections>div>a {
+  width: 22%;
+  float: left;
+  font-size: 1.1em;
+  margin: 0 1.5% 20px 1.5%;
+  color: #686D79;
+}
+
+.collections>div>a:hover strong {
+  text-decoration: underline;
+}
+
+.collections>div>a img {
+  width: 100%;
+  float: left;
+  margin-bottom: 14px;
+}
+
+.collections>div>a strong {
+  display: block;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin: 0 0 4px 0;
+  color: #5B296E;
+}
+
+.collections>div>a span {
+  text-align: right;
+  display: block;
+  font-size: 0.7em;
+  margin: 8px 0 0 0;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #5B296E;
+}
+
+.collections>div>span:nth-child(even) {
+  width: 100%;
+  float: left;
+}
+
+.collections>div>span:nth-child(odd) {
+  width: 100%;
+  float: left;
+  display: none;
+}
+
+.pcb-buttonBox {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.pcb-buttonBox a {
+  font-size: 0.9em;
+  padding: 14px 50px 14px 50px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pcb-box6 {
+  width: 100%;
+  float: left;
+  background: url('../img/pcb-bg3.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 30px 0 80px 0;
+  padding: 40px 0 0 0;
+}
+
+.pcb-box6 .contentBox {
+  margin-bottom: 0px;
+}
+
+.pcb-box6 .contentBox > div > div > div:first-child {
+  width: 40%;
+  float: left;
+  padding: 0 80px 0 20px;
+  box-sizing: border-box;
+}
+
+.pcb-box6 .contentBox > div > div > div:first-child img {
+  float: right;
+  height: 378px;
+}
+
+.pcb-box6 .contentBox > div > div > div:first-child + div {
+  width: 60%;
+  float: left;
+}
+
+.pcb-box6 .contentBox > div > div > div:first-child + div > img {
+  float: left;
+  height: 64px;
+  margin: 0 0 40px 0;
+}
+
+.pcb-box6 .contentBox > div > div > div > ul {
+  float: left;
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 0 0 30px 0;
+  box-sizing: border-box;
+}
+
+.pcb-box6 .contentBox > div > div > div > ul>li {
+  width: 100%;
+  list-style-position: outside;
+  float: left;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+  color: #5B296E;
+}
+
+.pcb-box6 .contentBox > div > div > div > ul>li::before {
+  width: 0.8em;
+  content: "•";
+  display: inline-block;
+  margin-left: -15px;
+  color: #5B296E
+}
+
+.pcb-box6 .contentBox > div > div > div > a {
+  width: 135px;
+  float: left;
+  margin: 0 10px 20px 10px;
+}
+
+
+
+@media only screen and (max-width: 1680px) {
+  .pcb-box0 a p {
+    font-size: 3.2em;
+    bottom: 55%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .pcb-box0 a p {
+    font-size: 2.5em;
+    letter-spacing: 0px;
+  }
+  .contentBox>div {
+    width: 100%;
+  }
+  .collections>div>a { 
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .pcb-box1 {
+    margin-bottom: 30px;
+  }
+  .pcb-box1>div {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    bottom: auto;
+    left: auto;
+    box-shadow: none;
+    margin: 0 0 0 0;
+  }
+  .pcb-box4 a {
+    margin: 0 36px 40px 36px;
+  }
+  .collections>div>a { 
+    font-size: 0.9em;
+  }
+  .pcb-box6 .contentBox > div > div > div:first-child, .pcb-box6 .contentBox > div > div > div:first-child + div {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .pcb-box0 a p {
+    font-size: 2em;
+    bottom: 55%;
+  }
+  .pcb-box0 a span {
+    font-size: 1em;
+    padding: 16px 30px 16px 30px;
+  }
+  .pcb-box1>div>div>h3 {
+    font-size: 1.2em;
+  }
+  .pcb-box1>div>div>p {
+    font-size: 1em;
+  }
+  .pcb-box2 {
+    text-align: center;
+  }
+  .pcb-box2>img {
+    width: 50%;
+    float: none;
+    box-shadow: none;
+  }
+  .pcb-box2>div {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+  }
+  .pcb-box2>div>ul {
+    text-align: left;
+  }
+  .pcb-box2>div>h2,
+  .pcb-box4 h2,
+  .pcb-box5 h2 {
+    font-size: 1.8em;
+  }
+  .pcb-box3 {
+    margin-bottom: 50px;
+  }
+  .swipeBar button {
+    margin: 0 26px 30px 26px;
+  }
+  .collections>div>a {
+    width: 46.8%;
+  }
+  .collections>div>a {
+    margin-bottom: 34px;
+  }
+  .collections>div>a span {
+    display: none;
+  }
+  .collections>div>span:nth-child(odd) {
+    display: block;
+  }
+  .pcb-box6 {
+    margin: 0 0 60px 0;
+    padding: 0 0 0 0;
+  }
+  .pcb-box6 .contentBox > div > div > div:first-child {
+    display: none;
+  }
+  .pcb-box6 .contentBox > div > div > div:first-child + div {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .pcb-box6 .contentBox > div > div > div:first-child + div > img {
+    float: none;
+  }
+  .pcb-box6 .contentBox > div > div > div > ul, .pcb-box6 .contentBox > div > div > div > a {
+    float: none;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pcb-box0 a p {
+    font-size: 1.4em;
+  }
+  .pcb-box0 a span {
+    font-size: 0.9em;
+    padding: 12px 20px 12px 20px;
+  }
+  .pcb-box1>div {
+    padding: 30px 30px 0 30px;
+  }
+  .pcb-box1>div>div {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ede5f5;
+  }
+  .pcb-box1>div>div:last-child {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .pcb-box1>div>div>p {
+    margin-top: 10px;
+    line-height: 1.5em;
+  }
+  .pcb-box2>div>h2,
+  .pcb-box4 h2,
+  .pcb-box5 h2 {
+    font-size: 1.3em;
+  }
+  .pcb-box2>div>p,
+  .pcb-box2>div>ul>li {
+    font-size: 1em;
+  }
+  .pcb-box3 h2 {
+    font-size: 1.3em;
+  }
+  .pcb-box3 p {
+    font-size: 0.9em;
+  }
+  .pcb-box3 p br {
+    display: none;
+  }
+  .pcb-box4 h2 {
+    margin-bottom: 20px;
+  }
+  .pcb-box4 a {
+    margin: 0 36px 30px 36px;
+  }
+  .pcb-box5 div.swipeBar {
+    text-align: left;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pcb-box5>div>div>span i.fa-arrow-right {
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .swipeBar div button {
+    float: left;
+    margin: 0 8px 30px 8px;
+  }
+  .swipeBar div {
+    width: 882px;
+  }
+  .swipeBar::-webkit-scrollbar {
+    display: none;
+  }
+  .pcb-box5>div>div>span {
+    display: block;
+  }
+  .pcb-box6 .contentBox > div > div > div > ul > li {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .pcb-box0 a p {
+    font-size: 1em;
+  }
+  .pcb-box0 span:hover {
+    color: #5B296E;
+    background-color: rgba(255,255,255,0.7);
+  }
+  .pcb-box0 a span {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 20px;
+    box-shadow: none;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-radius: 0;
+    background: none;
+    text-transform: uppercase;
+    color: #5B296E;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .pcb-box0 .edgeBtn {
+    border-radius: 30px;
+    bottom: -70px;
+    right: auto;
+    left: 50%;
+    margin: 0 auto 0 -125px;
+  }
+  .pcb-box1>div {
+    padding: 20px;
+  }
+  .pcb-box0 .edgeBtn {
+    width: 230px;
+    margin-right: -115px;
+  }
+  .collections>div>a {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pcb-box4 a {
+    margin: 0 16px 30px 16px;
+  }
+  .pcb-box2>img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .pcb-box0 a p {
+    font-size: 0.8em;
+  }
+  .pcb-box6 .contentBox > div > div > div > ul {
+    text-align: left;
+  }
+}

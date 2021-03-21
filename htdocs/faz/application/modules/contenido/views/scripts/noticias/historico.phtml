@@ -1,0 +1,136 @@
+<?php 
+	$arrayData 		= $this->datos;
+	$masVistos 		= $this->masVisto;
+	$datosCompartir	= $this->datos[0][0];
+	$url 			= explode("?", $this->site);
+	$url 			= $url[0];
+	$urlNoticias 	= "/contenido/noticias/historico";
+
+	$cantidadC  	= 140;
+	$tresPuntos 	= "";
+	$titulo_		= $arrayData[0]["titulo"];
+	$desc 			= str_replace("&nbsp;", "", strip_tags($arrayData[0]["contenidoC"]));
+	$urlImagen		= $arrayData[0]["imagen"];
+	$descripcion	= htmlspecialchars($desc, ENT_QUOTES);
+	
+	/****Metadata HTML ***/
+	$this->metadatos["configuracion"][0]["cTitulo"] 			= htmlspecialchars("Fundación Azteca - ".$titulo_, ENT_QUOTES);
+	$this->metadatos["configuracion"][0]["cMetaDescripcion"] 	= htmlspecialchars($descripcion, ENT_QUOTES);
+	$cMetaKeywords = $descripcion.$titulo_;
+	$cMetaKeyWord  = '';
+	
+	foreach(explode(' ',$cMetaKeywords) as $key => $keyWord){		
+		if(strlen($keyWord) > 2){			
+			//$conservar = '0-9a-zñáéíóú'; // juego de caracteres a conservar
+			$conservar = '/[^a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ]/iu'; // juego de caracteres a conservar
+			$regex = sprintf('~[^%s]++~i', $conservar); // case insensitive
+			$keyWord = preg_replace($conservar, '',$keyWord);			
+			$cMetaKeyWord[] =  $keyWord;
+		}
+	}
+
+	$this->metadatos["configuracion"][0]["cMetaKeywords"] = implode(',', $cMetaKeyWord);
+	/****Metadata HTML ***/
+	
+	
+	$crop ="";
+	$this->imgHisFB = $crop . $urlImagen;
+	
+	$this->metaFacebook =  @<<<METANOTA
+  	<meta property="og:type"   content="article" />
+	<meta property="og:url"    content="https://{$url}" />
+	<meta property="og:title"  content="{$titulo_}" />
+	<meta property="og:image"  content="{$this->imgHisFB}" />
+	<meta property="og:description"  content="{$descripcion}" />
+METANOTA;
+	
+	$this->metaFacebook .= @<<<METATWITTER
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{$titulo_}">
+	<meta name="twitter:description" content="{$descripcion}">
+	<meta name="twitter:image:src" content="{$urlImagen}">
+	<meta name="twitter:domain" content="https://{$url}">
+	<meta name="twitter:site" content="https://{$url}">
+	
+METATWITTER;
+
+?>
+<?php
+	$this->headLink()->appendStylesheet('/assets/v2/styles/interna.css?v=4');
+?>
+    <script>
+        var newsItems = [
+        ];
+    </script>
+    <div class="w3-col s12 m12 l12">
+     
+        <section class="w3-col s12 m12 l12 content">
+			 <?php if(!empty($this->datos)):?>
+            <section class="w3-col s12 m8 l8">
+                <article class="w3-col s12 m12 l12 bigItems" id="greedIndeed">
+	                <?php 
+	                  if (!empty($arrayData)) :	
+	                     foreach ($arrayData as $key => $datos):
+		                     if($key >=0 && $key <= 3):
+			                     if(!empty($datos["fecha"])){
+			                     	$newformat = $datos["fecha"];
+			                     }else{
+			                     	$newformat ="";
+			                     }
+			                     echo '<div class="w3-col s12 m12 l12 bigNew">
+										<div class="w3-col s12 m12 l12 bigIma">
+											<a href="'.$datos["urlC"].'"><img src="'.$datos["imagen"].'" alt="Articulo Fundación Azteca"></a>
+										</div>
+										<div class="w3-col s12 m12 l12 bigTxt">
+											<h2>'.$datos["titulo"].'</h2>
+											<p><span>'.$newformat.'</span></p>
+											<p>'.$datos["contenidoH"].'</p>
+											<a href="'.$datos["urlC"].'">ver más</a>
+										</div>
+									</div>';
+		                     endif;
+	                	endforeach;
+	            	endif;
+	            	?>
+                </article>
+                <section class="w3-col s12 m12 l12 cntrls">
+                	<?php if($this->pagina >= 1){?>          
+		                <a href="<?php if($this->pagina == 1 ){echo $urlNoticias;}else{echo "?pagina=".($this->pagina-1);};?>"><i class="fal fa-arrow-left"></i> <span>Anterior</span></a>
+		           <?php }?>
+		           
+					<?php if ($this->pagina < $this->total ){?>           
+		            <a href="<?php echo "?pagina=".($this->pagina+1);?>"><span>Siguiente</span> <i class="fal fa-arrow-right"></i></a>
+		            <?php }?>
+                   
+                </section>
+                
+            </section>
+
+            <aside class="w3-col s12 m4 l4 smallItems">
+		           <?php 
+		             if (!empty($arrayData)) :	
+	                     foreach ($arrayData as $key => $datos):
+		                     if($key >=4 && $key <= 7):					 	
+				 	?>
+						 	 <div class="w3-col s12 m12 l12 tinyItm">
+						            <a href="<?php echo $datos["urlC"];?>" class="resource">
+						              <img src="<?php echo  $datos["imagen"]; ?>" alt="Artículo Fundación Azteca">
+						              <p><span><?php echo $datos["titulo"];?></span></p>
+						            </a>
+						     </div> 
+		            <?php 
+		            		endif;
+		            	endforeach;
+		          	endif;
+		          	?>
+            </aside>
+             <?php else: ?>
+       	 		<br/><h2><strong>Lo sentimos, la página que solicitaste por ahora no tiene Artículos ...</strong></h2><br/>
+           <?php endif;?>
+        </section>        
+
+    </div>
+<script type="text/javascript" src="/assets/js/MooTools-Core-1.6.0-compressed.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/headfoot.js"></script>
+<script type="text/javascript" src="/assets/v2/scripts/interna.js"></script>

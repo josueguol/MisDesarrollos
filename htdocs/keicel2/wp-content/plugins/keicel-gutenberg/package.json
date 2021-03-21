@@ -1,0 +1,16 @@
+{
+  "name": "keicel-gutenberg",
+  "version": "1.0.0",
+  "description": "Bloques de Gutenberg para Keicel",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "author": "Fiusha & Pixcan",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.1",
+    "toml": "^3.0.0"
+  }
+}
